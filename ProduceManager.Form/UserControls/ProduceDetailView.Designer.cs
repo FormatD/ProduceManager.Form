@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProduceDetailView));
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this._gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -39,6 +39,7 @@
             this._colProcedure = new DevExpress.XtraGrid.Columns.GridColumn();
             this._colWorker = new DevExpress.XtraGrid.Columns.GridColumn();
             this._colAmount = new DevExpress.XtraGrid.Columns.GridColumn();
+            this._colState = new DevExpress.XtraGrid.Columns.GridColumn();
             this._colOperation = new DevExpress.XtraGrid.Columns.GridColumn();
             this._riOperate = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -48,7 +49,6 @@
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this._btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this._btnQuery = new DevExpress.XtraEditors.SimpleButton();
-            this._colState = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._riOperate)).BeginInit();
@@ -98,7 +98,7 @@
             this._colNo.Name = "_colNo";
             this._colNo.Visible = true;
             this._colNo.VisibleIndex = 0;
-            this._colNo.Width = 134;
+            this._colNo.Width = 124;
             // 
             // _colDate
             // 
@@ -107,7 +107,7 @@
             this._colDate.Name = "_colDate";
             this._colDate.Visible = true;
             this._colDate.VisibleIndex = 1;
-            this._colDate.Width = 145;
+            this._colDate.Width = 135;
             // 
             // _colProductName
             // 
@@ -116,7 +116,7 @@
             this._colProductName.Name = "_colProductName";
             this._colProductName.Visible = true;
             this._colProductName.VisibleIndex = 4;
-            this._colProductName.Width = 145;
+            this._colProductName.Width = 135;
             // 
             // _colProcedure
             // 
@@ -125,7 +125,7 @@
             this._colProcedure.Name = "_colProcedure";
             this._colProcedure.Visible = true;
             this._colProcedure.VisibleIndex = 3;
-            this._colProcedure.Width = 145;
+            this._colProcedure.Width = 135;
             // 
             // _colWorker
             // 
@@ -134,7 +134,7 @@
             this._colWorker.Name = "_colWorker";
             this._colWorker.Visible = true;
             this._colWorker.VisibleIndex = 2;
-            this._colWorker.Width = 145;
+            this._colWorker.Width = 135;
             // 
             // _colAmount
             // 
@@ -147,7 +147,15 @@
             this._colAmount.Name = "_colAmount";
             this._colAmount.Visible = true;
             this._colAmount.VisibleIndex = 5;
-            this._colAmount.Width = 145;
+            this._colAmount.Width = 135;
+            // 
+            // _colState
+            // 
+            this._colState.Caption = "状态";
+            this._colState.Name = "_colState";
+            this._colState.Visible = true;
+            this._colState.VisibleIndex = 6;
+            this._colState.Width = 109;
             // 
             // _colOperation
             // 
@@ -160,14 +168,14 @@
             this._colOperation.Name = "_colOperation";
             this._colOperation.Visible = true;
             this._colOperation.VisibleIndex = 7;
-            this._colOperation.Width = 155;
+            this._colOperation.Width = 106;
             // 
             // _riOperate
             // 
             this._riOperate.AutoHeight = false;
             this._riOperate.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "编辑", 40, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleLeft, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "删除", 40, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleLeft, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "编辑", 40, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleLeft, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "删除", 40, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleLeft, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this._riOperate.Name = "_riOperate";
             this._riOperate.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this._riOperate.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this._riOperation_ButtonClick);
@@ -247,13 +255,6 @@
             this._btnQuery.TabIndex = 0;
             this._btnQuery.Text = "查询";
             this._btnQuery.Click += new System.EventHandler(this._btnQuery_Click);
-            // 
-            // _colState
-            // 
-            this._colState.Caption = "状态";
-            this._colState.Name = "_colState";
-            this._colState.Visible = true;
-            this._colState.VisibleIndex = 6;
             // 
             // ProduceDetailView
             // 

@@ -10,6 +10,7 @@ using DevExpress.XtraEditors;
 using ProduceManager.Form.Persistence;
 using ProduceManager.Form.Domains;
 using ProduceManager.Form.Utils;
+using DevExpress.XtraEditors.Controls;
 
 namespace ProduceManager.Form
 {
@@ -49,29 +50,37 @@ namespace ProduceManager.Form
         private void AddProduceRecordForm_Load(object sender, EventArgs e)
         {
             _cbProducts.Properties.DataSource = _productList = _service.GetAllProducts();
+            _cbProducts.Properties.TextEditStyle = TextEditStyles.Standard;
+            _cbProducts.Properties.ImmediatePopup = true;
             _cbProducts.Properties.DisplayMember = "Name";
             _cbProducts.Properties.ValueMember = "Id";
             //_cbProducts.Properties.re = false;
 
             _cbBatch.Properties.DataSource = _batchList = _service.GetAllBatches();
+            _cbBatch.Properties.TextEditStyle = TextEditStyles.Standard;
+            _cbBatch.Properties.ImmediatePopup = true;
             _cbBatch.Properties.DisplayMember = "BatchNo";
             _cbBatch.Properties.ValueMember = "Id";
 
             _cbProcedure.Properties.DataSource = _procedureList = _service.GetAllProcedures();
+            _cbProcedure.Properties.TextEditStyle = TextEditStyles.Standard;
+            _cbProcedure.Properties.ImmediatePopup = true;
             _cbProcedure.Properties.DisplayMember = "Name";
             _cbProcedure.Properties.ValueMember = "Id";
 
             _cbWorkers.Properties.DataSource = _workerList = _service.GetAllWorkers();
+            _cbWorkers.Properties.TextEditStyle = TextEditStyles.Standard;
+            _cbWorkers.Properties.ImmediatePopup = true;
             _cbWorkers.Properties.DisplayMember = "Name";
             _cbWorkers.Properties.ValueMember = "Id";
 
-            if (_addFromBatch)
-            {
-                _cbBatch.ItemIndex = _batchList.IndexOf(x => x.Id == _batchId);
-            }
 
             if (_isAddingNew)
             {
+                if (_addFromBatch)
+                {
+                    _cbBatch.ItemIndex = _batchList.IndexOf(x => x.Id == _batchId);
+                }
             }
             else
             {
@@ -79,10 +88,11 @@ namespace ProduceManager.Form
                 if (produceRecord == null)
                 {
                     MessageBoxHelper.Warn("生产明细不存在。");
-                    DialogResult = System.Windows.Forms.DialogResult.Abort;
+                    DialogResult = DialogResult.Abort;
                     return;
                 }
 
+                _cbBatch.ItemIndex = _batchList.IndexOf(x => x.Id == produceRecord.BatchId);
                 //_cbProducts.ItemIndex = _productList.IndexOf(x => x.Id == produceRecord.ProductId);
                 _cbWorkers.ItemIndex = _workerList.IndexOf(x => x.Id == produceRecord.WorkerId);
                 _cbProcedure.ItemIndex = _productList.IndexOf(x => x.Id == produceRecord.ProcedureId);

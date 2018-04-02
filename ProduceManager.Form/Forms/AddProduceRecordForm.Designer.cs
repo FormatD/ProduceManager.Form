@@ -129,6 +129,7 @@
             this._cbWorkers.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this._cbWorkers.Properties.NullText = "请选择工人";
+            this._cbWorkers.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
             this._cbWorkers.Size = new System.Drawing.Size(267, 20);
             this._cbWorkers.TabIndex = 6;
             // 
