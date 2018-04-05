@@ -12,7 +12,7 @@ namespace ProduceManager.Form.Persistence
     {
 
         public ApplicationDbContext()
-            : base("Mssql")
+            : base(SystemConfig.ConnectionName)
         {
         }
 

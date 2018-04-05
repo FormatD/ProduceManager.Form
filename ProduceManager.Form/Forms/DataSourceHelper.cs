@@ -1,32 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using System.IO;
-using DevExpress.XtraReports.UI;
-using System.Data.SqlClient;
-using ProduceManager.Form.Utils;
-using ProduceManager.Form.Domains;
-using ProduceManager.Form.Persistence;
+﻿using NLog;
+using System;
+using System.Configuration;
+using System.Data.Common;
 
 namespace ProduceManager.Form
 {
 
     public static class DataSourceHelper
     {
+        private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
+
         public static DisplayDataSet GetDataSource(string sql)
         {
             DisplayDataSet ds = new DisplayDataSet("数据源", null);
 
-            using (var conn = new SqlConnection("Server=.;Database=ProduceManage;Trusted_Connection=True;"))
+            try
             {
-                var adapter = new SqlDataAdapter(sql, conn);
-                adapter.Fill(ds);
+                var connectionSetting = ConfigurationManager.ConnectionStrings[SystemConfig.ConnectionName];
+                var provider = connectionSetting.ProviderName;
+                var connectionString = connectionSetting.ConnectionString;
+
+                var factory = DbProviderFactories.GetFactory(connectionSetting.ProviderName);
+
+                using (var conn = factory.CreateConnection())
+                {
+                    conn.ConnectionString = (connectionSetting.ConnectionString);
+                    var adapter = factory.CreateDataAdapter();
+                    var cmd = factory.CreateCommand();
+                    cmd.CommandText = sql;
+                    cmd.Connection = conn;
+                    adapter.SelectCommand = cmd;
+
+                    adapter.Fill(ds);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.Warn(ex.Message);
+                _logger.Warn(sql);
             }
             return ds;
         }
