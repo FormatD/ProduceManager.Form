@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
@@ -175,8 +174,8 @@
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem48 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem48 = new DevExpress.Utils.ToolTipItem();
             this._ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
-            this.ribbonImageCollection = new DevExpress.Utils.ImageCollection(this.components);
+            this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu();
+            this.ribbonImageCollection = new DevExpress.Utils.ImageCollection();
             this.iHelp = new DevExpress.XtraBars.BarButtonItem();
             this.iAbout = new DevExpress.XtraBars.BarButtonItem();
             this.siStatus = new DevExpress.XtraBars.BarStaticItem();
@@ -196,7 +195,7 @@
             this._btnPriceManage = new DevExpress.XtraBars.BarButtonItem();
             this._btnReportView = new DevExpress.XtraBars.BarButtonItem();
             this.printPreviewBarItem1 = new DevExpress.XtraPrinting.Preview.PrintPreviewBarItem();
-            this._documentViewerRibbonController = new DevExpress.XtraPrinting.Preview.DocumentViewerRibbonController(this.components);
+            this._documentViewerRibbonController = new DevExpress.XtraPrinting.Preview.DocumentViewerRibbonController();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.printPreviewStaticItem1 = new DevExpress.XtraPrinting.Preview.PrintPreviewStaticItem();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
@@ -254,7 +253,8 @@
             this.printPreviewBarItem46 = new DevExpress.XtraPrinting.Preview.PrintPreviewBarItem();
             this.printPreviewBarItem47 = new DevExpress.XtraPrinting.Preview.PrintPreviewBarItem();
             this._btnReportDesigner = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
+            this._btnAddReport = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection();
             this._rpcReportPreview = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this._rpReportPreview = new DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPage();
             this.printPreviewRibbonPageGroup1 = new DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroup();
@@ -280,7 +280,6 @@
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this._btnAddReport = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this._ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).BeginInit();
@@ -386,14 +385,14 @@
             this.ribbonPage1,
             this.ribbonPage2,
             this.helpRibbonPage});
+            this._ribbonControl.QuickToolbarItemLinks.Add(this.iHelp);
             this._ribbonControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemProgressBar1,
             this.repositoryItemZoomTrackBar1});
             this._ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
             this._ribbonControl.Size = new System.Drawing.Size(1100, 147);
             this._ribbonControl.StatusBar = this.ribbonStatusBar;
-            this._ribbonControl.Toolbar.ItemLinks.Add(this.iHelp);
-            this._ribbonControl.TransparentEditors = true;
+            this._ribbonControl.TransparentEditorsMode = DevExpress.Utils.DefaultBoolean.True;
             // 
             // appMenu
             // 
@@ -426,8 +425,8 @@
             this.iHelp.Description = "Start the program help system.";
             this.iHelp.Hint = "Start the program help system";
             this.iHelp.Id = 22;
-            this.iHelp.ImageIndex = 7;
-            this.iHelp.LargeImageIndex = 7;
+            this.iHelp.ImageOptions.ImageIndex = 7;
+            this.iHelp.ImageOptions.LargeImageIndex = 7;
             this.iHelp.Name = "iHelp";
             // 
             // iAbout
@@ -436,8 +435,8 @@
             this.iAbout.Description = "Displays general program information.";
             this.iAbout.Hint = "Displays general program information";
             this.iAbout.Id = 24;
-            this.iAbout.ImageIndex = 8;
-            this.iAbout.LargeImageIndex = 8;
+            this.iAbout.ImageOptions.ImageIndex = 8;
+            this.iAbout.ImageOptions.LargeImageIndex = 8;
             this.iAbout.Name = "iAbout";
             // 
             // siStatus
@@ -445,130 +444,128 @@
             this.siStatus.Caption = "Some Status Info";
             this.siStatus.Id = 31;
             this.siStatus.Name = "siStatus";
-            this.siStatus.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
             // siInfo
             // 
             this.siInfo.Caption = "Some Info";
             this.siInfo.Id = 32;
             this.siInfo.Name = "siInfo";
-            this.siInfo.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
             // iBoldFontStyle
             // 
             this.iBoldFontStyle.Caption = "Bold";
             this.iBoldFontStyle.Id = 53;
-            this.iBoldFontStyle.ImageIndex = 9;
+            this.iBoldFontStyle.ImageOptions.ImageIndex = 9;
             this.iBoldFontStyle.Name = "iBoldFontStyle";
             // 
             // iItalicFontStyle
             // 
             this.iItalicFontStyle.Caption = "Italic";
             this.iItalicFontStyle.Id = 54;
-            this.iItalicFontStyle.ImageIndex = 10;
+            this.iItalicFontStyle.ImageOptions.ImageIndex = 10;
             this.iItalicFontStyle.Name = "iItalicFontStyle";
             // 
             // iUnderlinedFontStyle
             // 
             this.iUnderlinedFontStyle.Caption = "Underlined";
             this.iUnderlinedFontStyle.Id = 55;
-            this.iUnderlinedFontStyle.ImageIndex = 11;
+            this.iUnderlinedFontStyle.ImageOptions.ImageIndex = 11;
             this.iUnderlinedFontStyle.Name = "iUnderlinedFontStyle";
             // 
             // iLeftTextAlign
             // 
             this.iLeftTextAlign.Caption = "Left";
             this.iLeftTextAlign.Id = 57;
-            this.iLeftTextAlign.ImageIndex = 12;
+            this.iLeftTextAlign.ImageOptions.ImageIndex = 12;
             this.iLeftTextAlign.Name = "iLeftTextAlign";
             // 
             // iCenterTextAlign
             // 
             this.iCenterTextAlign.Caption = "Center";
             this.iCenterTextAlign.Id = 58;
-            this.iCenterTextAlign.ImageIndex = 13;
+            this.iCenterTextAlign.ImageOptions.ImageIndex = 13;
             this.iCenterTextAlign.Name = "iCenterTextAlign";
             // 
             // iRightTextAlign
             // 
             this.iRightTextAlign.Caption = "Right";
             this.iRightTextAlign.Id = 59;
-            this.iRightTextAlign.ImageIndex = 14;
+            this.iRightTextAlign.ImageOptions.ImageIndex = 14;
             this.iRightTextAlign.Name = "iRightTextAlign";
             // 
             // barButtonItem1
             // 
             this.barButtonItem1.Caption = "barButtonItem1";
             this.barButtonItem1.Id = 62;
-            this.barButtonItem1.LargeImageIndex = 7;
+            this.barButtonItem1.ImageOptions.LargeImageIndex = 7;
             this.barButtonItem1.Name = "barButtonItem1";
             // 
             // _btnBatchManage
             // 
             this._btnBatchManage.Caption = "批次管理";
-            this._btnBatchManage.Glyph = ((System.Drawing.Image)(resources.GetObject("_btnBatchManage.Glyph")));
             this._btnBatchManage.Id = 63;
-            this._btnBatchManage.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("_btnBatchManage.LargeGlyph")));
-            this._btnBatchManage.LargeImageIndex = 0;
+            this._btnBatchManage.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("_btnBatchManage.ImageOptions.Image")));
+            this._btnBatchManage.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("_btnBatchManage.ImageOptions.LargeImage")));
+            this._btnBatchManage.ImageOptions.LargeImageIndex = 0;
             this._btnBatchManage.Name = "_btnBatchManage";
             this._btnBatchManage.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnBatchManage_ItemClick);
             // 
             // _btnProduceDetails
             // 
             this._btnProduceDetails.Caption = "生产明细";
-            this._btnProduceDetails.Glyph = ((System.Drawing.Image)(resources.GetObject("_btnProduceDetails.Glyph")));
             this._btnProduceDetails.Id = 64;
-            this._btnProduceDetails.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("_btnProduceDetails.LargeGlyph")));
-            this._btnProduceDetails.LargeImageIndex = 0;
+            this._btnProduceDetails.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("_btnProduceDetails.ImageOptions.Image")));
+            this._btnProduceDetails.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("_btnProduceDetails.ImageOptions.LargeImage")));
+            this._btnProduceDetails.ImageOptions.LargeImageIndex = 0;
             this._btnProduceDetails.Name = "_btnProduceDetails";
             this._btnProduceDetails.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnProduceDetails_ItemClick);
             // 
             // _btnWorkerManage
             // 
             this._btnWorkerManage.Caption = "工人管理";
-            this._btnWorkerManage.Glyph = ((System.Drawing.Image)(resources.GetObject("_btnWorkerManage.Glyph")));
             this._btnWorkerManage.Id = 66;
-            this._btnWorkerManage.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("_btnWorkerManage.LargeGlyph")));
-            this._btnWorkerManage.LargeImageIndex = 1;
+            this._btnWorkerManage.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("_btnWorkerManage.ImageOptions.Image")));
+            this._btnWorkerManage.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("_btnWorkerManage.ImageOptions.LargeImage")));
+            this._btnWorkerManage.ImageOptions.LargeImageIndex = 1;
             this._btnWorkerManage.Name = "_btnWorkerManage";
             this._btnWorkerManage.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnWorkerManage_ItemClick);
             // 
             // _btnProductManage
             // 
             this._btnProductManage.Caption = "产品管理";
-            this._btnProductManage.Glyph = ((System.Drawing.Image)(resources.GetObject("_btnProductManage.Glyph")));
             this._btnProductManage.Id = 67;
-            this._btnProductManage.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("_btnProductManage.LargeGlyph")));
-            this._btnProductManage.LargeImageIndex = 0;
+            this._btnProductManage.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("_btnProductManage.ImageOptions.Image")));
+            this._btnProductManage.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("_btnProductManage.ImageOptions.LargeImage")));
+            this._btnProductManage.ImageOptions.LargeImageIndex = 0;
             this._btnProductManage.Name = "_btnProductManage";
             this._btnProductManage.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnProductManage_ItemClick);
             // 
             // _btnProcedureManage
             // 
             this._btnProcedureManage.Caption = "工序管理";
-            this._btnProcedureManage.Glyph = ((System.Drawing.Image)(resources.GetObject("_btnProcedureManage.Glyph")));
             this._btnProcedureManage.Id = 68;
-            this._btnProcedureManage.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("_btnProcedureManage.LargeGlyph")));
-            this._btnProcedureManage.LargeImageIndex = 1;
+            this._btnProcedureManage.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("_btnProcedureManage.ImageOptions.Image")));
+            this._btnProcedureManage.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("_btnProcedureManage.ImageOptions.LargeImage")));
+            this._btnProcedureManage.ImageOptions.LargeImageIndex = 1;
             this._btnProcedureManage.Name = "_btnProcedureManage";
             this._btnProcedureManage.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnProcedureManage_ItemClick);
             // 
             // _btnPriceManage
             // 
             this._btnPriceManage.Caption = "工资管理";
-            this._btnPriceManage.Glyph = ((System.Drawing.Image)(resources.GetObject("_btnPriceManage.Glyph")));
             this._btnPriceManage.Id = 69;
-            this._btnPriceManage.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("_btnPriceManage.LargeGlyph")));
-            this._btnPriceManage.LargeImageIndex = 1;
+            this._btnPriceManage.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("_btnPriceManage.ImageOptions.Image")));
+            this._btnPriceManage.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("_btnPriceManage.ImageOptions.LargeImage")));
+            this._btnPriceManage.ImageOptions.LargeImageIndex = 1;
             this._btnPriceManage.Name = "_btnPriceManage";
             this._btnPriceManage.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnPriceManage_ItemClick);
             // 
             // _btnReportView
             // 
             this._btnReportView.Caption = "报表查看";
-            this._btnReportView.Glyph = ((System.Drawing.Image)(resources.GetObject("_btnReportView.Glyph")));
             this._btnReportView.Id = 70;
-            this._btnReportView.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("_btnReportView.LargeGlyph")));
+            this._btnReportView.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("_btnReportView.ImageOptions.Image")));
+            this._btnReportView.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("_btnReportView.ImageOptions.LargeImage")));
             this._btnReportView.Name = "_btnReportView";
             this._btnReportView.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnReportView_ItemClick);
             // 
@@ -579,9 +576,9 @@
             this.printPreviewBarItem1.Command = DevExpress.XtraPrinting.PrintingSystemCommand.DocumentMap;
             this.printPreviewBarItem1.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem1.Enabled = false;
-            this.printPreviewBarItem1.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_DocumentMap;
             this.printPreviewBarItem1.Id = 71;
-            this.printPreviewBarItem1.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_DocumentMapLarge;
+            this.printPreviewBarItem1.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_DocumentMap;
+            this.printPreviewBarItem1.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_DocumentMapLarge;
             this.printPreviewBarItem1.Name = "printPreviewBarItem1";
             superToolTip1.FixedTooltipWidth = true;
             toolTipTitleItem1.Text = "Document Map";
@@ -621,14 +618,12 @@
             this.printPreviewStaticItem1.LeftIndent = 1;
             this.printPreviewStaticItem1.Name = "printPreviewStaticItem1";
             this.printPreviewStaticItem1.RightIndent = 1;
-            this.printPreviewStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
             this.printPreviewStaticItem1.Type = "PageOfPages";
             // 
             // barStaticItem1
             // 
             this.barStaticItem1.Id = 119;
             this.barStaticItem1.Name = "barStaticItem1";
-            this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
             this.barStaticItem1.Visibility = DevExpress.XtraBars.BarItemVisibility.OnlyInRuntime;
             // 
             // progressBarEditItem1
@@ -636,10 +631,10 @@
             this.progressBarEditItem1.ContextSpecifier = this._documentViewerRibbonController;
             this.progressBarEditItem1.Edit = this.repositoryItemProgressBar1;
             this.progressBarEditItem1.EditHeight = 12;
+            this.progressBarEditItem1.EditWidth = 150;
             this.progressBarEditItem1.Id = 120;
             this.progressBarEditItem1.Name = "progressBarEditItem1";
             this.progressBarEditItem1.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
-            this.progressBarEditItem1.Width = 150;
             // 
             // repositoryItemProgressBar1
             // 
@@ -671,7 +666,6 @@
             this.printPreviewStaticItem2.Caption = "100%";
             this.printPreviewStaticItem2.Id = 123;
             this.printPreviewStaticItem2.Name = "printPreviewStaticItem2";
-            this.printPreviewStaticItem2.TextAlignment = System.Drawing.StringAlignment.Near;
             this.printPreviewStaticItem2.Type = "ZoomFactorText";
             this.printPreviewStaticItem2.Width = 42;
             // 
@@ -681,12 +675,12 @@
             this.zoomTrackBarEditItem1.ContextSpecifier = this._documentViewerRibbonController;
             this.zoomTrackBarEditItem1.Edit = this.repositoryItemZoomTrackBar1;
             this.zoomTrackBarEditItem1.EditValue = 90;
+            this.zoomTrackBarEditItem1.EditWidth = 140;
             this.zoomTrackBarEditItem1.Id = 124;
             this.zoomTrackBarEditItem1.Name = "zoomTrackBarEditItem1";
             this.zoomTrackBarEditItem1.Range = new int[] {
         10,
         500};
-            this.zoomTrackBarEditItem1.Width = 140;
             // 
             // repositoryItemZoomTrackBar1
             // 
@@ -694,9 +688,8 @@
             this.repositoryItemZoomTrackBar1.AllowFocused = false;
             this.repositoryItemZoomTrackBar1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.repositoryItemZoomTrackBar1.Maximum = 180;
-            this.repositoryItemZoomTrackBar1.Middle = 5;
+            this.repositoryItemZoomTrackBar1.Middle = 90;
             this.repositoryItemZoomTrackBar1.Name = "repositoryItemZoomTrackBar1";
-            this.repositoryItemZoomTrackBar1.ScrollThumbStyle = DevExpress.XtraEditors.Repository.ScrollThumbStyle.ArrowDownRight;
             // 
             // printPreviewBarItem2
             // 
@@ -705,9 +698,9 @@
             this.printPreviewBarItem2.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Parameters;
             this.printPreviewBarItem2.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem2.Enabled = false;
-            this.printPreviewBarItem2.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Parameters;
             this.printPreviewBarItem2.Id = 72;
-            this.printPreviewBarItem2.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ParametersLarge;
+            this.printPreviewBarItem2.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Parameters;
+            this.printPreviewBarItem2.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ParametersLarge;
             this.printPreviewBarItem2.Name = "printPreviewBarItem2";
             superToolTip2.FixedTooltipWidth = true;
             toolTipTitleItem2.Text = "Parameters";
@@ -721,13 +714,14 @@
             // 
             // printPreviewBarItem3
             // 
+            this.printPreviewBarItem3.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.printPreviewBarItem3.Caption = "Find";
             this.printPreviewBarItem3.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Find;
             this.printPreviewBarItem3.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem3.Enabled = false;
-            this.printPreviewBarItem3.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Find;
             this.printPreviewBarItem3.Id = 73;
-            this.printPreviewBarItem3.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_FindLarge;
+            this.printPreviewBarItem3.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Find;
+            this.printPreviewBarItem3.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_FindLarge;
             this.printPreviewBarItem3.Name = "printPreviewBarItem3";
             superToolTip3.FixedTooltipWidth = true;
             toolTipTitleItem3.Text = "Find";
@@ -744,9 +738,9 @@
             this.printPreviewBarItem4.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Customize;
             this.printPreviewBarItem4.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem4.Enabled = false;
-            this.printPreviewBarItem4.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Customize;
             this.printPreviewBarItem4.Id = 74;
-            this.printPreviewBarItem4.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_CustomizeLarge;
+            this.printPreviewBarItem4.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Customize;
+            this.printPreviewBarItem4.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_CustomizeLarge;
             this.printPreviewBarItem4.Name = "printPreviewBarItem4";
             superToolTip4.FixedTooltipWidth = true;
             toolTipTitleItem4.Text = "Options";
@@ -763,9 +757,9 @@
             this.printPreviewBarItem5.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Print;
             this.printPreviewBarItem5.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem5.Enabled = false;
-            this.printPreviewBarItem5.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Print;
             this.printPreviewBarItem5.Id = 75;
-            this.printPreviewBarItem5.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PrintLarge;
+            this.printPreviewBarItem5.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Print;
+            this.printPreviewBarItem5.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PrintLarge;
             this.printPreviewBarItem5.Name = "printPreviewBarItem5";
             superToolTip5.FixedTooltipWidth = true;
             toolTipTitleItem5.Text = "Print (Ctrl+P)";
@@ -782,9 +776,9 @@
             this.printPreviewBarItem6.Command = DevExpress.XtraPrinting.PrintingSystemCommand.PrintDirect;
             this.printPreviewBarItem6.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem6.Enabled = false;
-            this.printPreviewBarItem6.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PrintDirect;
             this.printPreviewBarItem6.Id = 76;
-            this.printPreviewBarItem6.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PrintDirectLarge;
+            this.printPreviewBarItem6.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PrintDirect;
+            this.printPreviewBarItem6.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PrintDirectLarge;
             this.printPreviewBarItem6.Name = "printPreviewBarItem6";
             superToolTip6.FixedTooltipWidth = true;
             toolTipTitleItem6.Text = "Quick Print";
@@ -818,9 +812,9 @@
             this.printPreviewBarItem8.Command = DevExpress.XtraPrinting.PrintingSystemCommand.EditPageHF;
             this.printPreviewBarItem8.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem8.Enabled = false;
-            this.printPreviewBarItem8.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_EditPageHF;
             this.printPreviewBarItem8.Id = 78;
-            this.printPreviewBarItem8.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_EditPageHFLarge;
+            this.printPreviewBarItem8.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_EditPageHF;
+            this.printPreviewBarItem8.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_EditPageHFLarge;
             this.printPreviewBarItem8.Name = "printPreviewBarItem8";
             superToolTip8.FixedTooltipWidth = true;
             toolTipTitleItem8.Text = "Header and Footer";
@@ -838,9 +832,9 @@
             this.printPreviewBarItem9.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Scale;
             this.printPreviewBarItem9.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem9.Enabled = false;
-            this.printPreviewBarItem9.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Scale;
             this.printPreviewBarItem9.Id = 79;
-            this.printPreviewBarItem9.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ScaleLarge;
+            this.printPreviewBarItem9.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Scale;
+            this.printPreviewBarItem9.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ScaleLarge;
             this.printPreviewBarItem9.Name = "printPreviewBarItem9";
             superToolTip9.FixedTooltipWidth = true;
             toolTipTitleItem9.Text = "Scale";
@@ -859,9 +853,9 @@
             this.printPreviewBarItem10.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem10.Down = true;
             this.printPreviewBarItem10.Enabled = false;
-            this.printPreviewBarItem10.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Pointer;
             this.printPreviewBarItem10.GroupIndex = 1;
             this.printPreviewBarItem10.Id = 80;
+            this.printPreviewBarItem10.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Pointer;
             this.printPreviewBarItem10.Name = "printPreviewBarItem10";
             this.printPreviewBarItem10.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText;
             superToolTip10.FixedTooltipWidth = true;
@@ -880,9 +874,9 @@
             this.printPreviewBarItem11.Command = DevExpress.XtraPrinting.PrintingSystemCommand.HandTool;
             this.printPreviewBarItem11.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem11.Enabled = false;
-            this.printPreviewBarItem11.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_HandTool;
             this.printPreviewBarItem11.GroupIndex = 1;
             this.printPreviewBarItem11.Id = 81;
+            this.printPreviewBarItem11.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_HandTool;
             this.printPreviewBarItem11.Name = "printPreviewBarItem11";
             this.printPreviewBarItem11.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText;
             superToolTip11.FixedTooltipWidth = true;
@@ -901,9 +895,9 @@
             this.printPreviewBarItem12.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Magnifier;
             this.printPreviewBarItem12.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem12.Enabled = false;
-            this.printPreviewBarItem12.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Magnifier;
             this.printPreviewBarItem12.GroupIndex = 1;
             this.printPreviewBarItem12.Id = 82;
+            this.printPreviewBarItem12.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Magnifier;
             this.printPreviewBarItem12.Name = "printPreviewBarItem12";
             this.printPreviewBarItem12.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText;
             superToolTip12.FixedTooltipWidth = true;
@@ -923,9 +917,9 @@
             this.printPreviewBarItem13.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ZoomOut;
             this.printPreviewBarItem13.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem13.Enabled = false;
-            this.printPreviewBarItem13.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ZoomOut;
             this.printPreviewBarItem13.Id = 83;
-            this.printPreviewBarItem13.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ZoomOutLarge;
+            this.printPreviewBarItem13.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ZoomOut;
+            this.printPreviewBarItem13.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ZoomOutLarge;
             this.printPreviewBarItem13.Name = "printPreviewBarItem13";
             superToolTip13.FixedTooltipWidth = true;
             toolTipTitleItem13.Text = "Zoom Out";
@@ -942,9 +936,9 @@
             this.printPreviewBarItem14.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ZoomIn;
             this.printPreviewBarItem14.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem14.Enabled = false;
-            this.printPreviewBarItem14.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ZoomIn;
             this.printPreviewBarItem14.Id = 84;
-            this.printPreviewBarItem14.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ZoomInLarge;
+            this.printPreviewBarItem14.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ZoomIn;
+            this.printPreviewBarItem14.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ZoomInLarge;
             this.printPreviewBarItem14.Name = "printPreviewBarItem14";
             superToolTip14.FixedTooltipWidth = true;
             toolTipTitleItem14.Text = "Zoom In";
@@ -962,9 +956,9 @@
             this.printPreviewBarItem15.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Zoom;
             this.printPreviewBarItem15.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem15.Enabled = false;
-            this.printPreviewBarItem15.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Zoom;
             this.printPreviewBarItem15.Id = 85;
-            this.printPreviewBarItem15.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ZoomLarge;
+            this.printPreviewBarItem15.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Zoom;
+            this.printPreviewBarItem15.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ZoomLarge;
             this.printPreviewBarItem15.Name = "printPreviewBarItem15";
             superToolTip15.FixedTooltipWidth = true;
             toolTipTitleItem15.Text = "Zoom";
@@ -981,9 +975,9 @@
             this.printPreviewBarItem16.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ShowFirstPage;
             this.printPreviewBarItem16.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem16.Enabled = false;
-            this.printPreviewBarItem16.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ShowFirstPage;
             this.printPreviewBarItem16.Id = 86;
-            this.printPreviewBarItem16.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ShowFirstPageLarge;
+            this.printPreviewBarItem16.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ShowFirstPage;
+            this.printPreviewBarItem16.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ShowFirstPageLarge;
             this.printPreviewBarItem16.Name = "printPreviewBarItem16";
             superToolTip16.FixedTooltipWidth = true;
             toolTipTitleItem16.Text = "First Page (Ctrl+Home)";
@@ -1000,9 +994,9 @@
             this.printPreviewBarItem17.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ShowPrevPage;
             this.printPreviewBarItem17.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem17.Enabled = false;
-            this.printPreviewBarItem17.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ShowPrevPage;
             this.printPreviewBarItem17.Id = 87;
-            this.printPreviewBarItem17.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ShowPrevPageLarge;
+            this.printPreviewBarItem17.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ShowPrevPage;
+            this.printPreviewBarItem17.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ShowPrevPageLarge;
             this.printPreviewBarItem17.Name = "printPreviewBarItem17";
             superToolTip17.FixedTooltipWidth = true;
             toolTipTitleItem17.Text = "Previous Page (PageUp)";
@@ -1019,9 +1013,9 @@
             this.printPreviewBarItem18.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ShowNextPage;
             this.printPreviewBarItem18.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem18.Enabled = false;
-            this.printPreviewBarItem18.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ShowNextPage;
             this.printPreviewBarItem18.Id = 88;
-            this.printPreviewBarItem18.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ShowNextPageLarge;
+            this.printPreviewBarItem18.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ShowNextPage;
+            this.printPreviewBarItem18.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ShowNextPageLarge;
             this.printPreviewBarItem18.Name = "printPreviewBarItem18";
             superToolTip18.FixedTooltipWidth = true;
             toolTipTitleItem18.Text = "Next Page (PageDown)";
@@ -1038,9 +1032,9 @@
             this.printPreviewBarItem19.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ShowLastPage;
             this.printPreviewBarItem19.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem19.Enabled = false;
-            this.printPreviewBarItem19.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ShowLastPage;
             this.printPreviewBarItem19.Id = 89;
-            this.printPreviewBarItem19.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ShowLastPageLarge;
+            this.printPreviewBarItem19.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ShowLastPage;
+            this.printPreviewBarItem19.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ShowLastPageLarge;
             this.printPreviewBarItem19.Name = "printPreviewBarItem19";
             superToolTip19.FixedTooltipWidth = true;
             toolTipTitleItem19.Text = "Last Page (Ctrl+End)";
@@ -1058,9 +1052,9 @@
             this.printPreviewBarItem20.Command = DevExpress.XtraPrinting.PrintingSystemCommand.MultiplePages;
             this.printPreviewBarItem20.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem20.Enabled = false;
-            this.printPreviewBarItem20.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_MultiplePages;
             this.printPreviewBarItem20.Id = 90;
-            this.printPreviewBarItem20.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_MultiplePagesLarge;
+            this.printPreviewBarItem20.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_MultiplePages;
+            this.printPreviewBarItem20.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_MultiplePagesLarge;
             this.printPreviewBarItem20.Name = "printPreviewBarItem20";
             superToolTip20.FixedTooltipWidth = true;
             toolTipTitleItem20.Text = "View Many Pages";
@@ -1078,9 +1072,9 @@
             this.printPreviewBarItem21.Command = DevExpress.XtraPrinting.PrintingSystemCommand.FillBackground;
             this.printPreviewBarItem21.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem21.Enabled = false;
-            this.printPreviewBarItem21.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_FillBackground;
             this.printPreviewBarItem21.Id = 91;
-            this.printPreviewBarItem21.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_FillBackgroundLarge;
+            this.printPreviewBarItem21.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_FillBackground;
+            this.printPreviewBarItem21.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_FillBackgroundLarge;
             this.printPreviewBarItem21.Name = "printPreviewBarItem21";
             superToolTip21.FixedTooltipWidth = true;
             toolTipTitleItem21.Text = "Background Color";
@@ -1097,9 +1091,9 @@
             this.printPreviewBarItem22.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Watermark;
             this.printPreviewBarItem22.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem22.Enabled = false;
-            this.printPreviewBarItem22.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Watermark;
             this.printPreviewBarItem22.Id = 92;
-            this.printPreviewBarItem22.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_WatermarkLarge;
+            this.printPreviewBarItem22.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Watermark;
+            this.printPreviewBarItem22.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_WatermarkLarge;
             this.printPreviewBarItem22.Name = "printPreviewBarItem22";
             superToolTip22.FixedTooltipWidth = true;
             toolTipTitleItem22.Text = "Watermark";
@@ -1118,9 +1112,9 @@
             this.printPreviewBarItem23.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ExportFile;
             this.printPreviewBarItem23.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem23.Enabled = false;
-            this.printPreviewBarItem23.Glyph = ((System.Drawing.Image)(resources.GetObject("printPreviewBarItem23.Glyph")));
             this.printPreviewBarItem23.Id = 93;
-            this.printPreviewBarItem23.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("printPreviewBarItem23.LargeGlyph")));
+            this.printPreviewBarItem23.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("printPreviewBarItem23.ImageOptions.Image")));
+            this.printPreviewBarItem23.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("printPreviewBarItem23.ImageOptions.LargeImage")));
             this.printPreviewBarItem23.Name = "printPreviewBarItem23";
             superToolTip23.FixedTooltipWidth = true;
             toolTipTitleItem23.Text = "Export To...";
@@ -1139,9 +1133,9 @@
             this.printPreviewBarItem24.Command = DevExpress.XtraPrinting.PrintingSystemCommand.SendFile;
             this.printPreviewBarItem24.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem24.Enabled = false;
-            this.printPreviewBarItem24.Glyph = ((System.Drawing.Image)(resources.GetObject("printPreviewBarItem24.Glyph")));
             this.printPreviewBarItem24.Id = 94;
-            this.printPreviewBarItem24.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("printPreviewBarItem24.LargeGlyph")));
+            this.printPreviewBarItem24.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("printPreviewBarItem24.ImageOptions.Image")));
+            this.printPreviewBarItem24.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("printPreviewBarItem24.ImageOptions.LargeImage")));
             this.printPreviewBarItem24.Name = "printPreviewBarItem24";
             superToolTip24.FixedTooltipWidth = true;
             toolTipTitleItem24.Text = "E-Mail As...";
@@ -1159,9 +1153,9 @@
             this.printPreviewBarItem25.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ClosePreview;
             this.printPreviewBarItem25.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem25.Enabled = false;
-            this.printPreviewBarItem25.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ClosePreview;
             this.printPreviewBarItem25.Id = 95;
-            this.printPreviewBarItem25.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ClosePreviewLarge;
+            this.printPreviewBarItem25.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ClosePreview;
+            this.printPreviewBarItem25.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ClosePreviewLarge;
             this.printPreviewBarItem25.Name = "printPreviewBarItem25";
             superToolTip25.FixedTooltipWidth = true;
             toolTipTitleItem25.Text = "Close Print Preview";
@@ -1179,9 +1173,9 @@
             this.printPreviewBarItem26.Command = DevExpress.XtraPrinting.PrintingSystemCommand.PageOrientation;
             this.printPreviewBarItem26.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem26.Enabled = false;
-            this.printPreviewBarItem26.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PageOrientation;
             this.printPreviewBarItem26.Id = 96;
-            this.printPreviewBarItem26.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PageOrientationLarge;
+            this.printPreviewBarItem26.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PageOrientation;
+            this.printPreviewBarItem26.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PageOrientationLarge;
             this.printPreviewBarItem26.Name = "printPreviewBarItem26";
             superToolTip26.FixedTooltipWidth = true;
             toolTipTitleItem26.Text = "Page Orientation";
@@ -1199,9 +1193,9 @@
             this.printPreviewBarItem27.Command = DevExpress.XtraPrinting.PrintingSystemCommand.PaperSize;
             this.printPreviewBarItem27.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem27.Enabled = false;
-            this.printPreviewBarItem27.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PaperSize;
             this.printPreviewBarItem27.Id = 97;
-            this.printPreviewBarItem27.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PaperSizeLarge;
+            this.printPreviewBarItem27.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PaperSize;
+            this.printPreviewBarItem27.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PaperSizeLarge;
             this.printPreviewBarItem27.Name = "printPreviewBarItem27";
             superToolTip27.FixedTooltipWidth = true;
             toolTipTitleItem27.Text = "Page Size";
@@ -1219,9 +1213,9 @@
             this.printPreviewBarItem28.Command = DevExpress.XtraPrinting.PrintingSystemCommand.PageMargins;
             this.printPreviewBarItem28.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem28.Enabled = false;
-            this.printPreviewBarItem28.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PageMargins;
             this.printPreviewBarItem28.Id = 98;
-            this.printPreviewBarItem28.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PageMarginsLarge;
+            this.printPreviewBarItem28.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PageMargins;
+            this.printPreviewBarItem28.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PageMarginsLarge;
             this.printPreviewBarItem28.Name = "printPreviewBarItem28";
             superToolTip28.FixedTooltipWidth = true;
             toolTipTitleItem28.Text = "Page Margins";
@@ -1240,9 +1234,9 @@
             this.printPreviewBarItem29.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem29.Description = "Adobe Portable Document Format";
             this.printPreviewBarItem29.Enabled = false;
-            this.printPreviewBarItem29.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendPdf;
             this.printPreviewBarItem29.Id = 99;
-            this.printPreviewBarItem29.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendPdfLarge;
+            this.printPreviewBarItem29.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendPdf;
+            this.printPreviewBarItem29.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendPdfLarge;
             this.printPreviewBarItem29.Name = "printPreviewBarItem29";
             superToolTip29.FixedTooltipWidth = true;
             toolTipTitleItem29.Text = "E-Mail As PDF";
@@ -1260,9 +1254,9 @@
             this.printPreviewBarItem30.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem30.Description = "Plain Text";
             this.printPreviewBarItem30.Enabled = false;
-            this.printPreviewBarItem30.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendTxt;
             this.printPreviewBarItem30.Id = 100;
-            this.printPreviewBarItem30.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendTxtLarge;
+            this.printPreviewBarItem30.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendTxt;
+            this.printPreviewBarItem30.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendTxtLarge;
             this.printPreviewBarItem30.Name = "printPreviewBarItem30";
             superToolTip30.FixedTooltipWidth = true;
             toolTipTitleItem30.Text = "E-Mail As Text";
@@ -1280,9 +1274,9 @@
             this.printPreviewBarItem31.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem31.Description = "Comma-Separated Values Text";
             this.printPreviewBarItem31.Enabled = false;
-            this.printPreviewBarItem31.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendCsv;
             this.printPreviewBarItem31.Id = 101;
-            this.printPreviewBarItem31.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendCsvLarge;
+            this.printPreviewBarItem31.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendCsv;
+            this.printPreviewBarItem31.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendCsvLarge;
             this.printPreviewBarItem31.Name = "printPreviewBarItem31";
             superToolTip31.FixedTooltipWidth = true;
             toolTipTitleItem31.Text = "E-Mail As CSV";
@@ -1300,9 +1294,9 @@
             this.printPreviewBarItem32.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem32.Description = "Single File Web Page";
             this.printPreviewBarItem32.Enabled = false;
-            this.printPreviewBarItem32.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendMht;
             this.printPreviewBarItem32.Id = 102;
-            this.printPreviewBarItem32.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendMhtLarge;
+            this.printPreviewBarItem32.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendMht;
+            this.printPreviewBarItem32.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendMhtLarge;
             this.printPreviewBarItem32.Name = "printPreviewBarItem32";
             superToolTip32.FixedTooltipWidth = true;
             toolTipTitleItem32.Text = "E-Mail As MHT";
@@ -1320,9 +1314,9 @@
             this.printPreviewBarItem33.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem33.Description = "Microsoft Excel 2000-2003 Workbook";
             this.printPreviewBarItem33.Enabled = false;
-            this.printPreviewBarItem33.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendXls;
             this.printPreviewBarItem33.Id = 103;
-            this.printPreviewBarItem33.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendXlsLarge;
+            this.printPreviewBarItem33.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendXls;
+            this.printPreviewBarItem33.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendXlsLarge;
             this.printPreviewBarItem33.Name = "printPreviewBarItem33";
             superToolTip33.FixedTooltipWidth = true;
             toolTipTitleItem33.Text = "E-Mail As XLS";
@@ -1340,9 +1334,9 @@
             this.printPreviewBarItem34.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem34.Description = "Microsoft Excel 2007 Workbook";
             this.printPreviewBarItem34.Enabled = false;
-            this.printPreviewBarItem34.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendXlsx;
             this.printPreviewBarItem34.Id = 104;
-            this.printPreviewBarItem34.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendXlsxLarge;
+            this.printPreviewBarItem34.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendXlsx;
+            this.printPreviewBarItem34.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendXlsxLarge;
             this.printPreviewBarItem34.Name = "printPreviewBarItem34";
             superToolTip34.FixedTooltipWidth = true;
             toolTipTitleItem34.Text = "E-Mail As XLSX";
@@ -1360,9 +1354,9 @@
             this.printPreviewBarItem35.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem35.Description = "Rich Text Format";
             this.printPreviewBarItem35.Enabled = false;
-            this.printPreviewBarItem35.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendRtf;
             this.printPreviewBarItem35.Id = 105;
-            this.printPreviewBarItem35.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendRtfLarge;
+            this.printPreviewBarItem35.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendRtf;
+            this.printPreviewBarItem35.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendRtfLarge;
             this.printPreviewBarItem35.Name = "printPreviewBarItem35";
             superToolTip35.FixedTooltipWidth = true;
             toolTipTitleItem35.Text = "E-Mail As RTF";
@@ -1380,9 +1374,9 @@
             this.printPreviewBarItem36.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem36.Description = "BMP, GIF, JPEG, PNG, TIFF, EMF, WMF";
             this.printPreviewBarItem36.Enabled = false;
-            this.printPreviewBarItem36.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendGraphic;
             this.printPreviewBarItem36.Id = 106;
-            this.printPreviewBarItem36.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendGraphicLarge;
+            this.printPreviewBarItem36.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendGraphic;
+            this.printPreviewBarItem36.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendGraphicLarge;
             this.printPreviewBarItem36.Name = "printPreviewBarItem36";
             superToolTip36.FixedTooltipWidth = true;
             toolTipTitleItem36.Text = "E-Mail As Image";
@@ -1400,9 +1394,9 @@
             this.printPreviewBarItem37.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem37.Description = "Adobe Portable Document Format";
             this.printPreviewBarItem37.Enabled = false;
-            this.printPreviewBarItem37.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportPdf;
             this.printPreviewBarItem37.Id = 107;
-            this.printPreviewBarItem37.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportPdfLarge;
+            this.printPreviewBarItem37.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportPdf;
+            this.printPreviewBarItem37.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportPdfLarge;
             this.printPreviewBarItem37.Name = "printPreviewBarItem37";
             superToolTip37.FixedTooltipWidth = true;
             toolTipTitleItem37.Text = "Export to PDF";
@@ -1420,9 +1414,9 @@
             this.printPreviewBarItem38.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem38.Description = "Web Page";
             this.printPreviewBarItem38.Enabled = false;
-            this.printPreviewBarItem38.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportHtm;
             this.printPreviewBarItem38.Id = 108;
-            this.printPreviewBarItem38.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportHtmLarge;
+            this.printPreviewBarItem38.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportHtm;
+            this.printPreviewBarItem38.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportHtmLarge;
             this.printPreviewBarItem38.Name = "printPreviewBarItem38";
             superToolTip38.FixedTooltipWidth = true;
             toolTipTitleItem38.Text = "Export to HTML";
@@ -1440,9 +1434,9 @@
             this.printPreviewBarItem39.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem39.Description = "Plain Text";
             this.printPreviewBarItem39.Enabled = false;
-            this.printPreviewBarItem39.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportTxt;
             this.printPreviewBarItem39.Id = 109;
-            this.printPreviewBarItem39.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportTxtLarge;
+            this.printPreviewBarItem39.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportTxt;
+            this.printPreviewBarItem39.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportTxtLarge;
             this.printPreviewBarItem39.Name = "printPreviewBarItem39";
             superToolTip39.FixedTooltipWidth = true;
             toolTipTitleItem39.Text = "Export to Text";
@@ -1460,9 +1454,9 @@
             this.printPreviewBarItem40.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem40.Description = "Comma-Separated Values Text";
             this.printPreviewBarItem40.Enabled = false;
-            this.printPreviewBarItem40.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportCsv;
             this.printPreviewBarItem40.Id = 110;
-            this.printPreviewBarItem40.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportCsvLarge;
+            this.printPreviewBarItem40.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportCsv;
+            this.printPreviewBarItem40.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportCsvLarge;
             this.printPreviewBarItem40.Name = "printPreviewBarItem40";
             superToolTip40.FixedTooltipWidth = true;
             toolTipTitleItem40.Text = "Export to CSV";
@@ -1480,9 +1474,9 @@
             this.printPreviewBarItem41.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem41.Description = "Single File Web Page";
             this.printPreviewBarItem41.Enabled = false;
-            this.printPreviewBarItem41.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportMht;
             this.printPreviewBarItem41.Id = 111;
-            this.printPreviewBarItem41.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportMhtLarge;
+            this.printPreviewBarItem41.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportMht;
+            this.printPreviewBarItem41.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportMhtLarge;
             this.printPreviewBarItem41.Name = "printPreviewBarItem41";
             superToolTip41.FixedTooltipWidth = true;
             toolTipTitleItem41.Text = "Export to MHT";
@@ -1500,9 +1494,9 @@
             this.printPreviewBarItem42.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem42.Description = "Microsoft Excel 2000-2003 Workbook";
             this.printPreviewBarItem42.Enabled = false;
-            this.printPreviewBarItem42.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportXls;
             this.printPreviewBarItem42.Id = 112;
-            this.printPreviewBarItem42.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportXlsLarge;
+            this.printPreviewBarItem42.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportXls;
+            this.printPreviewBarItem42.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportXlsLarge;
             this.printPreviewBarItem42.Name = "printPreviewBarItem42";
             superToolTip42.FixedTooltipWidth = true;
             toolTipTitleItem42.Text = "Export to XLS";
@@ -1520,9 +1514,9 @@
             this.printPreviewBarItem43.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem43.Description = "Microsoft Excel 2007 Workbook";
             this.printPreviewBarItem43.Enabled = false;
-            this.printPreviewBarItem43.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportXlsx;
             this.printPreviewBarItem43.Id = 113;
-            this.printPreviewBarItem43.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportXlsxLarge;
+            this.printPreviewBarItem43.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportXlsx;
+            this.printPreviewBarItem43.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportXlsxLarge;
             this.printPreviewBarItem43.Name = "printPreviewBarItem43";
             superToolTip43.FixedTooltipWidth = true;
             toolTipTitleItem43.Text = "Export to XLSX";
@@ -1540,9 +1534,9 @@
             this.printPreviewBarItem44.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem44.Description = "Rich Text Format";
             this.printPreviewBarItem44.Enabled = false;
-            this.printPreviewBarItem44.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportRtf;
             this.printPreviewBarItem44.Id = 114;
-            this.printPreviewBarItem44.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportRtfLarge;
+            this.printPreviewBarItem44.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportRtf;
+            this.printPreviewBarItem44.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportRtfLarge;
             this.printPreviewBarItem44.Name = "printPreviewBarItem44";
             superToolTip44.FixedTooltipWidth = true;
             toolTipTitleItem44.Text = "Export to RTF";
@@ -1560,9 +1554,9 @@
             this.printPreviewBarItem45.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem45.Description = "BMP, GIF, JPEG, PNG, TIFF, EMF, WMF";
             this.printPreviewBarItem45.Enabled = false;
-            this.printPreviewBarItem45.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportGraphic;
             this.printPreviewBarItem45.Id = 115;
-            this.printPreviewBarItem45.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportGraphicLarge;
+            this.printPreviewBarItem45.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportGraphic;
+            this.printPreviewBarItem45.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportGraphicLarge;
             this.printPreviewBarItem45.Name = "printPreviewBarItem45";
             superToolTip45.FixedTooltipWidth = true;
             toolTipTitleItem45.Text = "Export to Image";
@@ -1579,9 +1573,9 @@
             this.printPreviewBarItem46.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Open;
             this.printPreviewBarItem46.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem46.Enabled = false;
-            this.printPreviewBarItem46.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Open;
             this.printPreviewBarItem46.Id = 116;
-            this.printPreviewBarItem46.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_OpenLarge;
+            this.printPreviewBarItem46.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Open;
+            this.printPreviewBarItem46.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_OpenLarge;
             this.printPreviewBarItem46.Name = "printPreviewBarItem46";
             superToolTip46.FixedTooltipWidth = true;
             toolTipTitleItem46.Text = "Open (Ctrl + O)";
@@ -1598,9 +1592,9 @@
             this.printPreviewBarItem47.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Save;
             this.printPreviewBarItem47.ContextSpecifier = this._documentViewerRibbonController;
             this.printPreviewBarItem47.Enabled = false;
-            this.printPreviewBarItem47.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Save;
             this.printPreviewBarItem47.Id = 117;
-            this.printPreviewBarItem47.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SaveLarge;
+            this.printPreviewBarItem47.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Save;
+            this.printPreviewBarItem47.ImageOptions.LargeImage = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SaveLarge;
             this.printPreviewBarItem47.Name = "printPreviewBarItem47";
             superToolTip47.FixedTooltipWidth = true;
             toolTipTitleItem47.Text = "Save (Ctrl + S)";
@@ -1614,11 +1608,20 @@
             // _btnReportDesigner
             // 
             this._btnReportDesigner.Caption = "报表设计";
-            this._btnReportDesigner.Glyph = ((System.Drawing.Image)(resources.GetObject("_btnReportDesigner.Glyph")));
             this._btnReportDesigner.Id = 125;
-            this._btnReportDesigner.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("_btnReportDesigner.LargeGlyph")));
+            this._btnReportDesigner.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("_btnReportDesigner.ImageOptions.Image")));
+            this._btnReportDesigner.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("_btnReportDesigner.ImageOptions.LargeImage")));
             this._btnReportDesigner.Name = "_btnReportDesigner";
             this._btnReportDesigner.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnReportDesigner_ItemClick);
+            // 
+            // _btnAddReport
+            // 
+            this._btnAddReport.Caption = "AddReprot";
+            this._btnAddReport.Id = 126;
+            this._btnAddReport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("_btnAddReport.ImageOptions.Image")));
+            this._btnAddReport.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("_btnAddReport.ImageOptions.LargeImage")));
+            this._btnAddReport.Name = "_btnAddReport";
+            this._btnAddReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnAddReport_ItemClick);
             // 
             // ribbonImageCollectionLarge
             // 
@@ -1661,7 +1664,7 @@
             // printPreviewRibbonPageGroup1
             // 
             this.printPreviewRibbonPageGroup1.ContextSpecifier = this._documentViewerRibbonController;
-            this.printPreviewRibbonPageGroup1.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Document;
+            this.printPreviewRibbonPageGroup1.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Document;
             this.printPreviewRibbonPageGroup1.ItemLinks.Add(this.printPreviewBarItem46);
             this.printPreviewRibbonPageGroup1.ItemLinks.Add(this.printPreviewBarItem47);
             this.printPreviewRibbonPageGroup1.Kind = DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroupKind.Document;
@@ -1672,7 +1675,7 @@
             // printPreviewRibbonPageGroup2
             // 
             this.printPreviewRibbonPageGroup2.ContextSpecifier = this._documentViewerRibbonController;
-            this.printPreviewRibbonPageGroup2.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PrintDirect;
+            this.printPreviewRibbonPageGroup2.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PrintDirect;
             this.printPreviewRibbonPageGroup2.ItemLinks.Add(this.printPreviewBarItem5);
             this.printPreviewRibbonPageGroup2.ItemLinks.Add(this.printPreviewBarItem6);
             this.printPreviewRibbonPageGroup2.ItemLinks.Add(this.printPreviewBarItem4);
@@ -1685,7 +1688,7 @@
             // printPreviewRibbonPageGroup3
             // 
             this.printPreviewRibbonPageGroup3.ContextSpecifier = this._documentViewerRibbonController;
-            this.printPreviewRibbonPageGroup3.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PageMargins;
+            this.printPreviewRibbonPageGroup3.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PageMargins;
             this.printPreviewRibbonPageGroup3.ItemLinks.Add(this.printPreviewBarItem8);
             this.printPreviewRibbonPageGroup3.ItemLinks.Add(this.printPreviewBarItem9);
             this.printPreviewRibbonPageGroup3.ItemLinks.Add(this.printPreviewBarItem28);
@@ -1706,7 +1709,7 @@
             // printPreviewRibbonPageGroup4
             // 
             this.printPreviewRibbonPageGroup4.ContextSpecifier = this._documentViewerRibbonController;
-            this.printPreviewRibbonPageGroup4.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Find;
+            this.printPreviewRibbonPageGroup4.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Find;
             this.printPreviewRibbonPageGroup4.ItemLinks.Add(this.printPreviewBarItem3);
             this.printPreviewRibbonPageGroup4.ItemLinks.Add(this.printPreviewBarItem1);
             this.printPreviewRibbonPageGroup4.ItemLinks.Add(this.printPreviewBarItem16, true);
@@ -1721,7 +1724,7 @@
             // printPreviewRibbonPageGroup5
             // 
             this.printPreviewRibbonPageGroup5.ContextSpecifier = this._documentViewerRibbonController;
-            this.printPreviewRibbonPageGroup5.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Zoom;
+            this.printPreviewRibbonPageGroup5.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Zoom;
             this.printPreviewRibbonPageGroup5.ItemLinks.Add(this.printPreviewBarItem10);
             this.printPreviewRibbonPageGroup5.ItemLinks.Add(this.printPreviewBarItem11);
             this.printPreviewRibbonPageGroup5.ItemLinks.Add(this.printPreviewBarItem12);
@@ -1737,7 +1740,7 @@
             // printPreviewRibbonPageGroup6
             // 
             this.printPreviewRibbonPageGroup6.ContextSpecifier = this._documentViewerRibbonController;
-            this.printPreviewRibbonPageGroup6.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Watermark;
+            this.printPreviewRibbonPageGroup6.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Watermark;
             this.printPreviewRibbonPageGroup6.ItemLinks.Add(this.printPreviewBarItem21);
             this.printPreviewRibbonPageGroup6.ItemLinks.Add(this.printPreviewBarItem22);
             this.printPreviewRibbonPageGroup6.Kind = DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroupKind.Background;
@@ -1748,7 +1751,7 @@
             // printPreviewRibbonPageGroup7
             // 
             this.printPreviewRibbonPageGroup7.ContextSpecifier = this._documentViewerRibbonController;
-            this.printPreviewRibbonPageGroup7.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportFile;
+            this.printPreviewRibbonPageGroup7.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportFile;
             this.printPreviewRibbonPageGroup7.ItemLinks.Add(this.printPreviewBarItem23);
             this.printPreviewRibbonPageGroup7.ItemLinks.Add(this.printPreviewBarItem24);
             this.printPreviewRibbonPageGroup7.Kind = DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroupKind.Export;
@@ -1759,7 +1762,7 @@
             // printPreviewRibbonPageGroup8
             // 
             this.printPreviewRibbonPageGroup8.ContextSpecifier = this._documentViewerRibbonController;
-            this.printPreviewRibbonPageGroup8.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ClosePreview;
+            this.printPreviewRibbonPageGroup8.ImageOptions.Image = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ClosePreview;
             this.printPreviewRibbonPageGroup8.ItemLinks.Add(this.printPreviewBarItem25);
             this.printPreviewRibbonPageGroup8.Kind = DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroupKind.Close;
             this.printPreviewRibbonPageGroup8.Name = "printPreviewRibbonPageGroup8";
@@ -1838,28 +1841,28 @@
             // 
             this.barButtonItem5.Caption = "批次管理";
             this.barButtonItem5.Id = 63;
-            this.barButtonItem5.LargeImageIndex = 0;
+            this.barButtonItem5.ImageOptions.LargeImageIndex = 0;
             this.barButtonItem5.Name = "barButtonItem5";
             // 
             // barButtonItem6
             // 
             this.barButtonItem6.Caption = "批次管理";
             this.barButtonItem6.Id = 63;
-            this.barButtonItem6.LargeImageIndex = 0;
+            this.barButtonItem6.ImageOptions.LargeImageIndex = 0;
             this.barButtonItem6.Name = "barButtonItem6";
             // 
             // barButtonItem7
             // 
             this.barButtonItem7.Caption = "barButtonItem4";
             this.barButtonItem7.Id = 65;
-            this.barButtonItem7.LargeImageIndex = 1;
+            this.barButtonItem7.ImageOptions.LargeImageIndex = 1;
             this.barButtonItem7.Name = "barButtonItem7";
             // 
             // barButtonItem4
             // 
             this.barButtonItem4.Caption = "barButtonItem4";
             this.barButtonItem4.Id = 65;
-            this.barButtonItem4.LargeImageIndex = 1;
+            this.barButtonItem4.ImageOptions.LargeImageIndex = 1;
             this.barButtonItem4.Name = "barButtonItem4";
             // 
             // xtraTabPage1
@@ -1874,15 +1877,6 @@
             this.xtraTabPage2.Size = new System.Drawing.Size(1070, 516);
             this.xtraTabPage2.Text = "xtraTabPage2";
             // 
-            // _btnAddReport
-            // 
-            this._btnAddReport.Caption = "AddReprot";
-            this._btnAddReport.Glyph = ((System.Drawing.Image)(resources.GetObject("_btnAddReport.Glyph")));
-            this._btnAddReport.Id = 126;
-            this._btnAddReport.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("_btnAddReport.LargeGlyph")));
-            this._btnAddReport.Name = "_btnAddReport";
-            this._btnAddReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnAddReport_ItemClick);
-            // 
             // MainForm
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
@@ -1895,6 +1889,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Ribbon = this._ribbonControl;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "生产管理系统";
             ((System.ComponentModel.ISupportInitialize)(this._ribbonControl)).EndInit();

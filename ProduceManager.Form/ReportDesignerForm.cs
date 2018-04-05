@@ -95,6 +95,8 @@ namespace ProduceManager.Form
 
         void XtraTabbedMdiManager_DocumentActivate(object sender, DevExpress.XtraBars.Docking2010.Views.DocumentEventArgs e)
         {
+            if (e.Document == null)
+                return;
             e.Document.Properties.AllowClose = DefaultBoolean.False;
             e.Document.Properties.AllowFloat = DefaultBoolean.False;
         }

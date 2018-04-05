@@ -39,7 +39,7 @@ namespace ProduceManager.Form.UserControls
 
         public void Jump(object parameter)
         {
-
+            Reload();
         }
 
         private void _riOperate_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)

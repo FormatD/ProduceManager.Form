@@ -1,6 +1,7 @@
 ﻿using ProduceManager.Form.Domains;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 
@@ -146,6 +147,25 @@ namespace ProduceManager.Form.Persistence
             _dbContext.SaveChanges();
         }
 
+        internal void DeleteAllPrice()
+        {
+            foreach (var price in _dbContext.Prices)
+            {
+                _dbContext.Prices.Remove(price);
+            }
+
+            SaveChanges();
+        }
+
+        internal void AddPriceList(List<Price> prices)
+        {
+            foreach (var price in prices)
+            {
+                _dbContext.Prices.Add(price);
+            }
+            SaveChanges();
+        }
+
         #endregion
 
         #region Produce Record
@@ -208,7 +228,7 @@ namespace ProduceManager.Form.Persistence
         #endregion
 
         #region Report
-        
+
         internal void AddReport(ReportItem report)
         {
             _dbContext.Reports.Add(report);
@@ -223,7 +243,19 @@ namespace ProduceManager.Form.Persistence
         internal IEnumerable<ReportItem> GetAllReports()
         {
             return _dbContext.Reports.ToList();
-        } 
+        }
+
+        #endregion
+
+        #region Price
+
+        internal IList<Price> GetAllPriceConfig()
+        {
+            return _dbContext.Prices
+                   .Include(x => x.Product)
+                   .Include(x => x.Procedure)
+                   .ToList();
+        }
 
         #endregion
     }
