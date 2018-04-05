@@ -173,6 +173,9 @@ namespace ProduceManager.Form
                 rep.SaveLayout(ms);
             }
             ReportDesignerHelper.ShowDesigner(_ms, ds, ms => _ms = ms);
+
+            if (_ms != null)
+                File.WriteAllBytes("report1.rpt", _ms.ToArray());
         }
 
         /// <summary>
@@ -274,6 +277,14 @@ namespace ProduceManager.Form
             //构建父子关系
             ds.Relations.Add("板块分类", ClassID, BoardClassID);
             return ds;
+        }
+
+        private void _btnAddReport_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            using (var form = new AddReportForm())
+            {
+                var xx = form.ShowDialog();
+            }
         }
 
     }

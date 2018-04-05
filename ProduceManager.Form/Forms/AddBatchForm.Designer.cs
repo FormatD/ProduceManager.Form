@@ -114,7 +114,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this._cbProducts.Properties.NullText = "请选择产品";
             this._cbProducts.Size = new System.Drawing.Size(251, 20);
-            this._cbProducts.TabIndex = 5;
+            this._cbProducts.TabIndex = 1;
             // 
             // _deStartTime
             // 
@@ -126,7 +126,7 @@
             this._deStartTime.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this._deStartTime.Size = new System.Drawing.Size(251, 20);
-            this._deStartTime.TabIndex = 4;
+            this._deStartTime.TabIndex = 2;
             // 
             // _chkProcedures
             // 
@@ -149,7 +149,7 @@
             this._seExpectedAmount.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this._seExpectedAmount.Size = new System.Drawing.Size(251, 20);
-            this._seExpectedAmount.TabIndex = 2;
+            this._seExpectedAmount.TabIndex = 4;
             // 
             // labelControl4
             // 
@@ -189,7 +189,7 @@
             this._txtBatchNo.Name = "_txtBatchNo";
             this._txtBatchNo.Properties.ReadOnly = true;
             this._txtBatchNo.Size = new System.Drawing.Size(251, 20);
-            this._txtBatchNo.TabIndex = 1;
+            this._txtBatchNo.TabIndex = 0;
             // 
             // labelControl1
             // 

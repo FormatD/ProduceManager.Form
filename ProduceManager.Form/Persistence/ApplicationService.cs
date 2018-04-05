@@ -206,6 +206,26 @@ namespace ProduceManager.Form.Persistence
         }
 
         #endregion
+
+        #region Report
+        
+        internal void AddReport(ReportItem report)
+        {
+            _dbContext.Reports.Add(report);
+            _dbContext.SaveChanges();
+        }
+
+        internal ReportItem GetReport(int id)
+        {
+            return _dbContext.Reports.FirstOrDefault(x => x.Id == id);
+        }
+
+        internal IEnumerable<ReportItem> GetAllReports()
+        {
+            return _dbContext.Reports.ToList();
+        } 
+
+        #endregion
     }
 
     public class ProduceRecordViewModel

@@ -103,7 +103,7 @@
             this._txtName.Location = new System.Drawing.Point(135, 32);
             this._txtName.Name = "_txtName";
             this._txtName.Size = new System.Drawing.Size(251, 20);
-            this._txtName.TabIndex = 2;
+            this._txtName.TabIndex = 0;
             // 
             // labelControl4
             // 

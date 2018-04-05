@@ -93,4 +93,16 @@ namespace ProduceManager.Form.Domains
         public int Amount { get; set; }
 
     }
+
+    public class ReportItem : Entity
+    {
+        public string Name { get; set; }
+
+        public string DataSource { get; set; }
+
+        public byte[] Content { get; set; }
+
+        public bool IsSystem { get; set; }
+    }
+
 }

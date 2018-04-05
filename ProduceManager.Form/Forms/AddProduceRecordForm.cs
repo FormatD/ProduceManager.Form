@@ -14,7 +14,7 @@ using DevExpress.XtraEditors.Controls;
 
 namespace ProduceManager.Form
 {
-    public partial class AddProduceRecordForm : DevExpress.XtraEditors.XtraForm
+    public partial class AddProduceRecordForm : XtraForm
     {
         private bool _isAddingNew;
         private int _produceRecordId;

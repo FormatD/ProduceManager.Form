@@ -34,5 +34,7 @@ namespace ProduceManager.Form.Persistence
 
         public IDbSet<ProduceRecord> ProduceRecords { get; set; }
 
+        public IDbSet<ReportItem> Reports { get; set; }
+
     }
 }

@@ -13,7 +13,7 @@ using ProduceManager.Form.Utils;
 
 namespace ProduceManager.Form
 {
-    public partial class AddBatchForm : DevExpress.XtraEditors.XtraForm
+    public partial class AddBatchForm : XtraForm
     {
         private bool _isAddingNew;
         private int _batchId;

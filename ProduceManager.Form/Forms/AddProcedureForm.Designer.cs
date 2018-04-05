@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProductForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProcedureForm));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this._btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this._btnAdd = new DevExpress.XtraEditors.SimpleButton();
@@ -103,7 +103,7 @@
             this._txtName.Location = new System.Drawing.Point(135, 32);
             this._txtName.Name = "_txtName";
             this._txtName.Size = new System.Drawing.Size(251, 20);
-            this._txtName.TabIndex = 2;
+            this._txtName.TabIndex = 0;
             // 
             // labelControl4
             // 
@@ -120,7 +120,7 @@
             this._txtCode.Size = new System.Drawing.Size(251, 20);
             this._txtCode.TabIndex = 1;
             // 
-            // AddProductForm
+            // AddProcedureForm
             // 
             this.AcceptButton = this._btnAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -131,7 +131,7 @@
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "AddProductForm";
+            this.Name = "AddProcedureForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "添加工序";
             this.Load += new System.EventHandler(this.AddBatchForm_Load);

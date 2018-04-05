@@ -119,7 +119,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this._cbBatch.Properties.NullText = "请选择产品";
             this._cbBatch.Size = new System.Drawing.Size(267, 20);
-            this._cbBatch.TabIndex = 7;
+            this._cbBatch.TabIndex = 0;
             this._cbBatch.EditValueChanged += new System.EventHandler(this._cbBatch_EditValueChanged);
             // 
             // _cbWorkers
@@ -131,7 +131,7 @@
             this._cbWorkers.Properties.NullText = "请选择工人";
             this._cbWorkers.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
             this._cbWorkers.Size = new System.Drawing.Size(267, 20);
-            this._cbWorkers.TabIndex = 6;
+            this._cbWorkers.TabIndex = 3;
             // 
             // _cbProcedure
             // 
@@ -141,7 +141,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this._cbProcedure.Properties.NullText = "请选择工序";
             this._cbProcedure.Size = new System.Drawing.Size(267, 20);
-            this._cbProcedure.TabIndex = 6;
+            this._cbProcedure.TabIndex = 2;
             // 
             // _cbProducts
             // 
@@ -151,7 +151,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this._cbProducts.Properties.NullText = "请选择产品";
             this._cbProducts.Size = new System.Drawing.Size(267, 20);
-            this._cbProducts.TabIndex = 5;
+            this._cbProducts.TabIndex = 1;
             // 
             // _deStartTime
             // 
@@ -177,7 +177,7 @@
             this._seExpectedAmount.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this._seExpectedAmount.Size = new System.Drawing.Size(267, 20);
-            this._seExpectedAmount.TabIndex = 2;
+            this._seExpectedAmount.TabIndex = 5;
             // 
             // labelControl4
             // 

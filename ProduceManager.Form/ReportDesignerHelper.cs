@@ -21,7 +21,7 @@ namespace ProduceManager.Form
         /// <param name="saveAction">保存行为</param>
         /// <param name="reportDisplayName">报表显示名称</param>
         /// <param name="parentForm">父窗体</param>
-        public static void ShowDesigner(MemoryStream reportStream, DataSet ds, Action<MemoryStream> saveAction, string reportDisplayName = null, System.Windows.Forms.Form parentForm = null)
+        public static void ShowDesigner(Stream reportStream, DataSet ds, Action<MemoryStream> saveAction, string reportDisplayName = null, System.Windows.Forms.Form parentForm = null)
         {
             XtraReport report = new XtraReport();
             report.DisplayName = string.IsNullOrWhiteSpace(reportDisplayName) ? "报表" : reportDisplayName;

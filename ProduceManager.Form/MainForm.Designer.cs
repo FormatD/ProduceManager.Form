@@ -280,6 +280,7 @@
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this._btnAddReport = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this._ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).BeginInit();
@@ -371,10 +372,11 @@
             this.barButtonItem2,
             this.printPreviewStaticItem2,
             this.zoomTrackBarEditItem1,
-            this._btnReportDesigner});
+            this._btnReportDesigner,
+            this._btnAddReport});
             this._ribbonControl.LargeImages = this.ribbonImageCollectionLarge;
             this._ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this._ribbonControl.MaxItemId = 126;
+            this._ribbonControl.MaxItemId = 127;
             this._ribbonControl.Name = "_ribbonControl";
             this._ribbonControl.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this._rpcReportPreview});
@@ -504,7 +506,9 @@
             // _btnBatchManage
             // 
             this._btnBatchManage.Caption = "批次管理";
+            this._btnBatchManage.Glyph = ((System.Drawing.Image)(resources.GetObject("_btnBatchManage.Glyph")));
             this._btnBatchManage.Id = 63;
+            this._btnBatchManage.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("_btnBatchManage.LargeGlyph")));
             this._btnBatchManage.LargeImageIndex = 0;
             this._btnBatchManage.Name = "_btnBatchManage";
             this._btnBatchManage.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnBatchManage_ItemClick);
@@ -512,7 +516,9 @@
             // _btnProduceDetails
             // 
             this._btnProduceDetails.Caption = "生产明细";
+            this._btnProduceDetails.Glyph = ((System.Drawing.Image)(resources.GetObject("_btnProduceDetails.Glyph")));
             this._btnProduceDetails.Id = 64;
+            this._btnProduceDetails.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("_btnProduceDetails.LargeGlyph")));
             this._btnProduceDetails.LargeImageIndex = 0;
             this._btnProduceDetails.Name = "_btnProduceDetails";
             this._btnProduceDetails.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnProduceDetails_ItemClick);
@@ -520,7 +526,9 @@
             // _btnWorkerManage
             // 
             this._btnWorkerManage.Caption = "工人管理";
+            this._btnWorkerManage.Glyph = ((System.Drawing.Image)(resources.GetObject("_btnWorkerManage.Glyph")));
             this._btnWorkerManage.Id = 66;
+            this._btnWorkerManage.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("_btnWorkerManage.LargeGlyph")));
             this._btnWorkerManage.LargeImageIndex = 1;
             this._btnWorkerManage.Name = "_btnWorkerManage";
             this._btnWorkerManage.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnWorkerManage_ItemClick);
@@ -528,7 +536,9 @@
             // _btnProductManage
             // 
             this._btnProductManage.Caption = "产品管理";
+            this._btnProductManage.Glyph = ((System.Drawing.Image)(resources.GetObject("_btnProductManage.Glyph")));
             this._btnProductManage.Id = 67;
+            this._btnProductManage.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("_btnProductManage.LargeGlyph")));
             this._btnProductManage.LargeImageIndex = 0;
             this._btnProductManage.Name = "_btnProductManage";
             this._btnProductManage.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnProductManage_ItemClick);
@@ -536,15 +546,19 @@
             // _btnProcedureManage
             // 
             this._btnProcedureManage.Caption = "工序管理";
+            this._btnProcedureManage.Glyph = ((System.Drawing.Image)(resources.GetObject("_btnProcedureManage.Glyph")));
             this._btnProcedureManage.Id = 68;
+            this._btnProcedureManage.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("_btnProcedureManage.LargeGlyph")));
             this._btnProcedureManage.LargeImageIndex = 1;
             this._btnProcedureManage.Name = "_btnProcedureManage";
             this._btnProcedureManage.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnProcedureManage_ItemClick);
             // 
             // _btnPriceManage
             // 
-            this._btnPriceManage.Caption = "barButtonItem2";
+            this._btnPriceManage.Caption = "工资管理";
+            this._btnPriceManage.Glyph = ((System.Drawing.Image)(resources.GetObject("_btnPriceManage.Glyph")));
             this._btnPriceManage.Id = 69;
+            this._btnPriceManage.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("_btnPriceManage.LargeGlyph")));
             this._btnPriceManage.LargeImageIndex = 1;
             this._btnPriceManage.Name = "_btnPriceManage";
             this._btnPriceManage.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnPriceManage_ItemClick);
@@ -1791,6 +1805,7 @@
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this._btnReportView);
             this.ribbonPageGroup2.ItemLinks.Add(this._btnReportDesigner);
+            this.ribbonPageGroup2.ItemLinks.Add(this._btnAddReport);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
             // helpRibbonPage
@@ -1858,6 +1873,15 @@
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(1070, 516);
             this.xtraTabPage2.Text = "xtraTabPage2";
+            // 
+            // _btnAddReport
+            // 
+            this._btnAddReport.Caption = "AddReprot";
+            this._btnAddReport.Glyph = ((System.Drawing.Image)(resources.GetObject("_btnAddReport.Glyph")));
+            this._btnAddReport.Id = 126;
+            this._btnAddReport.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("_btnAddReport.LargeGlyph")));
+            this._btnAddReport.Name = "_btnAddReport";
+            this._btnAddReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnAddReport_ItemClick);
             // 
             // MainForm
             // 
@@ -1994,5 +2018,6 @@
         private DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroup printPreviewRibbonPageGroup8;
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory _rpcReportPreview;
         private DevExpress.XtraBars.BarButtonItem _btnReportDesigner;
+        private DevExpress.XtraBars.BarButtonItem _btnAddReport;
     }
 }

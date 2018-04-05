@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.IO;
@@ -14,7 +8,7 @@ using DevExpress.Utils;
 
 namespace ProduceManager.Form
 {
-    public partial class ReportDesignerForm : DevExpress.XtraEditors.XtraForm
+    public partial class ReportDesignerForm : XtraForm
     {
 
         #region [Form]
@@ -105,7 +99,7 @@ namespace ProduceManager.Form
             e.Document.Properties.AllowFloat = DefaultBoolean.False;
         }
 
-        public class SaveCommandHandler : DevExpress.XtraReports.UserDesigner.ICommandHandler
+        public class SaveCommandHandler : ICommandHandler
         {
             XRDesignPanel panel;
 
@@ -114,7 +108,7 @@ namespace ProduceManager.Form
                 this.panel = panel;
             }
 
-            public void HandleCommand(DevExpress.XtraReports.UserDesigner.ReportCommand command, object[] args)
+            public void HandleCommand(ReportCommand command, object[] args)
             {
                 bool saveReport = true;
                 bool exitDesigner = false;

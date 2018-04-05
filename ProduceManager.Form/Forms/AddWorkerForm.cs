@@ -13,7 +13,7 @@ using ProduceManager.Form.Utils;
 
 namespace ProduceManager.Form
 {
-    public partial class AddWorkerForm : DevExpress.XtraEditors.XtraForm
+    public partial class AddWorkerForm : XtraForm
     {
         private int _workerId;
         private bool _isAddingNew;

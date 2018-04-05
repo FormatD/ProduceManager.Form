@@ -13,7 +13,7 @@ using ProduceManager.Form.Utils;
 
 namespace ProduceManager.Form
 {
-    public partial class AddProductForm : DevExpress.XtraEditors.XtraForm
+    public partial class AddProductForm : XtraForm
     {
         private int _productId;
         private bool _isAddingNew;
