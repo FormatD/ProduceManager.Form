@@ -12,7 +12,7 @@ using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraEditors.Repository;
 using System.Linq.Expressions;
 
-namespace ProduceManager.Form.Utils
+namespace ProduceManager.Forms.Utils
 {
     /// <summary>
     /// 下拉控件辅助类

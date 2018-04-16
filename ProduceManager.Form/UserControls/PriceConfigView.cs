@@ -8,11 +8,11 @@ using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraBars;
-using ProduceManager.Form.Persistence;
+using ProduceManager.Forms.Persistence;
 using DevExpress.XtraGrid.Columns;
-using ProduceManager.Form.Domains;
+using ProduceManager.Forms.Domains;
 
-namespace ProduceManager.Form.UserControls
+namespace ProduceManager.Forms.UserControls
 {
     public partial class PriceConfigView : XtraUserControl, IView
     {

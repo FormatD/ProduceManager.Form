@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProduceManager.Form.Utils;
-using ProduceManager.Form.Domains;
-using ProduceManager.Form.Persistence;
+using ProduceManager.Forms.Utils;
+using ProduceManager.Forms.Domains;
+using ProduceManager.Forms.Persistence;
 
-namespace ProduceManager.Form
+namespace ProduceManager.Forms
 {
     public partial class ProduceDetailView : UserControl, IView
     {
@@ -34,17 +34,24 @@ namespace ProduceManager.Form
             XtraGridHelper.SetGridViewStyle(_gridView, new[] { _colOperation });
             XtraGridHelper.DrawRowIndicator(_gridView);   //初始化序号 
             XtraGridHelper.BindCopyToCtrlC(gridControl);
+            _cbProcedures.Properties.Items.AddRange(_service.GetAllProcedures().ToArray());
+
             Query();
         }
 
         private void _btnAdd_Click(object sender, EventArgs e)
         {
-            using (var dlg = new AddProduceRecordForm())
+            var dlg = new AddProduceRecordForm();
             {
-                if (dlg.ShowDialog() == DialogResult.OK)
+                dlg.DataSaved += (s, arg) => Query(dlg);
+                dlg.DataSaved += (s, arg) =>
                 {
-                    Query();
-                }
+                    Query(dlg);
+                    var id = arg?.ProduceRecord?.Id;
+                    if (id.HasValue)
+                        JumpTo(id.Value);
+                };
+                dlg.ShowDialog();
             }
         }
 
@@ -53,12 +60,27 @@ namespace ProduceManager.Form
             Query();
         }
 
-        private void Query()
+        private void Query(Form target = null)
         {
-            var currentProduceRecordId = GetFocusedProduceRecordId();
-            gridControl.DataSource = produceRecordList = _service.GetAllProduceRecords();
+            using (WaitHelper.ShowWaitForm("加载中。。。", target))
+            {
+                var currentProduceRecordId = GetFocusedProduceRecordId();
 
-            JumpTo(currentProduceRecordId);
+                var procedures = (_cbProcedures.Properties.Items.Where(x => x.CheckState == CheckState.Checked).Select(x => x.Value as Procedure))?.Select(x => x.Id)?.ToList() ?? new List<int>();
+
+                var keyword = textEdit1.Text;
+
+                var minDate = new DateTime(2000, 1, 1);
+                var startTime = dateEdit1.DateTime < minDate ? minDate : dateEdit1.DateTime;
+                var endTime = dateEdit2.DateTime < minDate ? DateTime.MaxValue : dateEdit2.DateTime;
+
+                gridControl.DataSource = produceRecordList = _service.GetAllProduceRecords()
+                    .Where(x => (!procedures.Any() || procedures.Contains(x.ProcedureId))
+                        && (string.IsNullOrWhiteSpace(keyword) || x.WorkerName.Contains(keyword) || x.ProductName.Contains(keyword))
+                        && (x.Date >= startTime && x.Date <= endTime))
+                    .ToList();
+                JumpTo(currentProduceRecordId);
+            }
         }
 
         private void _riOperation_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -74,8 +96,16 @@ namespace ProduceManager.Form
 
                 using (var dlg = new AddProduceRecordForm(batch.Id))
                 {
-                    if (dlg.ShowDialog() == DialogResult.OK)
-                        Query();
+                    dlg.DataSaved += (s, arg) =>
+                    {
+                        Query(dlg);
+                        var id = arg?.ProduceRecord?.Id;
+                        if (id.HasValue)
+                            JumpTo(id.Value);
+                    };
+
+                    dlg.TopMost = true;
+                    dlg.Show();
                 }
             }
             else if (e.Button.Index == 1)

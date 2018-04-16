@@ -7,11 +7,11 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using ProduceManager.Form.Persistence;
+using ProduceManager.Forms.Persistence;
 using System.IO;
-using ProduceManager.Form.Utils;
+using ProduceManager.Forms.Utils;
 
-namespace ProduceManager.Form.UserControls
+namespace ProduceManager.Forms.UserControls
 {
     public partial class ReportView : XtraUserControl, IView
     {

@@ -1,4 +1,4 @@
-﻿namespace ProduceManager.Form.UserControls
+﻿namespace ProduceManager.Forms.UserControls
 {
     partial class PriceConfigView
     {
@@ -67,8 +67,9 @@
             // 
             // _btnSaveAll
             // 
+            this._btnSaveAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._btnSaveAll.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("_btnSaveAll.ImageOptions.Image")));
-            this._btnSaveAll.Location = new System.Drawing.Point(813, 13);
+            this._btnSaveAll.Location = new System.Drawing.Point(847, 8);
             this._btnSaveAll.Name = "_btnSaveAll";
             this._btnSaveAll.Size = new System.Drawing.Size(75, 23);
             this._btnSaveAll.TabIndex = 4;
@@ -77,8 +78,9 @@
             // 
             // _btnRefresh
             // 
+            this._btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._btnRefresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("_btnRefresh.ImageOptions.Image")));
-            this._btnRefresh.Location = new System.Drawing.Point(732, 13);
+            this._btnRefresh.Location = new System.Drawing.Point(766, 8);
             this._btnRefresh.Name = "_btnRefresh";
             this._btnRefresh.Size = new System.Drawing.Size(75, 23);
             this._btnRefresh.TabIndex = 4;

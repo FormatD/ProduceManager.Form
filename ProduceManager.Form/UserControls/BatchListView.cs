@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProduceManager.Form.Persistence;
-using ProduceManager.Form.Utils;
+using ProduceManager.Forms.Persistence;
+using ProduceManager.Forms.Utils;
 using DevExpress.XtraEditors;
 
-namespace ProduceManager.Form
+namespace ProduceManager.Forms
 {
     public partial class BatchListView : UserControl, IView
     {

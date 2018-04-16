@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 
-namespace ProduceManager.Form
+namespace ProduceManager.Forms
 {
     /// <summary>
     /// 中文名称显示数据集

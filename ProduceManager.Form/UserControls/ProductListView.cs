@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProduceManager.Form.Persistence;
-using ProduceManager.Form.Domains;
-using ProduceManager.Form.Utils;
+using ProduceManager.Forms.Persistence;
+using ProduceManager.Forms.Domains;
+using ProduceManager.Forms.Utils;
 
-namespace ProduceManager.Form
+namespace ProduceManager.Forms
 {
     public partial class ProductListView : UserControl, IView
     {
@@ -104,7 +104,7 @@ namespace ProduceManager.Form
                     return;
                 }
 
-                if (MessageBoxHelper.Question(string.Format("您确定要删除产品“{0}”吗?", product.GetFriendlyName())))
+                if (MessageBoxHelper.Question(string.Format("您确定要删除产品“{0}”吗?", product.GetDisplayText())))
                 {
                     _service.DeleteProduct(product.Id);
                 }

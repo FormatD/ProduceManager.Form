@@ -8,13 +8,16 @@
     <ProjectGuid>{D5F4D10C-6A79-49E8-9AD6-5AE0E7C0675E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ProduceManager.Form</RootNamespace>
-    <AssemblyName>ProduceManager.Form</AssemblyName>
+    <RootNamespace>ProduceManager.Forms</RootNamespace>
+    <AssemblyName>ProduceManager.Forms</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>2.0</OldToolsVersion>
     <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>f05463cd</NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,13 +28,12 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>f05463cd</NuGetPackageImportStamp>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -55,7 +57,22 @@
   <PropertyGroup>
     <ApplicationIcon>app.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>FE9AB42D59D54566E6226C9AFC888CD65C49D3A4</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ProduceManager.Form_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ChnCharInfo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=18f031bd02e5e291, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.International.Converters.PinYinConverter.1.0.0\lib\ChnCharInfo.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.BonusSkins.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Charts.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -79,6 +96,8 @@
     <Reference Include="DevExpress.CodeParser.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v17.2.Extensions, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.dll</HintPath>
@@ -122,6 +141,12 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\AddSaleBillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddSaleBillForm.Designer.cs">
+      <DependentUpon>AddSaleBillForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,8 +186,13 @@
     <Compile Include="Forms\AddBatchForm.Designer.cs">
       <DependentUpon>AddBatchForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Domains\SequenseNoGenerator.cs" />
     <Compile Include="Forms\DataSourceHelper.cs" />
+    <Compile Include="Forms\WaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WaitForm.Designer.cs">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201804011542413_add_delete_and_code.cs" />
     <Compile Include="Migrations\201804011542413_add_delete_and_code.Designer.cs">
       <DependentUpon>201804011542413_add_delete_and_code.cs</DependentUpon>
@@ -174,6 +204,14 @@
     <Compile Include="Migrations\201804050456318_addReportSystemFlag.cs" />
     <Compile Include="Migrations\201804050456318_addReportSystemFlag.Designer.cs">
       <DependentUpon>201804050456318_addReportSystemFlag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804151330287_add-sale-bill.cs" />
+    <Compile Include="Migrations\201804151330287_add-sale-bill.Designer.cs">
+      <DependentUpon>201804151330287_add-sale-bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804161708412_remove-sale-item-totalprice.cs" />
+    <Compile Include="Migrations\201804161708412_remove-sale-item-totalprice.Designer.cs">
+      <DependentUpon>201804161708412_remove-sale-item-totalprice.cs</DependentUpon>
     </Compile>
     <Compile Include="Persistence\ApplicationService.cs" />
     <Compile Include="PrintRibbonControllerResources.Designer.cs">
@@ -201,6 +239,12 @@
     <Compile Include="UserControls\ReportView.Designer.cs">
       <DependentUpon>ReportView.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\SaleBillView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SaleBillView.Designer.cs">
+      <DependentUpon>SaleBillView.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\WorkerListView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -219,7 +263,6 @@
     <Compile Include="UserControls\BatchListView.Designer.cs">
       <DependentUpon>BatchListView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Domains\Worker.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,13 +295,19 @@
     <Compile Include="Utils\ListExtension.cs" />
     <Compile Include="Utils\MessageBoxHelper.cs" />
     <Compile Include="Utils\ObjectExtension.cs" />
+    <Compile Include="Utils\PinYinHelper.cs" />
     <Compile Include="Utils\UsertControlExtension.cs" />
+    <Compile Include="Utils\WaitHelper.cs" />
+    <Compile Include="Utils\Win32Helper.cs" />
     <Compile Include="Utils\XtraGridHelper.cs" />
     <Compile Include="XRDesignRibbonControllerResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>XRDesignRibbonControllerResources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\AddSaleBillForm.resx">
+      <DependentUpon>AddSaleBillForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddReportForm.resx">
       <DependentUpon>AddReportForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -286,6 +335,12 @@
     <EmbeddedResource Include="Migrations\201804050456318_addReportSystemFlag.resx">
       <DependentUpon>201804050456318_addReportSystemFlag.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804151330287_add-sale-bill.resx">
+      <DependentUpon>201804151330287_add-sale-bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804161708412_remove-sale-item-totalprice.resx">
+      <DependentUpon>201804161708412_remove-sale-item-totalprice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PrintRibbonControllerResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>PrintRibbonControllerResources.Designer.cs</LastGenOutput>
@@ -302,6 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ReportView.resx">
       <DependentUpon>ReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SaleBillView.resx">
+      <DependentUpon>SaleBillView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\WorkerListView.resx">
       <DependentUpon>WorkerListView.cs</DependentUpon>
@@ -340,6 +398,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
+    <None Include="ProduceManager.Form_TemporaryKey.pfx" />
+    <None Include="Properties\DataSources\ProduceManager.Form.Domains.SaleBillItem.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -372,7 +432,185 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.ico" />
+    <Content Include="zh-cn\ChnCharInfo.resources.dll" />
+    <Content Include="zh-cn\DevExpress.Charts.Designer.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.Dashboard.v17.2.Core.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.Dashboard.v17.2.Web.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.Dashboard.v17.2.Win.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.Data.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.DataAccess.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.DataAccess.v17.2.UI.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.Diagram.v17.2.Core.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.ExpressApp.HtmlPropertyEditor.Win.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.ExpressApp.PivotChart.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.ExpressApp.Reports.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.ExpressApp.Scheduler.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.ExpressApp.Scheduler.Web.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.ExpressApp.Security.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.ExpressApp.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.ExpressApp.Validation.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.ExpressApp.Web.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.ExpressApp.Win.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.Map.v17.2.Core.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.Office.v17.2.Core.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.Pdf.v17.2.Core.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.PivotGrid.v17.2.Core.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.Printing.v17.2.Core.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.RichEdit.v17.2.Core.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.Snap.v17.2.Core.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.Snap.v17.2.Extensions.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.Snap.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.Sparkline.v17.2.Core.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.Spreadsheet.v17.2.Core.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.Utils.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.Utils.v17.2.UI.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraBars.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraCharts.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraCharts.v17.2.Wizard.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraEditors.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraGauges.v17.2.Core.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraGauges.v17.2.Presets.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraGrid.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraLayout.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraNavBar.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraPdfViewer.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraPivotGrid.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraPrinting.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraReports.v17.2.Extensions.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraReports.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraReports.v17.2.Web.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraRichEdit.v17.2.Extensions.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraRichEdit.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraScheduler.v17.2.Core.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraScheduler.v17.2.Extensions.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraScheduler.v17.2.Reporting.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraScheduler.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraSpellChecker.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraSpreadsheet.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraTreeList.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraVerticalGrid.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-cn\DevExpress.XtraWizard.v17.2.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="requirement.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProduceManage.Core\ProduceManage.Core.csproj">
+      <Project>{0cb1f8c6-46f1-4d1c-98b3-e98027496324}</Project>
+      <Name>ProduceManage.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.108.0\build\net45\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.108.0\build\net45\System.Data.SQLite.Core.targets')" />

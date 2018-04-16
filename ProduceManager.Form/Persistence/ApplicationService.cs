@@ -1,11 +1,11 @@
-﻿using ProduceManager.Form.Domains;
+﻿using ProduceManager.Forms.Domains;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
 
-namespace ProduceManager.Form.Persistence
+namespace ProduceManager.Forms.Persistence
 {
     public class ApplicationService
     {
@@ -173,8 +173,8 @@ namespace ProduceManager.Form.Persistence
         internal IList<ProduceRecordViewModel> GetAllProduceRecords()
         {
             var xx = from pr in _dbContext.ProduceRecords
-                     join b in _dbContext.Batchs on pr.BatchId equals b.Id
-                     join p in _dbContext.Products on b.ProductId equals p.Id
+                         //join b in _dbContext.Batchs on pr.BatchId equals b.Id
+                     join p in _dbContext.Products on pr.ProductId equals p.Id
                      join w in _dbContext.Workers on pr.WorkerId equals w.Id
                      join proc in _dbContext.Procedures on pr.ProcedureId equals proc.Id
                      select new ProduceRecordViewModel
@@ -184,9 +184,9 @@ namespace ProduceManager.Form.Persistence
                          IsDeleted = pr.IsDeleted,
                          Date = pr.Date,
                          // Batch
-                         BatchId = b.Id,
-                         BatchNo = b.No,
-                         IsBatchDeleted = b.IsDeleted,
+                         //BatchId = b.Id,
+                         //BatchNo = b.No,
+                         //IsBatchDeleted = b.IsDeleted,
                          // Product
                          ProductId = p.Id,
                          ProductName = p.Name,
@@ -203,6 +203,11 @@ namespace ProduceManager.Form.Persistence
                      };
 
             return xx.ToList();
+        }
+
+        internal object SearchProduceRecord(Func<ProduceRecord, bool> func)
+        {
+            return _dbContext.ProduceRecords.Where(func);
         }
 
         public ProduceRecord GetProduceRecord(int id)
@@ -257,6 +262,62 @@ namespace ProduceManager.Form.Persistence
                    .ToList();
         }
 
+        #endregion
+
+        #region SaleBills
+
+        public SaleBill GetSaleBill(int id)
+        {
+            return _dbContext.SaleBills.Include(x => x.Items).FirstOrDefault(x => x.Id == id);
+        }
+
+        internal void AddSaleBill(SaleBill saleBill)
+        {
+            _dbContext.SaleBills.Add(saleBill);
+            foreach (var item in saleBill.Items)
+            {
+                _dbContext.SaleBillItems.Add(item);
+            }
+
+            _dbContext.SaveChanges();
+        }
+
+        internal void DeleteSaleBill(int id)
+        {
+            var bill = GetSaleBill(id);
+            _dbContext.SaleBills.Remove(bill);
+        }
+
+        internal IList<SaleBill> GetAllSaleBills()
+        {
+            return _dbContext.SaleBills.Include(x => x.Items).ToList();
+        }
+
+        internal void SaveSaleBill(SaleBill saleBill)
+        {
+            foreach (var item in saleBill.Items)
+            {
+                var state = _dbContext.Entry(item).State;
+                switch (state)
+                {
+                    case EntityState.Detached:
+                        _dbContext.SaleBillItems.Add(item);
+                        break;
+                    case EntityState.Unchanged:
+                        break;
+                    case EntityState.Added:
+                        break;
+                    case EntityState.Deleted:
+                        break;
+                    case EntityState.Modified:
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            _dbContext.SaveChanges();
+        }
         #endregion
     }
 

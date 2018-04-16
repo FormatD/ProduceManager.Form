@@ -7,11 +7,11 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using ProduceManager.Form.Persistence;
-using ProduceManager.Form.Domains;
-using ProduceManager.Form.Utils;
+using ProduceManager.Forms.Persistence;
+using ProduceManager.Forms.Domains;
+using ProduceManager.Forms.Utils;
 
-namespace ProduceManager.Form
+namespace ProduceManager.Forms
 {
     public partial class AddProductForm : XtraForm
     {
@@ -29,7 +29,7 @@ namespace ProduceManager.Form
         {
             _service = ApplicationService.Instanse;
             InitializeComponent();
-            this._productId = productId;
+            _productId = productId;
 
             Text = "编辑产品";
             _btnAdd.Text = "保存";
@@ -41,6 +41,13 @@ namespace ProduceManager.Form
 
         private void AddBatchForm_Load(object sender, EventArgs e)
         {
+            // 加载完成之后挂事件
+            _txtName.EditValueChanged += _txtName_EditValueChanged;
+        }
+
+        private void _txtName_EditValueChanged(object sender, EventArgs e)
+        {
+            _txtCode.Text = PinYinHelper.GetPinYinFirstChars(_txtName.Text);
         }
 
         private void _btnCancel_Click(object sender, EventArgs e)

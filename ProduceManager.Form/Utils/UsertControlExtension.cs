@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ProduceManager.Form.Utils
+namespace ProduceManager.Forms.Utils
 {
     public static class UsertControlExtension
     {

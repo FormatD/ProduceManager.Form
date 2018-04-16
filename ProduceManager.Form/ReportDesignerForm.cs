@@ -6,7 +6,7 @@ using DevExpress.XtraReports.UI;
 using DevExpress.XtraReports.UserDesigner;
 using DevExpress.Utils;
 
-namespace ProduceManager.Form
+namespace ProduceManager.Forms
 {
     public partial class ReportDesignerForm : XtraForm
     {

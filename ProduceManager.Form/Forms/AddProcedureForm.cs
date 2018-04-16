@@ -7,11 +7,11 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using ProduceManager.Form.Persistence;
-using ProduceManager.Form.Domains;
-using ProduceManager.Form.Utils;
+using ProduceManager.Forms.Persistence;
+using ProduceManager.Forms.Domains;
+using ProduceManager.Forms.Utils;
 
-namespace ProduceManager.Form
+namespace ProduceManager.Forms
 {
     public partial class AddProcedureForm : XtraForm
     {

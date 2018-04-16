@@ -16,9 +16,9 @@ using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraEditors.Repository;
-using ProduceManager.Form.Domains;
+using ProduceManager.Forms.Domains;
 
-namespace ProduceManager.Form.Utils
+namespace ProduceManager.Forms.Utils
 {
     /// <summary>
     /// XtraGrid辅助类

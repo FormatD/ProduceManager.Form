@@ -1,4 +1,4 @@
-﻿namespace ProduceManager.Form
+﻿namespace ProduceManager.Forms
 {
     partial class ReportDesignerForm
     {
@@ -720,9 +720,9 @@
             this.commandBarItem31.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.NewReport;
             this.commandBarItem31.Description = "Create a new blank report.";
             this.commandBarItem31.Enabled = false;
-            this.commandBarItem31.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_NewReport;
+            this.commandBarItem31.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_NewReport;
             this.commandBarItem31.Id = 33;
-            this.commandBarItem31.LargeGlyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_NewReportLarge;
+            this.commandBarItem31.LargeGlyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_NewReportLarge;
             this.commandBarItem31.Name = "commandBarItem31";
             superToolTip1.FixedTooltipWidth = true;
             toolTipTitleItem1.Text = "New Blank Report";
@@ -738,10 +738,10 @@
             this.commandBarItem34.Caption = "Open...";
             this.commandBarItem34.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.OpenFile;
             this.commandBarItem34.Enabled = false;
-            this.commandBarItem34.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_OpenFile;
+            this.commandBarItem34.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_OpenFile;
             this.commandBarItem34.Id = 36;
             this.commandBarItem34.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O));
-            this.commandBarItem34.LargeGlyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_OpenFileLarge;
+            this.commandBarItem34.LargeGlyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_OpenFileLarge;
             this.commandBarItem34.Name = "commandBarItem34";
             superToolTip2.FixedTooltipWidth = true;
             toolTipTitleItem2.Text = "Open Report (Ctrl+O)";
@@ -759,9 +759,9 @@
             this.commandBarItem32.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.SaveFile;
             this.commandBarItem32.Description = "Save the current report.";
             this.commandBarItem32.Enabled = false;
-            this.commandBarItem32.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_SaveFile;
+            this.commandBarItem32.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_SaveFile;
             this.commandBarItem32.Id = 34;
-            this.commandBarItem32.LargeGlyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_SaveFileLarge;
+            this.commandBarItem32.LargeGlyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_SaveFileLarge;
             this.commandBarItem32.Name = "commandBarItem32";
             superToolTip3.FixedTooltipWidth = true;
             toolTipTitleItem3.Text = "Save Report";
@@ -777,10 +777,10 @@
             this.commandBarItem33.Caption = "Save All";
             this.commandBarItem33.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.SaveAll;
             this.commandBarItem33.Enabled = false;
-            this.commandBarItem33.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_SaveAll;
+            this.commandBarItem33.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_SaveAll;
             this.commandBarItem33.Id = 35;
             this.commandBarItem33.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L));
-            this.commandBarItem33.LargeGlyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_SaveAllLarge;
+            this.commandBarItem33.LargeGlyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_SaveAllLarge;
             this.commandBarItem33.Name = "commandBarItem33";
             superToolTip4.FixedTooltipWidth = true;
             toolTipTitleItem4.Text = "Save All Reports (Ctrl+L)";
@@ -813,9 +813,9 @@
             this.commandBarItem53.Caption = "Exit";
             this.commandBarItem53.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.Exit;
             this.commandBarItem53.Enabled = false;
-            this.commandBarItem53.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_Exit;
+            this.commandBarItem53.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_Exit;
             this.commandBarItem53.Id = 59;
-            this.commandBarItem53.LargeGlyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_ExitLarge;
+            this.commandBarItem53.LargeGlyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_ExitLarge;
             this.commandBarItem53.Name = "commandBarItem53";
             superToolTip6.FixedTooltipWidth = true;
             toolTipTitleItem6.Text = "Exit";
@@ -831,7 +831,7 @@
             this.commandBarItem1.Caption = "Align to Grid";
             this.commandBarItem1.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.AlignToGrid;
             this.commandBarItem1.Enabled = false;
-            this.commandBarItem1.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_AlignToGrid;
+            this.commandBarItem1.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_AlignToGrid;
             this.commandBarItem1.Id = 1;
             this.commandBarItem1.Name = "commandBarItem1";
             superToolTip7.FixedTooltipWidth = true;
@@ -848,7 +848,7 @@
             this.commandBarItem2.Caption = "Align Lefts";
             this.commandBarItem2.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.AlignLeft;
             this.commandBarItem2.Enabled = false;
-            this.commandBarItem2.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_AlignLeft;
+            this.commandBarItem2.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_AlignLeft;
             this.commandBarItem2.Id = 2;
             this.commandBarItem2.Name = "commandBarItem2";
             superToolTip8.FixedTooltipWidth = true;
@@ -865,7 +865,7 @@
             this.commandBarItem3.Caption = "Align Centers";
             this.commandBarItem3.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.AlignVerticalCenters;
             this.commandBarItem3.Enabled = false;
-            this.commandBarItem3.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_AlignVerticalCenters;
+            this.commandBarItem3.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_AlignVerticalCenters;
             this.commandBarItem3.Id = 3;
             this.commandBarItem3.Name = "commandBarItem3";
             superToolTip9.FixedTooltipWidth = true;
@@ -882,7 +882,7 @@
             this.commandBarItem4.Caption = "Align Rights";
             this.commandBarItem4.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.AlignRight;
             this.commandBarItem4.Enabled = false;
-            this.commandBarItem4.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_AlignRight;
+            this.commandBarItem4.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_AlignRight;
             this.commandBarItem4.Id = 4;
             this.commandBarItem4.Name = "commandBarItem4";
             superToolTip10.FixedTooltipWidth = true;
@@ -899,7 +899,7 @@
             this.commandBarItem5.Caption = "Align Tops";
             this.commandBarItem5.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.AlignTop;
             this.commandBarItem5.Enabled = false;
-            this.commandBarItem5.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_AlignTop;
+            this.commandBarItem5.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_AlignTop;
             this.commandBarItem5.Id = 5;
             this.commandBarItem5.Name = "commandBarItem5";
             superToolTip11.FixedTooltipWidth = true;
@@ -916,7 +916,7 @@
             this.commandBarItem6.Caption = "Align Middles";
             this.commandBarItem6.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.AlignHorizontalCenters;
             this.commandBarItem6.Enabled = false;
-            this.commandBarItem6.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_AlignHorizontalCenters;
+            this.commandBarItem6.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_AlignHorizontalCenters;
             this.commandBarItem6.Id = 6;
             this.commandBarItem6.Name = "commandBarItem6";
             superToolTip12.FixedTooltipWidth = true;
@@ -933,7 +933,7 @@
             this.commandBarItem7.Caption = "Align Bottoms";
             this.commandBarItem7.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.AlignBottom;
             this.commandBarItem7.Enabled = false;
-            this.commandBarItem7.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_AlignBottom;
+            this.commandBarItem7.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_AlignBottom;
             this.commandBarItem7.Id = 7;
             this.commandBarItem7.Name = "commandBarItem7";
             superToolTip13.FixedTooltipWidth = true;
@@ -950,7 +950,7 @@
             this.commandBarItem8.Caption = "Make Same Width";
             this.commandBarItem8.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.SizeToControlWidth;
             this.commandBarItem8.Enabled = false;
-            this.commandBarItem8.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_SizeToControlWidth;
+            this.commandBarItem8.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_SizeToControlWidth;
             this.commandBarItem8.Id = 8;
             this.commandBarItem8.Name = "commandBarItem8";
             superToolTip14.FixedTooltipWidth = true;
@@ -967,7 +967,7 @@
             this.commandBarItem9.Caption = "Size to Grid";
             this.commandBarItem9.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.SizeToGrid;
             this.commandBarItem9.Enabled = false;
-            this.commandBarItem9.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_SizeToGrid;
+            this.commandBarItem9.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_SizeToGrid;
             this.commandBarItem9.Id = 9;
             this.commandBarItem9.Name = "commandBarItem9";
             superToolTip15.FixedTooltipWidth = true;
@@ -984,7 +984,7 @@
             this.commandBarItem10.Caption = "Make Same Height";
             this.commandBarItem10.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.SizeToControlHeight;
             this.commandBarItem10.Enabled = false;
-            this.commandBarItem10.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_SizeToControlHeight;
+            this.commandBarItem10.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_SizeToControlHeight;
             this.commandBarItem10.Id = 10;
             this.commandBarItem10.Name = "commandBarItem10";
             superToolTip16.FixedTooltipWidth = true;
@@ -1001,7 +1001,7 @@
             this.commandBarItem11.Caption = "Make Same Size";
             this.commandBarItem11.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.SizeToControl;
             this.commandBarItem11.Enabled = false;
-            this.commandBarItem11.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_SizeToControl;
+            this.commandBarItem11.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_SizeToControl;
             this.commandBarItem11.Id = 11;
             this.commandBarItem11.Name = "commandBarItem11";
             superToolTip17.FixedTooltipWidth = true;
@@ -1018,7 +1018,7 @@
             this.commandBarItem12.Caption = "Make Horizontal Spacing Equal";
             this.commandBarItem12.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.HorizSpaceMakeEqual;
             this.commandBarItem12.Enabled = false;
-            this.commandBarItem12.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_HorizSpaceMakeEqual;
+            this.commandBarItem12.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_HorizSpaceMakeEqual;
             this.commandBarItem12.Id = 12;
             this.commandBarItem12.Name = "commandBarItem12";
             superToolTip18.FixedTooltipWidth = true;
@@ -1035,7 +1035,7 @@
             this.commandBarItem13.Caption = "Increase Horizontal Spacing";
             this.commandBarItem13.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.HorizSpaceIncrease;
             this.commandBarItem13.Enabled = false;
-            this.commandBarItem13.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_HorizSpaceIncrease;
+            this.commandBarItem13.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_HorizSpaceIncrease;
             this.commandBarItem13.Id = 13;
             this.commandBarItem13.Name = "commandBarItem13";
             superToolTip19.FixedTooltipWidth = true;
@@ -1052,7 +1052,7 @@
             this.commandBarItem14.Caption = "Decrease Horizontal Spacing";
             this.commandBarItem14.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.HorizSpaceDecrease;
             this.commandBarItem14.Enabled = false;
-            this.commandBarItem14.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_HorizSpaceDecrease;
+            this.commandBarItem14.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_HorizSpaceDecrease;
             this.commandBarItem14.Id = 14;
             this.commandBarItem14.Name = "commandBarItem14";
             superToolTip20.FixedTooltipWidth = true;
@@ -1069,7 +1069,7 @@
             this.commandBarItem15.Caption = "Remove Horizontal Spacing";
             this.commandBarItem15.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.HorizSpaceConcatenate;
             this.commandBarItem15.Enabled = false;
-            this.commandBarItem15.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_HorizSpaceConcatenate;
+            this.commandBarItem15.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_HorizSpaceConcatenate;
             this.commandBarItem15.Id = 15;
             this.commandBarItem15.Name = "commandBarItem15";
             superToolTip21.FixedTooltipWidth = true;
@@ -1086,7 +1086,7 @@
             this.commandBarItem16.Caption = "Make Vertical Spacing Equal";
             this.commandBarItem16.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.VertSpaceMakeEqual;
             this.commandBarItem16.Enabled = false;
-            this.commandBarItem16.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_VertSpaceMakeEqual;
+            this.commandBarItem16.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_VertSpaceMakeEqual;
             this.commandBarItem16.Id = 16;
             this.commandBarItem16.Name = "commandBarItem16";
             superToolTip22.FixedTooltipWidth = true;
@@ -1103,7 +1103,7 @@
             this.commandBarItem17.Caption = "Increase Vertical Spacing";
             this.commandBarItem17.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.VertSpaceIncrease;
             this.commandBarItem17.Enabled = false;
-            this.commandBarItem17.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_VertSpaceIncrease;
+            this.commandBarItem17.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_VertSpaceIncrease;
             this.commandBarItem17.Id = 17;
             this.commandBarItem17.Name = "commandBarItem17";
             superToolTip23.FixedTooltipWidth = true;
@@ -1120,7 +1120,7 @@
             this.commandBarItem18.Caption = "Decrease Vertical Spacing";
             this.commandBarItem18.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.VertSpaceDecrease;
             this.commandBarItem18.Enabled = false;
-            this.commandBarItem18.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_VertSpaceDecrease;
+            this.commandBarItem18.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_VertSpaceDecrease;
             this.commandBarItem18.Id = 18;
             this.commandBarItem18.Name = "commandBarItem18";
             superToolTip24.FixedTooltipWidth = true;
@@ -1137,7 +1137,7 @@
             this.commandBarItem19.Caption = "Remove Vertical Spacing";
             this.commandBarItem19.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.VertSpaceConcatenate;
             this.commandBarItem19.Enabled = false;
-            this.commandBarItem19.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_VertSpaceConcatenate;
+            this.commandBarItem19.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_VertSpaceConcatenate;
             this.commandBarItem19.Id = 19;
             this.commandBarItem19.Name = "commandBarItem19";
             superToolTip25.FixedTooltipWidth = true;
@@ -1154,7 +1154,7 @@
             this.commandBarItem20.Caption = "Center Horizontally";
             this.commandBarItem20.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.CenterHorizontally;
             this.commandBarItem20.Enabled = false;
-            this.commandBarItem20.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_CenterHorizontally;
+            this.commandBarItem20.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_CenterHorizontally;
             this.commandBarItem20.Id = 20;
             this.commandBarItem20.Name = "commandBarItem20";
             superToolTip26.FixedTooltipWidth = true;
@@ -1171,7 +1171,7 @@
             this.commandBarItem21.Caption = "Center Vertically";
             this.commandBarItem21.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.CenterVertically;
             this.commandBarItem21.Enabled = false;
-            this.commandBarItem21.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_CenterVertically;
+            this.commandBarItem21.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_CenterVertically;
             this.commandBarItem21.Id = 21;
             this.commandBarItem21.Name = "commandBarItem21";
             superToolTip27.FixedTooltipWidth = true;
@@ -1188,7 +1188,7 @@
             this.commandBarItem22.Caption = "Bring to Front";
             this.commandBarItem22.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.BringToFront;
             this.commandBarItem22.Enabled = false;
-            this.commandBarItem22.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_BringToFront;
+            this.commandBarItem22.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_BringToFront;
             this.commandBarItem22.Id = 22;
             this.commandBarItem22.Name = "commandBarItem22";
             superToolTip28.FixedTooltipWidth = true;
@@ -1205,7 +1205,7 @@
             this.commandBarItem23.Caption = "Send to Back";
             this.commandBarItem23.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.SendToBack;
             this.commandBarItem23.Enabled = false;
-            this.commandBarItem23.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_SendToBack;
+            this.commandBarItem23.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_SendToBack;
             this.commandBarItem23.Id = 23;
             this.commandBarItem23.Name = "commandBarItem23";
             superToolTip29.FixedTooltipWidth = true;
@@ -1222,7 +1222,7 @@
             this.commandBarItem24.Caption = "Bold";
             this.commandBarItem24.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.FontBold;
             this.commandBarItem24.Enabled = false;
-            this.commandBarItem24.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_FontBold;
+            this.commandBarItem24.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_FontBold;
             this.commandBarItem24.Id = 24;
             this.commandBarItem24.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B));
             this.commandBarItem24.Name = "commandBarItem24";
@@ -1240,7 +1240,7 @@
             this.commandBarItem25.Caption = "Italic";
             this.commandBarItem25.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.FontItalic;
             this.commandBarItem25.Enabled = false;
-            this.commandBarItem25.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_FontItalic;
+            this.commandBarItem25.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_FontItalic;
             this.commandBarItem25.Id = 25;
             this.commandBarItem25.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I));
             this.commandBarItem25.Name = "commandBarItem25";
@@ -1258,7 +1258,7 @@
             this.commandBarItem26.Caption = "Underline";
             this.commandBarItem26.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.FontUnderline;
             this.commandBarItem26.Enabled = false;
-            this.commandBarItem26.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_FontUnderline;
+            this.commandBarItem26.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_FontUnderline;
             this.commandBarItem26.Id = 26;
             this.commandBarItem26.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U));
             this.commandBarItem26.Name = "commandBarItem26";
@@ -1314,7 +1314,7 @@
             this.commandBarItem27.Caption = "Align Text Left";
             this.commandBarItem27.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.JustifyLeft;
             this.commandBarItem27.Enabled = false;
-            this.commandBarItem27.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_JustifyLeft;
+            this.commandBarItem27.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_JustifyLeft;
             this.commandBarItem27.Id = 29;
             this.commandBarItem27.Name = "commandBarItem27";
             superToolTip35.FixedTooltipWidth = true;
@@ -1331,7 +1331,7 @@
             this.commandBarItem28.Caption = "Center Text";
             this.commandBarItem28.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.JustifyCenter;
             this.commandBarItem28.Enabled = false;
-            this.commandBarItem28.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_JustifyCenter;
+            this.commandBarItem28.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_JustifyCenter;
             this.commandBarItem28.Id = 30;
             this.commandBarItem28.Name = "commandBarItem28";
             superToolTip36.FixedTooltipWidth = true;
@@ -1348,7 +1348,7 @@
             this.commandBarItem29.Caption = "Align Text Right";
             this.commandBarItem29.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.JustifyRight;
             this.commandBarItem29.Enabled = false;
-            this.commandBarItem29.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_JustifyRight;
+            this.commandBarItem29.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_JustifyRight;
             this.commandBarItem29.Id = 31;
             this.commandBarItem29.Name = "commandBarItem29";
             superToolTip37.FixedTooltipWidth = true;
@@ -1365,7 +1365,7 @@
             this.commandBarItem30.Caption = "Justify";
             this.commandBarItem30.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.JustifyJustify;
             this.commandBarItem30.Enabled = false;
-            this.commandBarItem30.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_JustifyJustify;
+            this.commandBarItem30.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_JustifyJustify;
             this.commandBarItem30.Id = 32;
             this.commandBarItem30.Name = "commandBarItem30";
             superToolTip38.FixedTooltipWidth = true;
@@ -1384,10 +1384,10 @@
             this.commandBarItem35.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.NewReport;
             this.commandBarItem35.Description = "Create a new blank report.";
             this.commandBarItem35.Enabled = false;
-            this.commandBarItem35.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_NewReport;
+            this.commandBarItem35.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_NewReport;
             this.commandBarItem35.Id = 37;
             this.commandBarItem35.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N));
-            this.commandBarItem35.LargeGlyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_NewReportLarge;
+            this.commandBarItem35.LargeGlyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_NewReportLarge;
             this.commandBarItem35.Name = "commandBarItem35";
             superToolTip39.FixedTooltipWidth = true;
             toolTipTitleItem39.Text = "New Blank Report (Ctrl+N)";
@@ -1404,10 +1404,10 @@
             this.commandBarItem36.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.NewReportWizard;
             this.commandBarItem36.Description = "Launch the report wizard to create a new report.";
             this.commandBarItem36.Enabled = false;
-            this.commandBarItem36.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_NewReportWizard;
+            this.commandBarItem36.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_NewReportWizard;
             this.commandBarItem36.Id = 38;
             this.commandBarItem36.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W));
-            this.commandBarItem36.LargeGlyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_NewReportWizardLarge;
+            this.commandBarItem36.LargeGlyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_NewReportWizardLarge;
             this.commandBarItem36.Name = "commandBarItem36";
             superToolTip40.FixedTooltipWidth = true;
             toolTipTitleItem40.Text = "New Report via Wizard (Ctrl+W)";
@@ -1424,10 +1424,10 @@
             this.commandBarItem37.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.SaveFile;
             this.commandBarItem37.Description = "Save the current report.";
             this.commandBarItem37.Enabled = false;
-            this.commandBarItem37.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_SaveFile;
+            this.commandBarItem37.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_SaveFile;
             this.commandBarItem37.Id = 39;
             this.commandBarItem37.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S));
-            this.commandBarItem37.LargeGlyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_SaveFileLarge;
+            this.commandBarItem37.LargeGlyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_SaveFileLarge;
             this.commandBarItem37.Name = "commandBarItem37";
             superToolTip41.FixedTooltipWidth = true;
             toolTipTitleItem41.Text = "Save Report (Ctrl+S)";
@@ -1444,9 +1444,9 @@
             this.commandBarItem38.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.SaveFileAs;
             this.commandBarItem38.Description = "Save the current report with a new name.";
             this.commandBarItem38.Enabled = false;
-            this.commandBarItem38.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_SaveFileAs;
+            this.commandBarItem38.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_SaveFileAs;
             this.commandBarItem38.Id = 40;
-            this.commandBarItem38.LargeGlyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_SaveFileAsLarge;
+            this.commandBarItem38.LargeGlyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_SaveFileAsLarge;
             this.commandBarItem38.Name = "commandBarItem38";
             superToolTip42.FixedTooltipWidth = true;
             toolTipTitleItem42.Text = "Save Report As";
@@ -1462,10 +1462,10 @@
             this.commandBarItem39.Caption = "Cut";
             this.commandBarItem39.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.Cut;
             this.commandBarItem39.Enabled = false;
-            this.commandBarItem39.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_Cut;
+            this.commandBarItem39.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_Cut;
             this.commandBarItem39.Id = 41;
             this.commandBarItem39.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X));
-            this.commandBarItem39.LargeGlyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_CutLarge;
+            this.commandBarItem39.LargeGlyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_CutLarge;
             this.commandBarItem39.Name = "commandBarItem39";
             superToolTip43.FixedTooltipWidth = true;
             toolTipTitleItem43.Text = "Cut (Ctrl+X)";
@@ -1481,10 +1481,10 @@
             this.commandBarItem40.Caption = "Copy";
             this.commandBarItem40.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.Copy;
             this.commandBarItem40.Enabled = false;
-            this.commandBarItem40.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_Copy;
+            this.commandBarItem40.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_Copy;
             this.commandBarItem40.Id = 42;
             this.commandBarItem40.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C));
-            this.commandBarItem40.LargeGlyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_CopyLarge;
+            this.commandBarItem40.LargeGlyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_CopyLarge;
             this.commandBarItem40.Name = "commandBarItem40";
             superToolTip44.FixedTooltipWidth = true;
             toolTipTitleItem44.Text = "Copy (Ctrl+C)";
@@ -1500,10 +1500,10 @@
             this.commandBarItem41.Caption = "Paste";
             this.commandBarItem41.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.Paste;
             this.commandBarItem41.Enabled = false;
-            this.commandBarItem41.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_Paste;
+            this.commandBarItem41.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_Paste;
             this.commandBarItem41.Id = 43;
             this.commandBarItem41.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V));
-            this.commandBarItem41.LargeGlyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_PasteLarge;
+            this.commandBarItem41.LargeGlyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_PasteLarge;
             this.commandBarItem41.Name = "commandBarItem41";
             superToolTip45.FixedTooltipWidth = true;
             toolTipTitleItem45.Text = "Paste (Ctrl+V)";
@@ -1519,10 +1519,10 @@
             this.commandBarItem42.Caption = "Undo";
             this.commandBarItem42.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.Undo;
             this.commandBarItem42.Enabled = false;
-            this.commandBarItem42.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_Undo;
+            this.commandBarItem42.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_Undo;
             this.commandBarItem42.Id = 44;
             this.commandBarItem42.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z));
-            this.commandBarItem42.LargeGlyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_UndoLarge;
+            this.commandBarItem42.LargeGlyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_UndoLarge;
             this.commandBarItem42.Name = "commandBarItem42";
             superToolTip46.FixedTooltipWidth = true;
             toolTipTitleItem46.Text = "Undo (Ctrl+Z)";
@@ -1538,10 +1538,10 @@
             this.commandBarItem43.Caption = "Redo";
             this.commandBarItem43.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.Redo;
             this.commandBarItem43.Enabled = false;
-            this.commandBarItem43.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_Redo;
+            this.commandBarItem43.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_Redo;
             this.commandBarItem43.Id = 45;
             this.commandBarItem43.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y));
-            this.commandBarItem43.LargeGlyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_RedoLarge;
+            this.commandBarItem43.LargeGlyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_RedoLarge;
             this.commandBarItem43.Name = "commandBarItem43";
             superToolTip47.FixedTooltipWidth = true;
             toolTipTitleItem47.Text = "Redo (Ctrl+Y)";
@@ -1558,9 +1558,9 @@
             this.commandBarItem44.Caption = "Zoom";
             this.commandBarItem44.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.Zoom;
             this.commandBarItem44.Enabled = false;
-            this.commandBarItem44.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_Zoom;
+            this.commandBarItem44.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_Zoom;
             this.commandBarItem44.Id = 46;
-            this.commandBarItem44.LargeGlyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_ZoomLarge;
+            this.commandBarItem44.LargeGlyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_ZoomLarge;
             this.commandBarItem44.Name = "commandBarItem44";
             superToolTip48.FixedTooltipWidth = true;
             toolTipTitleItem48.Text = "Zoom";
@@ -1576,10 +1576,10 @@
             this.commandBarItem45.Caption = "Zoom In";
             this.commandBarItem45.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.ZoomIn;
             this.commandBarItem45.Enabled = false;
-            this.commandBarItem45.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_ZoomIn;
+            this.commandBarItem45.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_ZoomIn;
             this.commandBarItem45.Id = 47;
             this.commandBarItem45.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Add));
-            this.commandBarItem45.LargeGlyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_ZoomInLarge;
+            this.commandBarItem45.LargeGlyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_ZoomInLarge;
             this.commandBarItem45.Name = "commandBarItem45";
             superToolTip49.FixedTooltipWidth = true;
             toolTipTitleItem49.Text = "Zoom In (Ctrl+Add)";
@@ -1595,10 +1595,10 @@
             this.commandBarItem46.Caption = "Zoom Out";
             this.commandBarItem46.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.ZoomOut;
             this.commandBarItem46.Enabled = false;
-            this.commandBarItem46.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_ZoomOut;
+            this.commandBarItem46.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_ZoomOut;
             this.commandBarItem46.Id = 48;
             this.commandBarItem46.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Subtract));
-            this.commandBarItem46.LargeGlyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_ZoomOutLarge;
+            this.commandBarItem46.LargeGlyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_ZoomOutLarge;
             this.commandBarItem46.Name = "commandBarItem46";
             superToolTip50.FixedTooltipWidth = true;
             toolTipTitleItem50.Text = "Zoom Out (Ctrl+Subtract)";
@@ -1657,9 +1657,9 @@
             // barDockPanelsListItem1
             // 
             this.barDockPanelsListItem1.Caption = "Windows";
-            this.barDockPanelsListItem1.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_Windows;
+            this.barDockPanelsListItem1.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_Windows;
             this.barDockPanelsListItem1.Id = 51;
-            this.barDockPanelsListItem1.LargeGlyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_WindowsLarge;
+            this.barDockPanelsListItem1.LargeGlyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_WindowsLarge;
             this.barDockPanelsListItem1.Name = "barDockPanelsListItem1";
             this.barDockPanelsListItem1.ShowCustomizationItem = false;
             this.barDockPanelsListItem1.ShowDockPanels = true;
@@ -1680,9 +1680,9 @@
             this.scriptsCommandBarItem1.Caption = "Scripts";
             this.scriptsCommandBarItem1.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.ShowScriptsTab;
             this.scriptsCommandBarItem1.Enabled = false;
-            this.scriptsCommandBarItem1.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_Scripts;
+            this.scriptsCommandBarItem1.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_Scripts;
             this.scriptsCommandBarItem1.Id = 52;
-            this.scriptsCommandBarItem1.LargeGlyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_ScriptsLarge;
+            this.scriptsCommandBarItem1.LargeGlyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_ScriptsLarge;
             this.scriptsCommandBarItem1.Name = "scriptsCommandBarItem1";
             superToolTip54.FixedTooltipWidth = true;
             toolTipTitleItem54.Text = "Show/Hide Scripts";
@@ -1698,9 +1698,9 @@
             this.commandBarItem47.Caption = "Back";
             this.commandBarItem47.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.HtmlBackward;
             this.commandBarItem47.Enabled = false;
-            this.commandBarItem47.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_HtmlBackward;
+            this.commandBarItem47.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_HtmlBackward;
             this.commandBarItem47.Id = 53;
-            this.commandBarItem47.LargeGlyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_HtmlBackwardLarge;
+            this.commandBarItem47.LargeGlyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_HtmlBackwardLarge;
             this.commandBarItem47.Name = "commandBarItem47";
             superToolTip55.FixedTooltipWidth = true;
             toolTipTitleItem55.Text = "Back";
@@ -1716,9 +1716,9 @@
             this.commandBarItem48.Caption = "Forward";
             this.commandBarItem48.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.HtmlForward;
             this.commandBarItem48.Enabled = false;
-            this.commandBarItem48.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_HtmlForward;
+            this.commandBarItem48.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_HtmlForward;
             this.commandBarItem48.Id = 54;
-            this.commandBarItem48.LargeGlyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_HtmlForwardLarge;
+            this.commandBarItem48.LargeGlyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_HtmlForwardLarge;
             this.commandBarItem48.Name = "commandBarItem48";
             superToolTip56.FixedTooltipWidth = true;
             toolTipTitleItem56.Text = "Forward";
@@ -1734,9 +1734,9 @@
             this.commandBarItem49.Caption = "Home";
             this.commandBarItem49.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.HtmlHome;
             this.commandBarItem49.Enabled = false;
-            this.commandBarItem49.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_HtmlHome;
+            this.commandBarItem49.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_HtmlHome;
             this.commandBarItem49.Id = 55;
-            this.commandBarItem49.LargeGlyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_HtmlHomeLarge;
+            this.commandBarItem49.LargeGlyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_HtmlHomeLarge;
             this.commandBarItem49.Name = "commandBarItem49";
             superToolTip57.FixedTooltipWidth = true;
             toolTipTitleItem57.Text = "Home";
@@ -1752,9 +1752,9 @@
             this.commandBarItem50.Caption = "Refresh";
             this.commandBarItem50.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.HtmlRefresh;
             this.commandBarItem50.Enabled = false;
-            this.commandBarItem50.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_HtmlRefresh;
+            this.commandBarItem50.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_HtmlRefresh;
             this.commandBarItem50.Id = 56;
-            this.commandBarItem50.LargeGlyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_HtmlRefreshLarge;
+            this.commandBarItem50.LargeGlyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_HtmlRefreshLarge;
             this.commandBarItem50.Name = "commandBarItem50";
             superToolTip58.FixedTooltipWidth = true;
             toolTipTitleItem58.Text = "Refresh";
@@ -1770,9 +1770,9 @@
             this.commandBarItem51.Caption = "Find";
             this.commandBarItem51.Command = DevExpress.XtraReports.UserDesigner.ReportCommand.HtmlFind;
             this.commandBarItem51.Enabled = false;
-            this.commandBarItem51.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_HtmlFind;
+            this.commandBarItem51.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_HtmlFind;
             this.commandBarItem51.Id = 57;
-            this.commandBarItem51.LargeGlyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_HtmlFindLarge;
+            this.commandBarItem51.LargeGlyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_HtmlFindLarge;
             this.commandBarItem51.Name = "commandBarItem51";
             superToolTip59.FixedTooltipWidth = true;
             toolTipTitleItem59.Text = "Find";
@@ -1867,9 +1867,9 @@
             this.printPreviewBarItem1.Command = DevExpress.XtraPrinting.PrintingSystemCommand.DocumentMap;
             this.printPreviewBarItem1.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem1.Enabled = false;
-            this.printPreviewBarItem1.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_DocumentMap;
+            this.printPreviewBarItem1.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_DocumentMap;
             this.printPreviewBarItem1.Id = 69;
-            this.printPreviewBarItem1.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_DocumentMapLarge;
+            this.printPreviewBarItem1.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_DocumentMapLarge;
             this.printPreviewBarItem1.Name = "printPreviewBarItem1";
             superToolTip60.FixedTooltipWidth = true;
             toolTipTitleItem60.Text = "Document Map";
@@ -1888,9 +1888,9 @@
             this.printPreviewBarItem2.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Parameters;
             this.printPreviewBarItem2.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem2.Enabled = false;
-            this.printPreviewBarItem2.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Parameters;
+            this.printPreviewBarItem2.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_Parameters;
             this.printPreviewBarItem2.Id = 70;
-            this.printPreviewBarItem2.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ParametersLarge;
+            this.printPreviewBarItem2.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ParametersLarge;
             this.printPreviewBarItem2.Name = "printPreviewBarItem2";
             superToolTip61.FixedTooltipWidth = true;
             toolTipTitleItem61.Text = "Parameters";
@@ -1908,9 +1908,9 @@
             this.printPreviewBarItem3.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Find;
             this.printPreviewBarItem3.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem3.Enabled = false;
-            this.printPreviewBarItem3.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Find;
+            this.printPreviewBarItem3.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_Find;
             this.printPreviewBarItem3.Id = 71;
-            this.printPreviewBarItem3.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_FindLarge;
+            this.printPreviewBarItem3.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_FindLarge;
             this.printPreviewBarItem3.Name = "printPreviewBarItem3";
             superToolTip62.FixedTooltipWidth = true;
             toolTipTitleItem62.Text = "Find";
@@ -1927,9 +1927,9 @@
             this.printPreviewBarItem4.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Customize;
             this.printPreviewBarItem4.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem4.Enabled = false;
-            this.printPreviewBarItem4.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Customize;
+            this.printPreviewBarItem4.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_Customize;
             this.printPreviewBarItem4.Id = 72;
-            this.printPreviewBarItem4.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_CustomizeLarge;
+            this.printPreviewBarItem4.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_CustomizeLarge;
             this.printPreviewBarItem4.Name = "printPreviewBarItem4";
             superToolTip63.FixedTooltipWidth = true;
             toolTipTitleItem63.Text = "Options";
@@ -1946,9 +1946,9 @@
             this.printPreviewBarItem5.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Print;
             this.printPreviewBarItem5.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem5.Enabled = false;
-            this.printPreviewBarItem5.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Print;
+            this.printPreviewBarItem5.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_Print;
             this.printPreviewBarItem5.Id = 73;
-            this.printPreviewBarItem5.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PrintLarge;
+            this.printPreviewBarItem5.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_PrintLarge;
             this.printPreviewBarItem5.Name = "printPreviewBarItem5";
             superToolTip64.FixedTooltipWidth = true;
             toolTipTitleItem64.Text = "Print (Ctrl+P)";
@@ -1965,9 +1965,9 @@
             this.printPreviewBarItem6.Command = DevExpress.XtraPrinting.PrintingSystemCommand.PrintDirect;
             this.printPreviewBarItem6.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem6.Enabled = false;
-            this.printPreviewBarItem6.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PrintDirect;
+            this.printPreviewBarItem6.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_PrintDirect;
             this.printPreviewBarItem6.Id = 74;
-            this.printPreviewBarItem6.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PrintDirectLarge;
+            this.printPreviewBarItem6.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_PrintDirectLarge;
             this.printPreviewBarItem6.Name = "printPreviewBarItem6";
             superToolTip65.FixedTooltipWidth = true;
             toolTipTitleItem65.Text = "Quick Print";
@@ -2001,9 +2001,9 @@
             this.printPreviewBarItem8.Command = DevExpress.XtraPrinting.PrintingSystemCommand.EditPageHF;
             this.printPreviewBarItem8.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem8.Enabled = false;
-            this.printPreviewBarItem8.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_EditPageHF;
+            this.printPreviewBarItem8.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_EditPageHF;
             this.printPreviewBarItem8.Id = 76;
-            this.printPreviewBarItem8.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_EditPageHFLarge;
+            this.printPreviewBarItem8.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_EditPageHFLarge;
             this.printPreviewBarItem8.Name = "printPreviewBarItem8";
             superToolTip67.FixedTooltipWidth = true;
             toolTipTitleItem67.Text = "Header and Footer";
@@ -2021,9 +2021,9 @@
             this.printPreviewBarItem9.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Scale;
             this.printPreviewBarItem9.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem9.Enabled = false;
-            this.printPreviewBarItem9.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Scale;
+            this.printPreviewBarItem9.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_Scale;
             this.printPreviewBarItem9.Id = 77;
-            this.printPreviewBarItem9.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ScaleLarge;
+            this.printPreviewBarItem9.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ScaleLarge;
             this.printPreviewBarItem9.Name = "printPreviewBarItem9";
             superToolTip68.FixedTooltipWidth = true;
             toolTipTitleItem68.Text = "Scale";
@@ -2041,7 +2041,7 @@
             this.printPreviewBarItem10.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Pointer;
             this.printPreviewBarItem10.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem10.Enabled = false;
-            this.printPreviewBarItem10.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Pointer;
+            this.printPreviewBarItem10.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_Pointer;
             this.printPreviewBarItem10.GroupIndex = 1;
             this.printPreviewBarItem10.Id = 78;
             this.printPreviewBarItem10.Name = "printPreviewBarItem10";
@@ -2062,7 +2062,7 @@
             this.printPreviewBarItem11.Command = DevExpress.XtraPrinting.PrintingSystemCommand.HandTool;
             this.printPreviewBarItem11.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem11.Enabled = false;
-            this.printPreviewBarItem11.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_HandTool;
+            this.printPreviewBarItem11.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_HandTool;
             this.printPreviewBarItem11.GroupIndex = 1;
             this.printPreviewBarItem11.Id = 79;
             this.printPreviewBarItem11.Name = "printPreviewBarItem11";
@@ -2083,7 +2083,7 @@
             this.printPreviewBarItem12.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Magnifier;
             this.printPreviewBarItem12.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem12.Enabled = false;
-            this.printPreviewBarItem12.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Magnifier;
+            this.printPreviewBarItem12.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_Magnifier;
             this.printPreviewBarItem12.GroupIndex = 1;
             this.printPreviewBarItem12.Id = 80;
             this.printPreviewBarItem12.Name = "printPreviewBarItem12";
@@ -2105,9 +2105,9 @@
             this.printPreviewBarItem13.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ZoomOut;
             this.printPreviewBarItem13.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem13.Enabled = false;
-            this.printPreviewBarItem13.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ZoomOut;
+            this.printPreviewBarItem13.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ZoomOut;
             this.printPreviewBarItem13.Id = 81;
-            this.printPreviewBarItem13.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ZoomOutLarge;
+            this.printPreviewBarItem13.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ZoomOutLarge;
             this.printPreviewBarItem13.Name = "printPreviewBarItem13";
             superToolTip72.FixedTooltipWidth = true;
             toolTipTitleItem72.Text = "Zoom Out";
@@ -2124,9 +2124,9 @@
             this.printPreviewBarItem14.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ZoomIn;
             this.printPreviewBarItem14.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem14.Enabled = false;
-            this.printPreviewBarItem14.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ZoomIn;
+            this.printPreviewBarItem14.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ZoomIn;
             this.printPreviewBarItem14.Id = 82;
-            this.printPreviewBarItem14.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ZoomInLarge;
+            this.printPreviewBarItem14.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ZoomInLarge;
             this.printPreviewBarItem14.Name = "printPreviewBarItem14";
             superToolTip73.FixedTooltipWidth = true;
             toolTipTitleItem73.Text = "Zoom In";
@@ -2144,9 +2144,9 @@
             this.printPreviewBarItem15.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Zoom;
             this.printPreviewBarItem15.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem15.Enabled = false;
-            this.printPreviewBarItem15.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Zoom;
+            this.printPreviewBarItem15.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_Zoom;
             this.printPreviewBarItem15.Id = 83;
-            this.printPreviewBarItem15.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ZoomLarge;
+            this.printPreviewBarItem15.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ZoomLarge;
             this.printPreviewBarItem15.Name = "printPreviewBarItem15";
             superToolTip74.FixedTooltipWidth = true;
             toolTipTitleItem74.Text = "Zoom";
@@ -2163,9 +2163,9 @@
             this.printPreviewBarItem16.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ShowFirstPage;
             this.printPreviewBarItem16.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem16.Enabled = false;
-            this.printPreviewBarItem16.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ShowFirstPage;
+            this.printPreviewBarItem16.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ShowFirstPage;
             this.printPreviewBarItem16.Id = 84;
-            this.printPreviewBarItem16.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ShowFirstPageLarge;
+            this.printPreviewBarItem16.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ShowFirstPageLarge;
             this.printPreviewBarItem16.Name = "printPreviewBarItem16";
             superToolTip75.FixedTooltipWidth = true;
             toolTipTitleItem75.Text = "First Page (Ctrl+Home)";
@@ -2182,9 +2182,9 @@
             this.printPreviewBarItem17.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ShowPrevPage;
             this.printPreviewBarItem17.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem17.Enabled = false;
-            this.printPreviewBarItem17.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ShowPrevPage;
+            this.printPreviewBarItem17.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ShowPrevPage;
             this.printPreviewBarItem17.Id = 85;
-            this.printPreviewBarItem17.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ShowPrevPageLarge;
+            this.printPreviewBarItem17.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ShowPrevPageLarge;
             this.printPreviewBarItem17.Name = "printPreviewBarItem17";
             superToolTip76.FixedTooltipWidth = true;
             toolTipTitleItem76.Text = "Previous Page (PageUp)";
@@ -2201,9 +2201,9 @@
             this.printPreviewBarItem18.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ShowNextPage;
             this.printPreviewBarItem18.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem18.Enabled = false;
-            this.printPreviewBarItem18.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ShowNextPage;
+            this.printPreviewBarItem18.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ShowNextPage;
             this.printPreviewBarItem18.Id = 86;
-            this.printPreviewBarItem18.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ShowNextPageLarge;
+            this.printPreviewBarItem18.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ShowNextPageLarge;
             this.printPreviewBarItem18.Name = "printPreviewBarItem18";
             superToolTip77.FixedTooltipWidth = true;
             toolTipTitleItem77.Text = "Next Page (PageDown)";
@@ -2220,9 +2220,9 @@
             this.printPreviewBarItem19.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ShowLastPage;
             this.printPreviewBarItem19.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem19.Enabled = false;
-            this.printPreviewBarItem19.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ShowLastPage;
+            this.printPreviewBarItem19.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ShowLastPage;
             this.printPreviewBarItem19.Id = 87;
-            this.printPreviewBarItem19.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ShowLastPageLarge;
+            this.printPreviewBarItem19.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ShowLastPageLarge;
             this.printPreviewBarItem19.Name = "printPreviewBarItem19";
             superToolTip78.FixedTooltipWidth = true;
             toolTipTitleItem78.Text = "Last Page (Ctrl+End)";
@@ -2240,9 +2240,9 @@
             this.printPreviewBarItem20.Command = DevExpress.XtraPrinting.PrintingSystemCommand.MultiplePages;
             this.printPreviewBarItem20.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem20.Enabled = false;
-            this.printPreviewBarItem20.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_MultiplePages;
+            this.printPreviewBarItem20.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_MultiplePages;
             this.printPreviewBarItem20.Id = 88;
-            this.printPreviewBarItem20.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_MultiplePagesLarge;
+            this.printPreviewBarItem20.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_MultiplePagesLarge;
             this.printPreviewBarItem20.Name = "printPreviewBarItem20";
             superToolTip79.FixedTooltipWidth = true;
             toolTipTitleItem79.Text = "View Many Pages";
@@ -2260,9 +2260,9 @@
             this.printPreviewBarItem21.Command = DevExpress.XtraPrinting.PrintingSystemCommand.FillBackground;
             this.printPreviewBarItem21.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem21.Enabled = false;
-            this.printPreviewBarItem21.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_FillBackground;
+            this.printPreviewBarItem21.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_FillBackground;
             this.printPreviewBarItem21.Id = 89;
-            this.printPreviewBarItem21.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_FillBackgroundLarge;
+            this.printPreviewBarItem21.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_FillBackgroundLarge;
             this.printPreviewBarItem21.Name = "printPreviewBarItem21";
             superToolTip80.FixedTooltipWidth = true;
             toolTipTitleItem80.Text = "Background Color";
@@ -2279,9 +2279,9 @@
             this.printPreviewBarItem22.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Watermark;
             this.printPreviewBarItem22.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem22.Enabled = false;
-            this.printPreviewBarItem22.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Watermark;
+            this.printPreviewBarItem22.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_Watermark;
             this.printPreviewBarItem22.Id = 90;
-            this.printPreviewBarItem22.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_WatermarkLarge;
+            this.printPreviewBarItem22.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_WatermarkLarge;
             this.printPreviewBarItem22.Name = "printPreviewBarItem22";
             superToolTip81.FixedTooltipWidth = true;
             toolTipTitleItem81.Text = "Watermark";
@@ -2341,9 +2341,9 @@
             this.printPreviewBarItem25.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ClosePreview;
             this.printPreviewBarItem25.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem25.Enabled = false;
-            this.printPreviewBarItem25.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ClosePreview;
+            this.printPreviewBarItem25.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ClosePreview;
             this.printPreviewBarItem25.Id = 93;
-            this.printPreviewBarItem25.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ClosePreviewLarge;
+            this.printPreviewBarItem25.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ClosePreviewLarge;
             this.printPreviewBarItem25.Name = "printPreviewBarItem25";
             superToolTip84.FixedTooltipWidth = true;
             toolTipTitleItem84.Text = "Close Print Preview";
@@ -2361,9 +2361,9 @@
             this.printPreviewBarItem26.Command = DevExpress.XtraPrinting.PrintingSystemCommand.PageOrientation;
             this.printPreviewBarItem26.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem26.Enabled = false;
-            this.printPreviewBarItem26.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PageOrientation;
+            this.printPreviewBarItem26.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_PageOrientation;
             this.printPreviewBarItem26.Id = 94;
-            this.printPreviewBarItem26.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PageOrientationLarge;
+            this.printPreviewBarItem26.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_PageOrientationLarge;
             this.printPreviewBarItem26.Name = "printPreviewBarItem26";
             superToolTip85.FixedTooltipWidth = true;
             toolTipTitleItem85.Text = "Page Orientation";
@@ -2381,9 +2381,9 @@
             this.printPreviewBarItem27.Command = DevExpress.XtraPrinting.PrintingSystemCommand.PaperSize;
             this.printPreviewBarItem27.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem27.Enabled = false;
-            this.printPreviewBarItem27.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PaperSize;
+            this.printPreviewBarItem27.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_PaperSize;
             this.printPreviewBarItem27.Id = 95;
-            this.printPreviewBarItem27.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PaperSizeLarge;
+            this.printPreviewBarItem27.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_PaperSizeLarge;
             this.printPreviewBarItem27.Name = "printPreviewBarItem27";
             superToolTip86.FixedTooltipWidth = true;
             toolTipTitleItem86.Text = "Page Size";
@@ -2401,9 +2401,9 @@
             this.printPreviewBarItem28.Command = DevExpress.XtraPrinting.PrintingSystemCommand.PageMargins;
             this.printPreviewBarItem28.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem28.Enabled = false;
-            this.printPreviewBarItem28.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PageMargins;
+            this.printPreviewBarItem28.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_PageMargins;
             this.printPreviewBarItem28.Id = 96;
-            this.printPreviewBarItem28.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PageMarginsLarge;
+            this.printPreviewBarItem28.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_PageMarginsLarge;
             this.printPreviewBarItem28.Name = "printPreviewBarItem28";
             superToolTip87.FixedTooltipWidth = true;
             toolTipTitleItem87.Text = "Page Margins";
@@ -2422,9 +2422,9 @@
             this.printPreviewBarItem29.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem29.Description = "Adobe Portable Document Format";
             this.printPreviewBarItem29.Enabled = false;
-            this.printPreviewBarItem29.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendPdf;
+            this.printPreviewBarItem29.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_SendPdf;
             this.printPreviewBarItem29.Id = 97;
-            this.printPreviewBarItem29.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendPdfLarge;
+            this.printPreviewBarItem29.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_SendPdfLarge;
             this.printPreviewBarItem29.Name = "printPreviewBarItem29";
             superToolTip88.FixedTooltipWidth = true;
             toolTipTitleItem88.Text = "E-Mail As PDF";
@@ -2442,9 +2442,9 @@
             this.printPreviewBarItem30.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem30.Description = "Plain Text";
             this.printPreviewBarItem30.Enabled = false;
-            this.printPreviewBarItem30.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendTxt;
+            this.printPreviewBarItem30.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_SendTxt;
             this.printPreviewBarItem30.Id = 98;
-            this.printPreviewBarItem30.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendTxtLarge;
+            this.printPreviewBarItem30.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_SendTxtLarge;
             this.printPreviewBarItem30.Name = "printPreviewBarItem30";
             superToolTip89.FixedTooltipWidth = true;
             toolTipTitleItem89.Text = "E-Mail As Text";
@@ -2462,9 +2462,9 @@
             this.printPreviewBarItem31.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem31.Description = "Comma-Separated Values Text";
             this.printPreviewBarItem31.Enabled = false;
-            this.printPreviewBarItem31.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendCsv;
+            this.printPreviewBarItem31.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_SendCsv;
             this.printPreviewBarItem31.Id = 99;
-            this.printPreviewBarItem31.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendCsvLarge;
+            this.printPreviewBarItem31.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_SendCsvLarge;
             this.printPreviewBarItem31.Name = "printPreviewBarItem31";
             superToolTip90.FixedTooltipWidth = true;
             toolTipTitleItem90.Text = "E-Mail As CSV";
@@ -2482,9 +2482,9 @@
             this.printPreviewBarItem32.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem32.Description = "Single File Web Page";
             this.printPreviewBarItem32.Enabled = false;
-            this.printPreviewBarItem32.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendMht;
+            this.printPreviewBarItem32.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_SendMht;
             this.printPreviewBarItem32.Id = 100;
-            this.printPreviewBarItem32.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendMhtLarge;
+            this.printPreviewBarItem32.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_SendMhtLarge;
             this.printPreviewBarItem32.Name = "printPreviewBarItem32";
             superToolTip91.FixedTooltipWidth = true;
             toolTipTitleItem91.Text = "E-Mail As MHT";
@@ -2502,9 +2502,9 @@
             this.printPreviewBarItem33.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem33.Description = "Microsoft Excel 2000-2003 Workbook";
             this.printPreviewBarItem33.Enabled = false;
-            this.printPreviewBarItem33.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendXls;
+            this.printPreviewBarItem33.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_SendXls;
             this.printPreviewBarItem33.Id = 101;
-            this.printPreviewBarItem33.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendXlsLarge;
+            this.printPreviewBarItem33.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_SendXlsLarge;
             this.printPreviewBarItem33.Name = "printPreviewBarItem33";
             superToolTip92.FixedTooltipWidth = true;
             toolTipTitleItem92.Text = "E-Mail As XLS";
@@ -2522,9 +2522,9 @@
             this.printPreviewBarItem34.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem34.Description = "Microsoft Excel 2007 Workbook";
             this.printPreviewBarItem34.Enabled = false;
-            this.printPreviewBarItem34.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendXlsx;
+            this.printPreviewBarItem34.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_SendXlsx;
             this.printPreviewBarItem34.Id = 102;
-            this.printPreviewBarItem34.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendXlsxLarge;
+            this.printPreviewBarItem34.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_SendXlsxLarge;
             this.printPreviewBarItem34.Name = "printPreviewBarItem34";
             superToolTip93.FixedTooltipWidth = true;
             toolTipTitleItem93.Text = "E-Mail As XLSX";
@@ -2542,9 +2542,9 @@
             this.printPreviewBarItem35.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem35.Description = "Rich Text Format";
             this.printPreviewBarItem35.Enabled = false;
-            this.printPreviewBarItem35.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendRtf;
+            this.printPreviewBarItem35.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_SendRtf;
             this.printPreviewBarItem35.Id = 103;
-            this.printPreviewBarItem35.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendRtfLarge;
+            this.printPreviewBarItem35.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_SendRtfLarge;
             this.printPreviewBarItem35.Name = "printPreviewBarItem35";
             superToolTip94.FixedTooltipWidth = true;
             toolTipTitleItem94.Text = "E-Mail As RTF";
@@ -2562,9 +2562,9 @@
             this.printPreviewBarItem36.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem36.Description = "BMP, GIF, JPEG, PNG, TIFF, EMF, WMF";
             this.printPreviewBarItem36.Enabled = false;
-            this.printPreviewBarItem36.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendGraphic;
+            this.printPreviewBarItem36.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_SendGraphic;
             this.printPreviewBarItem36.Id = 104;
-            this.printPreviewBarItem36.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SendGraphicLarge;
+            this.printPreviewBarItem36.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_SendGraphicLarge;
             this.printPreviewBarItem36.Name = "printPreviewBarItem36";
             superToolTip95.FixedTooltipWidth = true;
             toolTipTitleItem95.Text = "E-Mail As Image";
@@ -2582,9 +2582,9 @@
             this.printPreviewBarItem37.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem37.Description = "Adobe Portable Document Format";
             this.printPreviewBarItem37.Enabled = false;
-            this.printPreviewBarItem37.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportPdf;
+            this.printPreviewBarItem37.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ExportPdf;
             this.printPreviewBarItem37.Id = 105;
-            this.printPreviewBarItem37.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportPdfLarge;
+            this.printPreviewBarItem37.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ExportPdfLarge;
             this.printPreviewBarItem37.Name = "printPreviewBarItem37";
             superToolTip96.FixedTooltipWidth = true;
             toolTipTitleItem96.Text = "Export to PDF";
@@ -2602,9 +2602,9 @@
             this.printPreviewBarItem38.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem38.Description = "Web Page";
             this.printPreviewBarItem38.Enabled = false;
-            this.printPreviewBarItem38.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportHtm;
+            this.printPreviewBarItem38.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ExportHtm;
             this.printPreviewBarItem38.Id = 106;
-            this.printPreviewBarItem38.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportHtmLarge;
+            this.printPreviewBarItem38.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ExportHtmLarge;
             this.printPreviewBarItem38.Name = "printPreviewBarItem38";
             superToolTip97.FixedTooltipWidth = true;
             toolTipTitleItem97.Text = "Export to HTML";
@@ -2622,9 +2622,9 @@
             this.printPreviewBarItem39.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem39.Description = "Plain Text";
             this.printPreviewBarItem39.Enabled = false;
-            this.printPreviewBarItem39.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportTxt;
+            this.printPreviewBarItem39.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ExportTxt;
             this.printPreviewBarItem39.Id = 107;
-            this.printPreviewBarItem39.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportTxtLarge;
+            this.printPreviewBarItem39.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ExportTxtLarge;
             this.printPreviewBarItem39.Name = "printPreviewBarItem39";
             superToolTip98.FixedTooltipWidth = true;
             toolTipTitleItem98.Text = "Export to Text";
@@ -2642,9 +2642,9 @@
             this.printPreviewBarItem40.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem40.Description = "Comma-Separated Values Text";
             this.printPreviewBarItem40.Enabled = false;
-            this.printPreviewBarItem40.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportCsv;
+            this.printPreviewBarItem40.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ExportCsv;
             this.printPreviewBarItem40.Id = 108;
-            this.printPreviewBarItem40.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportCsvLarge;
+            this.printPreviewBarItem40.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ExportCsvLarge;
             this.printPreviewBarItem40.Name = "printPreviewBarItem40";
             superToolTip99.FixedTooltipWidth = true;
             toolTipTitleItem99.Text = "Export to CSV";
@@ -2662,9 +2662,9 @@
             this.printPreviewBarItem41.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem41.Description = "Single File Web Page";
             this.printPreviewBarItem41.Enabled = false;
-            this.printPreviewBarItem41.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportMht;
+            this.printPreviewBarItem41.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ExportMht;
             this.printPreviewBarItem41.Id = 109;
-            this.printPreviewBarItem41.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportMhtLarge;
+            this.printPreviewBarItem41.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ExportMhtLarge;
             this.printPreviewBarItem41.Name = "printPreviewBarItem41";
             superToolTip100.FixedTooltipWidth = true;
             toolTipTitleItem100.Text = "Export to MHT";
@@ -2682,9 +2682,9 @@
             this.printPreviewBarItem42.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem42.Description = "Microsoft Excel 2000-2003 Workbook";
             this.printPreviewBarItem42.Enabled = false;
-            this.printPreviewBarItem42.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportXls;
+            this.printPreviewBarItem42.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ExportXls;
             this.printPreviewBarItem42.Id = 110;
-            this.printPreviewBarItem42.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportXlsLarge;
+            this.printPreviewBarItem42.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ExportXlsLarge;
             this.printPreviewBarItem42.Name = "printPreviewBarItem42";
             superToolTip101.FixedTooltipWidth = true;
             toolTipTitleItem101.Text = "Export to XLS";
@@ -2702,9 +2702,9 @@
             this.printPreviewBarItem43.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem43.Description = "Microsoft Excel 2007 Workbook";
             this.printPreviewBarItem43.Enabled = false;
-            this.printPreviewBarItem43.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportXlsx;
+            this.printPreviewBarItem43.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ExportXlsx;
             this.printPreviewBarItem43.Id = 111;
-            this.printPreviewBarItem43.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportXlsxLarge;
+            this.printPreviewBarItem43.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ExportXlsxLarge;
             this.printPreviewBarItem43.Name = "printPreviewBarItem43";
             superToolTip102.FixedTooltipWidth = true;
             toolTipTitleItem102.Text = "Export to XLSX";
@@ -2722,9 +2722,9 @@
             this.printPreviewBarItem44.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem44.Description = "Rich Text Format";
             this.printPreviewBarItem44.Enabled = false;
-            this.printPreviewBarItem44.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportRtf;
+            this.printPreviewBarItem44.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ExportRtf;
             this.printPreviewBarItem44.Id = 112;
-            this.printPreviewBarItem44.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportRtfLarge;
+            this.printPreviewBarItem44.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ExportRtfLarge;
             this.printPreviewBarItem44.Name = "printPreviewBarItem44";
             superToolTip103.FixedTooltipWidth = true;
             toolTipTitleItem103.Text = "Export to RTF";
@@ -2742,9 +2742,9 @@
             this.printPreviewBarItem45.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem45.Description = "BMP, GIF, JPEG, PNG, TIFF, EMF, WMF";
             this.printPreviewBarItem45.Enabled = false;
-            this.printPreviewBarItem45.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportGraphic;
+            this.printPreviewBarItem45.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ExportGraphic;
             this.printPreviewBarItem45.Id = 113;
-            this.printPreviewBarItem45.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportGraphicLarge;
+            this.printPreviewBarItem45.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ExportGraphicLarge;
             this.printPreviewBarItem45.Name = "printPreviewBarItem45";
             superToolTip104.FixedTooltipWidth = true;
             toolTipTitleItem104.Text = "Export to Image";
@@ -2761,9 +2761,9 @@
             this.printPreviewBarItem46.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Open;
             this.printPreviewBarItem46.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem46.Enabled = false;
-            this.printPreviewBarItem46.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Open;
+            this.printPreviewBarItem46.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_Open;
             this.printPreviewBarItem46.Id = 114;
-            this.printPreviewBarItem46.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_OpenLarge;
+            this.printPreviewBarItem46.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_OpenLarge;
             this.printPreviewBarItem46.Name = "printPreviewBarItem46";
             superToolTip105.FixedTooltipWidth = true;
             toolTipTitleItem105.Text = "Open (Ctrl + O)";
@@ -2780,9 +2780,9 @@
             this.printPreviewBarItem47.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Save;
             this.printPreviewBarItem47.ContextSpecifier = this.xrDesignRibbonController1;
             this.printPreviewBarItem47.Enabled = false;
-            this.printPreviewBarItem47.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Save;
+            this.printPreviewBarItem47.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_Save;
             this.printPreviewBarItem47.Id = 115;
-            this.printPreviewBarItem47.LargeGlyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_SaveLarge;
+            this.printPreviewBarItem47.LargeGlyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_SaveLarge;
             this.printPreviewBarItem47.Name = "printPreviewBarItem47";
             superToolTip106.FixedTooltipWidth = true;
             toolTipTitleItem106.Text = "Save (Ctrl + S)";
@@ -2905,7 +2905,7 @@
             // 
             // xrDesignRibbonPageGroup1
             // 
-            this.xrDesignRibbonPageGroup1.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_Report;
+            this.xrDesignRibbonPageGroup1.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_Report;
             this.xrDesignRibbonPageGroup1.ItemLinks.Add(this.commandBarItem31);
             this.xrDesignRibbonPageGroup1.ItemLinks.Add(this.commandBarItem34);
             this.xrDesignRibbonPageGroup1.ItemLinks.Add(this.commandBarItem32);
@@ -2917,7 +2917,7 @@
             // 
             // xrDesignRibbonPageGroup2
             // 
-            this.xrDesignRibbonPageGroup2.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_Edit;
+            this.xrDesignRibbonPageGroup2.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_Edit;
             this.xrDesignRibbonPageGroup2.ItemLinks.Add(this.commandBarItem39);
             this.xrDesignRibbonPageGroup2.ItemLinks.Add(this.commandBarItem40);
             this.xrDesignRibbonPageGroup2.ItemLinks.Add(this.commandBarItem41);
@@ -2930,7 +2930,7 @@
             // 
             // xrDesignRibbonPageGroup3
             // 
-            this.xrDesignRibbonPageGroup3.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_Font;
+            this.xrDesignRibbonPageGroup3.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_Font;
             this.xrDesignRibbonPageGroup3.ItemLinks.Add(this.barEditItem1, false, "", "", true);
             this.xrDesignRibbonPageGroup3.ItemLinks.Add(this.xrDesignBarButtonGroup1);
             this.xrDesignRibbonPageGroup3.ItemLinks.Add(this.barEditItem2, false, "", "", true);
@@ -2943,7 +2943,7 @@
             // 
             // xrDesignRibbonPageGroup4
             // 
-            this.xrDesignRibbonPageGroup4.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_AlignVerticalCenters;
+            this.xrDesignRibbonPageGroup4.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_AlignVerticalCenters;
             this.xrDesignRibbonPageGroup4.ItemLinks.Add(this.xrDesignBarButtonGroup4);
             this.xrDesignRibbonPageGroup4.ItemLinks.Add(this.xrDesignBarButtonGroup5);
             this.xrDesignRibbonPageGroup4.Kind = DevExpress.XtraReports.UserDesigner.XRDesignRibbonPageGroupKind.Alignment;
@@ -2953,7 +2953,7 @@
             // 
             // xrDesignRibbonPageGroup5
             // 
-            this.xrDesignRibbonPageGroup5.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_SizeToControl;
+            this.xrDesignRibbonPageGroup5.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_SizeToControl;
             this.xrDesignRibbonPageGroup5.ItemLinks.Add(this.xrDesignBarButtonGroup6);
             this.xrDesignRibbonPageGroup5.ItemLinks.Add(this.xrDesignBarButtonGroup7);
             this.xrDesignRibbonPageGroup5.ItemLinks.Add(this.xrDesignBarButtonGroup8);
@@ -2965,7 +2965,7 @@
             // 
             // xrDesignRibbonPageGroup6
             // 
-            this.xrDesignRibbonPageGroup6.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_Zoom;
+            this.xrDesignRibbonPageGroup6.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_Zoom;
             this.xrDesignRibbonPageGroup6.ItemLinks.Add(this.commandBarItem46);
             this.xrDesignRibbonPageGroup6.ItemLinks.Add(this.commandBarItem44);
             this.xrDesignRibbonPageGroup6.ItemLinks.Add(this.commandBarItem45);
@@ -2976,7 +2976,7 @@
             // 
             // xrDesignRibbonPageGroup7
             // 
-            this.xrDesignRibbonPageGroup7.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_Windows;
+            this.xrDesignRibbonPageGroup7.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_Windows;
             this.xrDesignRibbonPageGroup7.ItemLinks.Add(this.barDockPanelsListItem1);
             this.xrDesignRibbonPageGroup7.Kind = DevExpress.XtraReports.UserDesigner.XRDesignRibbonPageGroupKind.View;
             this.xrDesignRibbonPageGroup7.Name = "xrDesignRibbonPageGroup7";
@@ -2985,7 +2985,7 @@
             // 
             // xrDesignRibbonPageGroup8
             // 
-            this.xrDesignRibbonPageGroup8.Glyph = global::ProduceManager.Form.XRDesignRibbonControllerResources.RibbonUserDesigner_Scripts;
+            this.xrDesignRibbonPageGroup8.Glyph = global::ProduceManager.Forms.XRDesignRibbonControllerResources.RibbonUserDesigner_Scripts;
             this.xrDesignRibbonPageGroup8.ItemLinks.Add(this.scriptsCommandBarItem1);
             this.xrDesignRibbonPageGroup8.Kind = DevExpress.XtraReports.UserDesigner.XRDesignRibbonPageGroupKind.Scripts;
             this.xrDesignRibbonPageGroup8.Name = "xrDesignRibbonPageGroup8";
@@ -3010,7 +3010,7 @@
             // printPreviewRibbonPageGroup1
             // 
             this.printPreviewRibbonPageGroup1.ContextSpecifier = this.xrDesignRibbonController1;
-            this.printPreviewRibbonPageGroup1.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Document;
+            this.printPreviewRibbonPageGroup1.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_Document;
             this.printPreviewRibbonPageGroup1.ItemLinks.Add(this.printPreviewBarItem46);
             this.printPreviewRibbonPageGroup1.ItemLinks.Add(this.printPreviewBarItem47);
             this.printPreviewRibbonPageGroup1.Kind = DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroupKind.Document;
@@ -3021,7 +3021,7 @@
             // printPreviewRibbonPageGroup2
             // 
             this.printPreviewRibbonPageGroup2.ContextSpecifier = this.xrDesignRibbonController1;
-            this.printPreviewRibbonPageGroup2.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PrintDirect;
+            this.printPreviewRibbonPageGroup2.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_PrintDirect;
             this.printPreviewRibbonPageGroup2.ItemLinks.Add(this.printPreviewBarItem5);
             this.printPreviewRibbonPageGroup2.ItemLinks.Add(this.printPreviewBarItem6);
             this.printPreviewRibbonPageGroup2.ItemLinks.Add(this.printPreviewBarItem4);
@@ -3034,7 +3034,7 @@
             // printPreviewRibbonPageGroup3
             // 
             this.printPreviewRibbonPageGroup3.ContextSpecifier = this.xrDesignRibbonController1;
-            this.printPreviewRibbonPageGroup3.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_PageMargins;
+            this.printPreviewRibbonPageGroup3.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_PageMargins;
             this.printPreviewRibbonPageGroup3.ItemLinks.Add(this.printPreviewBarItem8);
             this.printPreviewRibbonPageGroup3.ItemLinks.Add(this.printPreviewBarItem9);
             this.printPreviewRibbonPageGroup3.ItemLinks.Add(this.printPreviewBarItem28);
@@ -3055,7 +3055,7 @@
             // printPreviewRibbonPageGroup4
             // 
             this.printPreviewRibbonPageGroup4.ContextSpecifier = this.xrDesignRibbonController1;
-            this.printPreviewRibbonPageGroup4.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Find;
+            this.printPreviewRibbonPageGroup4.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_Find;
             this.printPreviewRibbonPageGroup4.ItemLinks.Add(this.printPreviewBarItem3);
             this.printPreviewRibbonPageGroup4.ItemLinks.Add(this.printPreviewBarItem1);
             this.printPreviewRibbonPageGroup4.ItemLinks.Add(this.printPreviewBarItem16, true);
@@ -3070,7 +3070,7 @@
             // printPreviewRibbonPageGroup5
             // 
             this.printPreviewRibbonPageGroup5.ContextSpecifier = this.xrDesignRibbonController1;
-            this.printPreviewRibbonPageGroup5.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Zoom;
+            this.printPreviewRibbonPageGroup5.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_Zoom;
             this.printPreviewRibbonPageGroup5.ItemLinks.Add(this.printPreviewBarItem10);
             this.printPreviewRibbonPageGroup5.ItemLinks.Add(this.printPreviewBarItem11);
             this.printPreviewRibbonPageGroup5.ItemLinks.Add(this.printPreviewBarItem12);
@@ -3086,7 +3086,7 @@
             // printPreviewRibbonPageGroup6
             // 
             this.printPreviewRibbonPageGroup6.ContextSpecifier = this.xrDesignRibbonController1;
-            this.printPreviewRibbonPageGroup6.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_Watermark;
+            this.printPreviewRibbonPageGroup6.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_Watermark;
             this.printPreviewRibbonPageGroup6.ItemLinks.Add(this.printPreviewBarItem21);
             this.printPreviewRibbonPageGroup6.ItemLinks.Add(this.printPreviewBarItem22);
             this.printPreviewRibbonPageGroup6.Kind = DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroupKind.Background;
@@ -3097,7 +3097,7 @@
             // printPreviewRibbonPageGroup7
             // 
             this.printPreviewRibbonPageGroup7.ContextSpecifier = this.xrDesignRibbonController1;
-            this.printPreviewRibbonPageGroup7.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ExportFile;
+            this.printPreviewRibbonPageGroup7.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ExportFile;
             this.printPreviewRibbonPageGroup7.ItemLinks.Add(this.printPreviewBarItem23);
             this.printPreviewRibbonPageGroup7.ItemLinks.Add(this.printPreviewBarItem24);
             this.printPreviewRibbonPageGroup7.Kind = DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroupKind.Export;
@@ -3108,7 +3108,7 @@
             // printPreviewRibbonPageGroup8
             // 
             this.printPreviewRibbonPageGroup8.ContextSpecifier = this.xrDesignRibbonController1;
-            this.printPreviewRibbonPageGroup8.Glyph = global::ProduceManager.Form.PrintRibbonControllerResources.RibbonPrintPreview_ClosePreview;
+            this.printPreviewRibbonPageGroup8.Glyph = global::ProduceManager.Forms.PrintRibbonControllerResources.RibbonPrintPreview_ClosePreview;
             this.printPreviewRibbonPageGroup8.ItemLinks.Add(this.printPreviewBarItem25);
             this.printPreviewRibbonPageGroup8.Kind = DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroupKind.Close;
             this.printPreviewRibbonPageGroup8.Name = "printPreviewRibbonPageGroup8";

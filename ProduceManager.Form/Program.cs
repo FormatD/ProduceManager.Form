@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 using DevExpress.LookAndFeel;
-using ProduceManager.Form.Persistence;
-using System.Linq;
+using System.Threading;
+using System.Globalization;
+using ProduceManager.Forms.Utils;
 
-namespace ProduceManager.Form
+namespace ProduceManager.Forms
 {
     static class Program
     {
@@ -15,6 +15,8 @@ namespace ProduceManager.Form
         [STAThread]
         static void Main()
         {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("zh-Hans");
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
@@ -22,7 +24,7 @@ namespace ProduceManager.Form
             DevExpress.UserSkins.BonusSkins.Register();
             UserLookAndFeel.Default.SetSkinStyle("Office 2013");
 
-            Application.Run(new MainForm());
+            Application.Run(AppHelper.MainForm = new MainForm());
         }
     }
 }

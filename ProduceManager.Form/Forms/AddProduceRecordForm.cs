@@ -7,12 +7,14 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using ProduceManager.Form.Persistence;
-using ProduceManager.Form.Domains;
-using ProduceManager.Form.Utils;
+using ProduceManager.Forms.Persistence;
+using ProduceManager.Forms.Domains;
+using ProduceManager.Forms.Utils;
 using DevExpress.XtraEditors.Controls;
+using DevExpress.Data.Filtering;
+using System.Threading;
 
-namespace ProduceManager.Form
+namespace ProduceManager.Forms
 {
     public partial class AddProduceRecordForm : XtraForm
     {
@@ -25,6 +27,10 @@ namespace ProduceManager.Form
         private IList<Worker> _workerList;
         private int _batchId;
         private bool _addFromBatch;
+        private bool _isBatchMode;
+
+        public event EventHandler<AddProduceRecordEventArgs> DataSaved;
+
         public AddProduceRecordForm()
         {
             InitializeComponent();
@@ -47,6 +53,17 @@ namespace ProduceManager.Form
             _btnAdd.Text = "保存";
         }
 
+        void Properties_PopupFilter(object sender, DevExpress.XtraEditors.Controls.PopupFilterEventArgs e)
+        {
+            if (string.IsNullOrEmpty(e.SearchText)) return;
+            LookUpEdit edit = sender as LookUpEdit;
+            PropertyDescriptorCollection propertyDescriptors = ListBindingHelper.GetListItemProperties(edit.Properties.DataSource);
+            IEnumerable<FunctionOperator> operators = propertyDescriptors.OfType<PropertyDescriptor>().Select(
+                t => new FunctionOperator(FunctionOperatorType.Contains, new OperandProperty(t.Name), new OperandValue(e.SearchText)));
+            e.Criteria = new GroupOperator(GroupOperatorType.Or, operators);
+            e.SuppressSearchCriteria = true;
+        }
+
         private void AddProduceRecordForm_Load(object sender, EventArgs e)
         {
             _cbProducts.Properties.DataSource = _productList = _service.GetAllProducts();
@@ -54,7 +71,8 @@ namespace ProduceManager.Form
             _cbProducts.Properties.ImmediatePopup = true;
             _cbProducts.Properties.DisplayMember = "Name";
             _cbProducts.Properties.ValueMember = "Id";
-            //_cbProducts.Properties.re = false;
+
+            _cbProducts.Properties.PopupFilter += Properties_PopupFilter;
 
             _cbBatch.Properties.DataSource = _batchList = _service.GetAllBatches();
             _cbBatch.Properties.TextEditStyle = TextEditStyles.Standard;
@@ -65,15 +83,14 @@ namespace ProduceManager.Form
             _cbProcedure.Properties.DataSource = _procedureList = _service.GetAllProcedures();
             _cbProcedure.Properties.TextEditStyle = TextEditStyles.Standard;
             _cbProcedure.Properties.ImmediatePopup = true;
-            _cbProcedure.Properties.DisplayMember = "Name";
+            _cbProcedure.Properties.DisplayMember = "DisplayText";
             _cbProcedure.Properties.ValueMember = "Id";
 
             _cbWorkers.Properties.DataSource = _workerList = _service.GetAllWorkers();
             _cbWorkers.Properties.TextEditStyle = TextEditStyles.Standard;
             _cbWorkers.Properties.ImmediatePopup = true;
-            _cbWorkers.Properties.DisplayMember = "Name";
+            _cbWorkers.Properties.DisplayMember = "DisplayText";
             _cbWorkers.Properties.ValueMember = "Id";
-
 
             if (_isAddingNew)
             {
@@ -81,6 +98,8 @@ namespace ProduceManager.Form
                 {
                     _cbBatch.ItemIndex = _batchList.IndexOf(x => x.Id == _batchId);
                 }
+
+                _deStartTime.EditValue = DateTime.Today;
             }
             else
             {
@@ -94,7 +113,7 @@ namespace ProduceManager.Form
 
                 _cbBatch.ItemIndex = _batchList.IndexOf(x => x.Id == produceRecord.BatchId);
                 //_cbProducts.ItemIndex = _productList.IndexOf(x => x.Id == produceRecord.ProductId);
-                _cbWorkers.ItemIndex = _workerList.IndexOf(x => x.Id == produceRecord.WorkerId);
+                _cbWorkers.EditValue = _workerList.FirstOrDefault(x => x.Id == produceRecord.WorkerId);
                 _cbProcedure.ItemIndex = _productList.IndexOf(x => x.Id == produceRecord.ProcedureId);
                 _seExpectedAmount.EditValue = produceRecord.Amount;
                 _deStartTime.EditValue = produceRecord.Date;
@@ -112,9 +131,17 @@ namespace ProduceManager.Form
             var product = _cbProducts.GetSelectedDataRow() as Product;
             var worker = _cbWorkers.GetSelectedDataRow() as Worker;
             var procedure = _cbProcedure.GetSelectedDataRow() as Procedure;
-
             var amount = (int)_seExpectedAmount.Value;
             var date = _deStartTime.DateTime;
+
+            if (!_cbProcedure.Validate(procedure == null)
+                || !_cbProducts.Validate(product == null)
+                || !_cbWorkers.Validate(worker == null)
+                || !_seExpectedAmount.Validate(amount <= 0)
+                || !_deStartTime.Validate(date < new DateTime(1990, 1, 1)))
+            {
+                return;
+            }
 
             if (_isAddingNew)
             {
@@ -122,13 +149,14 @@ namespace ProduceManager.Form
                 var produceRecord = new ProduceRecord
                 {
                     WorkerId = worker.Id,
-                    BatchId = batch.Id,
-                    ProductId = batch.ProductId,
+                    BatchId = 0,//batch.Id,
+                    ProductId = product.Id,// batch.ProductId,
                     ProcedureId = procedure.Id,
                     Amount = amount,
                     Date = date,
                 };
                 _service.AddProduceRecord(produceRecord);
+                OnDataSaved(produceRecord);
             }
             else
             {
@@ -142,8 +170,45 @@ namespace ProduceManager.Form
                 _deStartTime.DateTime = date;
 
                 _service.SaveChanges();
+                OnDataSaved(oldProduceRecord);
             }
-            DialogResult = DialogResult.OK;
+
+            SetAsFocused();
+
+            if (_chkIsBatchAddModel.Checked)
+            {
+                ResetForm();
+            }
+            else
+            {
+                DialogResult = DialogResult.OK;
+            }
+        }
+
+        private void SetAsFocused()
+        {
+            ThreadPool.QueueUserWorkItem(x =>
+            {
+                Thread.Sleep(500);
+                BeginInvoke(new MethodInvoker(() =>
+                {
+                    var xx = Win32Helper.SetForegroundWindow(this.Handle);
+                    Console.WriteLine(xx);
+                }));
+            });
+
+            //this.Activate();
+
+            //Console.WriteLine(this.Focus());
+            //Console.WriteLine(this.TopMost = true);
+            //Console.WriteLine($"Current is me:{Form.ActiveForm == this}");
+        }
+
+        private void ResetForm()
+        {
+            _cbProducts.Select();
+            //_deStartTime.EditValue = DateTime.Today;
+            _seExpectedAmount.EditValue = 0;
         }
 
         private void _cbBatch_EditValueChanged(object sender, EventArgs e)
@@ -158,5 +223,42 @@ namespace ProduceManager.Form
             }
         }
 
+        private void _chkIsBatchAddModel_CheckedChanged(object sender, EventArgs e)
+        {
+            _isBatchMode = _chkIsBatchAddModel.Checked;
+
+            _cbBatch.TabStop = !_isBatchMode;
+            _cbProcedure.TabStop = !_isBatchMode;
+            _deStartTime.TabStop = !_isBatchMode;
+
+            _cbBatch.Properties.Appearance.BackColor = _isBatchMode ? Color.Gray : Color.White;
+            _cbProcedure.Properties.Appearance.BackColor = _isBatchMode ? Color.Gray : Color.White;
+            _deStartTime.Properties.Appearance.BackColor = _isBatchMode ? Color.Gray : Color.White;
+        }
+
+        private void OnDataSaved(ProduceRecord produceRecord)
+        {
+            var handler = DataSaved;
+            DataSaved?.Invoke(this, new AddProduceRecordEventArgs { ProduceRecord = produceRecord });
+        }
+    }
+
+    public class AddProduceRecordEventArgs : EventArgs
+    {
+        public ProduceRecord ProduceRecord { get; set; }
+    }
+
+    public static class FormValidateHelper
+    {
+        public static bool Validate(this Control control, bool failCondition)
+        {
+            if (failCondition)
+            {
+                control.Select();
+                return false;
+            }
+
+            return true;
+        }
     }
 }

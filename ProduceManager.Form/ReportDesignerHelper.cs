@@ -6,7 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace ProduceManager.Form
+namespace ProduceManager.Forms
 {
     /// <summary>
     /// 报表设计器辅助类

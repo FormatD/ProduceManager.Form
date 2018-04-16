@@ -13,14 +13,14 @@ using DevExpress.Skins;
 using DevExpress.LookAndFeel;
 using DevExpress.UserSkins;
 using DevExpress.XtraTab;
-using ProduceManager.Form.UserControls;
+using ProduceManager.Forms.UserControls;
 using DevExpress.XtraPrinting.Preview;
-using ProduceManager.Form.Utils;
+using ProduceManager.Forms.Utils;
 using System.IO;
 using DevExpress.XtraReports.UI;
 
 
-namespace ProduceManager.Form
+namespace ProduceManager.Forms
 {
     public partial class MainForm : RibbonForm
     {
@@ -171,11 +171,20 @@ namespace ProduceManager.Form
         {
             using (var form = new AddReportForm())
             {
-                if(form.ShowDialog() == DialogResult.OK)
+                if (form.ShowDialog() == DialogResult.OK)
                     JumpToReportView();
             }
         }
 
+        private void _btnSaleBill_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var view = _mdiService.JumpTo<SaleBillView>();
+        }
+
+        private void e_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            new AddSaleBillForm().ShowDialog();
+        }
     }
 
 

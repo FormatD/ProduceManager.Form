@@ -1,4 +1,4 @@
-﻿namespace ProduceManager.Form
+﻿namespace ProduceManager.Forms
 {
     partial class AddProcedureForm
     {

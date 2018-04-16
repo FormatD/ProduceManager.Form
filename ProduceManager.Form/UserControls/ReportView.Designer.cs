@@ -1,4 +1,4 @@
-﻿namespace ProduceManager.Form.UserControls
+﻿namespace ProduceManager.Forms.UserControls
 {
     partial class ReportView
     {

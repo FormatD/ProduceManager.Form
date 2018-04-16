@@ -1,4 +1,4 @@
-﻿namespace ProduceManager.Form
+﻿namespace ProduceManager.Forms
 {
     partial class AddProduceRecordForm
     {
@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProduceRecordForm));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this._chkIsBatchAddModel = new DevExpress.XtraEditors.CheckEdit();
             this._btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this._btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this._cbBatch = new DevExpress.XtraEditors.LookUpEdit();
-            this._cbWorkers = new DevExpress.XtraEditors.LookUpEdit();
             this._cbProcedure = new DevExpress.XtraEditors.LookUpEdit();
             this._cbProducts = new DevExpress.XtraEditors.LookUpEdit();
             this._deStartTime = new DevExpress.XtraEditors.DateEdit();
@@ -45,22 +45,27 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this._cbWorkers = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._chkIsBatchAddModel.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._cbBatch.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._cbWorkers.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._cbProcedure.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._cbProducts.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._deStartTime.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._deStartTime.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._seExpectedAmount.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._cbWorkers.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
             // 
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl1.Controls.Add(this._chkIsBatchAddModel);
             this.panelControl1.Controls.Add(this._btnCancel);
             this.panelControl1.Controls.Add(this._btnAdd);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -68,6 +73,15 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(467, 46);
             this.panelControl1.TabIndex = 1;
+            // 
+            // _chkIsBatchAddModel
+            // 
+            this._chkIsBatchAddModel.Location = new System.Drawing.Point(13, 11);
+            this._chkIsBatchAddModel.Name = "_chkIsBatchAddModel";
+            this._chkIsBatchAddModel.Properties.Caption = "批量添加模式";
+            this._chkIsBatchAddModel.Size = new System.Drawing.Size(114, 19);
+            this._chkIsBatchAddModel.TabIndex = 2;
+            this._chkIsBatchAddModel.CheckedChanged += new System.EventHandler(this._chkIsBatchAddModel_CheckedChanged);
             // 
             // _btnCancel
             // 
@@ -94,7 +108,6 @@
             // 
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl2.Controls.Add(this._cbBatch);
-            this.panelControl2.Controls.Add(this._cbWorkers);
             this.panelControl2.Controls.Add(this._cbProcedure);
             this.panelControl2.Controls.Add(this._cbProducts);
             this.panelControl2.Controls.Add(this._deStartTime);
@@ -105,6 +118,7 @@
             this.panelControl2.Controls.Add(this.labelControl3);
             this.panelControl2.Controls.Add(this.labelControl2);
             this.panelControl2.Controls.Add(this.labelControl1);
+            this.panelControl2.Controls.Add(this._cbWorkers);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Name = "panelControl2";
@@ -115,55 +129,59 @@
             // 
             this._cbBatch.Location = new System.Drawing.Point(135, 21);
             this._cbBatch.Name = "_cbBatch";
+            this._cbBatch.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this._cbBatch.Properties.Appearance.Options.UseBackColor = true;
             this._cbBatch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this._cbBatch.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("No", "批次号"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Date", "开始时间", 20, DevExpress.Utils.FormatType.DateTime, "yyyy-MM-dd", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this._cbBatch.Properties.NullText = "请选择产品";
             this._cbBatch.Size = new System.Drawing.Size(267, 20);
             this._cbBatch.TabIndex = 0;
             this._cbBatch.EditValueChanged += new System.EventHandler(this._cbBatch_EditValueChanged);
             // 
-            // _cbWorkers
-            // 
-            this._cbWorkers.Location = new System.Drawing.Point(135, 135);
-            this._cbWorkers.Name = "_cbWorkers";
-            this._cbWorkers.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this._cbWorkers.Properties.NullText = "请选择工人";
-            this._cbWorkers.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
-            this._cbWorkers.Size = new System.Drawing.Size(267, 20);
-            this._cbWorkers.TabIndex = 3;
-            // 
             // _cbProcedure
             // 
-            this._cbProcedure.Location = new System.Drawing.Point(135, 97);
+            this._cbProcedure.Location = new System.Drawing.Point(135, 59);
             this._cbProcedure.Name = "_cbProcedure";
+            this._cbProcedure.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this._cbProcedure.Properties.Appearance.Options.UseBackColor = true;
+            this._cbProcedure.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this._cbProcedure.Properties.AppearanceFocused.BorderColor = System.Drawing.Color.Blue;
+            this._cbProcedure.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this._cbProcedure.Properties.AppearanceFocused.Options.UseBorderColor = true;
             this._cbProcedure.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this._cbProcedure.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DisplayText", "工序名称")});
             this._cbProcedure.Properties.NullText = "请选择工序";
             this._cbProcedure.Size = new System.Drawing.Size(267, 20);
-            this._cbProcedure.TabIndex = 2;
+            this._cbProcedure.TabIndex = 1;
             // 
             // _cbProducts
             // 
-            this._cbProducts.Location = new System.Drawing.Point(135, 60);
+            this._cbProducts.Location = new System.Drawing.Point(135, 170);
             this._cbProducts.Name = "_cbProducts";
             this._cbProducts.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this._cbProducts.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "产品名称")});
             this._cbProducts.Properties.NullText = "请选择产品";
             this._cbProducts.Size = new System.Drawing.Size(267, 20);
-            this._cbProducts.TabIndex = 1;
+            this._cbProducts.TabIndex = 4;
             // 
             // _deStartTime
             // 
             this._deStartTime.EditValue = null;
-            this._deStartTime.Location = new System.Drawing.Point(135, 171);
+            this._deStartTime.Location = new System.Drawing.Point(135, 96);
             this._deStartTime.Name = "_deStartTime";
             this._deStartTime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this._deStartTime.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this._deStartTime.Size = new System.Drawing.Size(267, 20);
-            this._deStartTime.TabIndex = 4;
+            this._deStartTime.TabIndex = 2;
             // 
             // _seExpectedAmount
             // 
@@ -181,7 +199,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(58, 209);
+            this.labelControl4.Location = new System.Drawing.Point(58, 207);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(48, 14);
             this.labelControl4.TabIndex = 0;
@@ -189,7 +207,7 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(82, 138);
+            this.labelControl6.Location = new System.Drawing.Point(82, 136);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(24, 14);
             this.labelControl6.TabIndex = 0;
@@ -197,7 +215,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(82, 60);
+            this.labelControl5.Location = new System.Drawing.Point(82, 172);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(24, 14);
             this.labelControl5.TabIndex = 0;
@@ -205,7 +223,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(82, 100);
+            this.labelControl3.Location = new System.Drawing.Point(82, 62);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(24, 14);
             this.labelControl3.TabIndex = 0;
@@ -213,7 +231,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(58, 174);
+            this.labelControl2.Location = new System.Drawing.Point(58, 97);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(48, 14);
             this.labelControl2.TabIndex = 0;
@@ -226,6 +244,24 @@
             this.labelControl1.Size = new System.Drawing.Size(36, 14);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "批次号";
+            // 
+            // _cbWorkers
+            // 
+            this._cbWorkers.Location = new System.Drawing.Point(135, 135);
+            this._cbWorkers.Name = "_cbWorkers";
+            this._cbWorkers.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this._cbWorkers.Properties.NullText = "请选择工人";
+            this._cbWorkers.Properties.PopupView = this.gridLookUpEdit1View;
+            this._cbWorkers.Size = new System.Drawing.Size(267, 20);
+            this._cbWorkers.TabIndex = 3;
+            // 
+            // gridLookUpEdit1View
+            // 
+            this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
+            this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
             // AddProduceRecordForm
             // 
@@ -244,16 +280,18 @@
             this.Load += new System.EventHandler(this.AddProduceRecordForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._chkIsBatchAddModel.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this._cbBatch.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._cbWorkers.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._cbProcedure.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._cbProducts.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._deStartTime.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._deStartTime.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._seExpectedAmount.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._cbWorkers.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -273,8 +311,10 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LookUpEdit _cbProducts;
         private DevExpress.XtraEditors.LookUpEdit _cbProcedure;
-        private DevExpress.XtraEditors.LookUpEdit _cbWorkers;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LookUpEdit _cbBatch;
+        private DevExpress.XtraEditors.CheckEdit _chkIsBatchAddModel;
+        private DevExpress.XtraEditors.GridLookUpEdit _cbWorkers;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
     }
 }

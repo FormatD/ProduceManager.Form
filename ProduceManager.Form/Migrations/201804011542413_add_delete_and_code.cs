@@ -1,4 +1,4 @@
-namespace ProduceManager.Form.Migrations
+namespace ProduceManager.Forms.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

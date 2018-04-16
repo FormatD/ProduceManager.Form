@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ProduceManager.Form.Utils
+namespace ProduceManager.Forms.Utils
 {
     /// <summary>
     /// ID-Text-Data，用于Combo绑定

@@ -10,11 +10,11 @@ using DevExpress.XtraEditors;
 using System.IO;
 using DevExpress.XtraReports.UI;
 using System.Data.SqlClient;
-using ProduceManager.Form.Utils;
-using ProduceManager.Form.Domains;
-using ProduceManager.Form.Persistence;
+using ProduceManager.Forms.Utils;
+using ProduceManager.Forms.Domains;
+using ProduceManager.Forms.Persistence;
 
-namespace ProduceManager.Form
+namespace ProduceManager.Forms
 {
     public partial class AddReportForm : XtraForm
     {

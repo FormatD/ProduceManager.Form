@@ -3,7 +3,7 @@ using System;
 using System.Configuration;
 using System.Data.Common;
 
-namespace ProduceManager.Form
+namespace ProduceManager.Forms
 {
 
     public static class DataSourceHelper

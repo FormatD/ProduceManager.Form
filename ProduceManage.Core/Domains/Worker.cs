@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProduceManager.Form.Domains
+namespace ProduceManager.Forms.Domains
 {
     public class Entity
     {
@@ -14,43 +14,64 @@ namespace ProduceManager.Form.Domains
 
     }
 
-    public class Worker : Entity
+    public interface IDisplayable
+    {
+        string GetDisplayText();
+    }
+
+    public class Worker : Entity, IDisplayable
     {
 
         public string Name { get; set; }
 
         public string Code { get; set; }
 
+        public string DisplayText => GetDisplayText();
 
-        internal string GetFriendlyName()
+        public string GetDisplayText()
         {
             return string.Format("{0}({1})", Name, Code);
         }
+
+        public override string ToString()
+        {
+            return GetDisplayText();
+        }
     }
 
-    public class Procedure : Entity
+    public class Procedure : Entity, IDisplayable
     {
         public string Name { get; set; }
 
         public int Order { get; set; }
+        public string DisplayText => GetDisplayText();
 
-
-        internal string GetFriendlyName()
+        public string GetDisplayText()
         {
             return string.Format("{0}({1})", Name, Order);
         }
+
+        public override string ToString()
+        {
+            return GetDisplayText();
+        }
     }
 
-    public class Product : Entity
+    public class Product : Entity, IDisplayable
     {
 
         public string Code { get; set; }
 
         public string Name { get; set; }
 
-        public string GetFriendlyName()
+        public string GetDisplayText()
         {
             return string.Format("{0}({1})", Name, Code);
+        }
+
+        public override string ToString()
+        {
+            return GetDisplayText();
         }
 
     }
@@ -64,7 +85,7 @@ namespace ProduceManager.Form.Domains
         public double price { get; set; }
     }
 
-    public class Batch : Entity
+    public class Batch : Entity, IDisplayable
     {
         public string No { get; set; }
 
@@ -74,8 +95,16 @@ namespace ProduceManager.Form.Domains
 
         public DateTime StartDate { get; set; }
 
-    }
+        public string GetDisplayText()
+        {
+            return No;
+        }
 
+        public override string ToString()
+        {
+            return GetDisplayText();
+        }
+    }
 
     public class ProduceRecord : Entity
     {
@@ -103,6 +132,11 @@ namespace ProduceManager.Form.Domains
         public byte[] Content { get; set; }
 
         public bool IsSystem { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 
 }

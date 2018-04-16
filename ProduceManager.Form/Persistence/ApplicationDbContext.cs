@@ -1,4 +1,4 @@
-﻿using ProduceManager.Form.Domains;
+﻿using ProduceManager.Forms.Domains;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProduceManager.Form.Persistence
+namespace ProduceManager.Forms.Persistence
 {
     public class ApplicationDbContext : DbContext
     {
@@ -19,6 +19,8 @@ namespace ProduceManager.Form.Persistence
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<SaleBillItem>().Ignore(t => t.ProductName);
         }
 
 
@@ -35,6 +37,28 @@ namespace ProduceManager.Form.Persistence
         public IDbSet<ProduceRecord> ProduceRecords { get; set; }
 
         public IDbSet<ReportItem> Reports { get; set; }
+
+        public IDbSet<SaleBill> SaleBills { get; set; }
+
+        public IDbSet<SaleBillItem> SaleBillItems { get; set; }
+
+        public void RejectChanges()
+        {
+            foreach (var entry in ChangeTracker.Entries())
+            {
+                switch (entry.State)
+                {
+                    case EntityState.Modified:
+                    case EntityState.Deleted:
+                        entry.State = EntityState.Modified; //Revert changes made to deleted entity.
+                        entry.State = EntityState.Unchanged;
+                        break;
+                    case EntityState.Added:
+                        entry.State = EntityState.Detached;
+                        break;
+                }
+            }
+        }
 
     }
 }
