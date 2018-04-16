@@ -55,7 +55,17 @@ namespace ProduceManager.Forms.UserControls
         private void Query()
         {
             var currentBatchId = GetFocusedSaleBillId();
-            gridControl.DataSource = _saleBillList = _service.GetAllSaleBills();
+
+            var keyword = _txtKeyword.Text;
+
+            var minDate = new DateTime(2000, 1, 1);
+            var startTime = _deStart.DateTime < minDate ? minDate : _deStart.DateTime;
+            var endTime = _deEnd.DateTime < minDate ? DateTime.MaxValue : _deEnd.DateTime;
+
+            gridControl.DataSource = _saleBillList = _service.GetAllSaleBills()
+                .Where(x => (string.IsNullOrWhiteSpace(keyword) || x.CustomeName.Contains(keyword))
+                    && (x.Date >= startTime && x.Date <= endTime))
+                .ToList();
 
             JumpTo(currentBatchId);
         }

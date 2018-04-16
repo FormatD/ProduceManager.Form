@@ -11,11 +11,12 @@ namespace ProduceManager.Forms.Domains
     {
         public string BillNo { get; set; }
 
-        public double Price { get; set; }
-
-        public IList<SaleBillItem> Items { get; set; }
 
         public string CustomeName { get; set; }
+
+        public DateTime Date { get; set; }
+
+        public IList<SaleBillItem> Items { get; set; }
 
         public double TotalPrice => Items?.Sum(x => x.TotalPrice) ?? 0;
 

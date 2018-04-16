@@ -13,7 +13,7 @@ namespace ProduceManager.Forms.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201804161708412_remove-sale-item-totalprice"; }
+            get { return "201804161813508_remove-sale-item-totalprice"; }
         }
         
         string IMigrationMetadata.Source

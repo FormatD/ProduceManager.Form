@@ -209,9 +209,9 @@
     <Compile Include="Migrations\201804151330287_add-sale-bill.Designer.cs">
       <DependentUpon>201804151330287_add-sale-bill.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201804161708412_remove-sale-item-totalprice.cs" />
-    <Compile Include="Migrations\201804161708412_remove-sale-item-totalprice.Designer.cs">
-      <DependentUpon>201804161708412_remove-sale-item-totalprice.cs</DependentUpon>
+    <Compile Include="Migrations\201804161813508_remove-sale-item-totalprice.cs" />
+    <Compile Include="Migrations\201804161813508_remove-sale-item-totalprice.Designer.cs">
+      <DependentUpon>201804161813508_remove-sale-item-totalprice.cs</DependentUpon>
     </Compile>
     <Compile Include="Persistence\ApplicationService.cs" />
     <Compile Include="PrintRibbonControllerResources.Designer.cs">
@@ -338,8 +338,8 @@
     <EmbeddedResource Include="Migrations\201804151330287_add-sale-bill.resx">
       <DependentUpon>201804151330287_add-sale-bill.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804161708412_remove-sale-item-totalprice.resx">
-      <DependentUpon>201804161708412_remove-sale-item-totalprice.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201804161813508_remove-sale-item-totalprice.resx">
+      <DependentUpon>201804161813508_remove-sale-item-totalprice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintRibbonControllerResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -7,12 +7,14 @@ namespace ProduceManager.Forms.Migrations
     {
         public override void Up()
         {
-            DropColumn("dbo.SaleBillItems", "TotalPrice");
+            AddColumn("dbo.SaleBills", "Date", c => c.DateTime(nullable: false));
+            DropColumn("dbo.SaleBills", "Price");
         }
         
         public override void Down()
         {
-            AddColumn("dbo.SaleBillItems", "TotalPrice", c => c.Double(nullable: false));
+            AddColumn("dbo.SaleBills", "Price", c => c.Double(nullable: false));
+            DropColumn("dbo.SaleBills", "Date");
         }
     }
 }
