@@ -104,8 +104,7 @@ namespace ProduceManager.Forms
                             JumpTo(id.Value);
                     };
 
-                    dlg.TopMost = true;
-                    dlg.Show();
+                    dlg.ShowDialog();
                 }
             }
             else if (e.Button.Index == 1)

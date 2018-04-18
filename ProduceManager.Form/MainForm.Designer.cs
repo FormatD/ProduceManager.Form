@@ -255,7 +255,7 @@
             this.printPreviewBarItem47 = new DevExpress.XtraPrinting.Preview.PrintPreviewBarItem();
             this._btnReportDesigner = new DevExpress.XtraBars.BarButtonItem();
             this._btnAddReport = new DevExpress.XtraBars.BarButtonItem();
-            this.e = new DevExpress.XtraBars.BarButtonItem();
+            this._btnSaleBill = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
             this._rpcReportPreview = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this._rpReportPreview = new DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPage();
@@ -282,7 +282,6 @@
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this._btnSaleBill = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this._ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).BeginInit();
@@ -376,7 +375,6 @@
             this.zoomTrackBarEditItem1,
             this._btnReportDesigner,
             this._btnAddReport,
-            this.e,
             this._btnSaleBill});
             this._ribbonControl.LargeImages = this.ribbonImageCollectionLarge;
             this._ribbonControl.Location = new System.Drawing.Point(0, 0);
@@ -513,6 +511,7 @@
             this._btnBatchManage.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("_btnBatchManage.ImageOptions.LargeImage")));
             this._btnBatchManage.ImageOptions.LargeImageIndex = 0;
             this._btnBatchManage.Name = "_btnBatchManage";
+            this._btnBatchManage.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this._btnBatchManage.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnBatchManage_ItemClick);
             // 
             // _btnProduceDetails
@@ -1628,12 +1627,14 @@
             this._btnAddReport.Name = "_btnAddReport";
             this._btnAddReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnAddReport_ItemClick);
             // 
-            // e
+            // _btnSaleBill
             // 
-            this.e.Caption = "Test";
-            this.e.Id = 127;
-            this.e.Name = "e";
-            this.e.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.e_ItemClick);
+            this._btnSaleBill.Caption = "销售单";
+            this._btnSaleBill.Id = 128;
+            this._btnSaleBill.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("_btnSaleBill.ImageOptions.Image")));
+            this._btnSaleBill.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("_btnSaleBill.ImageOptions.LargeImage")));
+            this._btnSaleBill.Name = "_btnSaleBill";
+            this._btnSaleBill.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnSaleBill_ItemClick);
             // 
             // ribbonImageCollectionLarge
             // 
@@ -1792,7 +1793,6 @@
             // 
             this.fileRibbonPageGroup.ItemLinks.Add(this._btnBatchManage);
             this.fileRibbonPageGroup.ItemLinks.Add(this._btnProduceDetails);
-            this.fileRibbonPageGroup.ItemLinks.Add(this.e);
             this.fileRibbonPageGroup.ItemLinks.Add(this._btnSaleBill);
             this.fileRibbonPageGroup.Name = "fileRibbonPageGroup";
             // 
@@ -1889,15 +1889,6 @@
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(1070, 516);
             this.xtraTabPage2.Text = "xtraTabPage2";
-            // 
-            // _btnSaleBill
-            // 
-            this._btnSaleBill.Caption = "销售单";
-            this._btnSaleBill.Id = 128;
-            this._btnSaleBill.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
-            this._btnSaleBill.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
-            this._btnSaleBill.Name = "_btnSaleBill";
-            this._btnSaleBill.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnSaleBill_ItemClick);
             // 
             // MainForm
             // 
@@ -2036,7 +2027,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory _rpcReportPreview;
         private DevExpress.XtraBars.BarButtonItem _btnReportDesigner;
         private DevExpress.XtraBars.BarButtonItem _btnAddReport;
-        private DevExpress.XtraBars.BarButtonItem e;
         private DevExpress.XtraBars.BarButtonItem _btnSaleBill;
     }
 }
