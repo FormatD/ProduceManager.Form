@@ -10,15 +10,15 @@ namespace ProduceManager.Forms.Domains
     public class ProduceRecord : Entity
     {
 
-        public int BatchId { get; set; }
-
-        public int ProductId { get; set; }
-
-        public int ProcedureId { get; set; }
-
         public DateTime Date { get; set; }
 
-        public int WorkerId { get; set; }
+        public Batch Batch { get; set; }
+
+        public Product Product { get; set; }
+
+        public Procedure Procedure { get; set; }
+
+        public Worker Worker { get; set; }
 
         public int Amount { get; set; }
 

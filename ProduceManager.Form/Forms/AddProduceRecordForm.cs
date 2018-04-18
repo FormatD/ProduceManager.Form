@@ -111,10 +111,10 @@ namespace ProduceManager.Forms
                     return;
                 }
 
-                _cbBatch.ItemIndex = _batchList.IndexOf(x => x.Id == produceRecord.BatchId);
-                //_cbProducts.ItemIndex = _productList.IndexOf(x => x.Id == produceRecord.ProductId);
-                _cbWorkers.EditValue = _workerList.FirstOrDefault(x => x.Id == produceRecord.WorkerId);
-                _cbProcedure.ItemIndex = _productList.IndexOf(x => x.Id == produceRecord.ProcedureId);
+                //_cbBatch.ItemIndex = _batchList.IndexOf(x => x.Id == produceRecord.BatchId);
+                _cbProducts.ItemIndex = _productList.IndexOf(x => x.Id == produceRecord.Product.Id);
+                _cbWorkers.EditValue = _workerList.FirstOrDefault(x => x.Id == produceRecord.Worker.Id);
+                _cbProcedure.ItemIndex = _productList.IndexOf(x => x.Id == produceRecord.Procedure.Id);
                 _seExpectedAmount.EditValue = produceRecord.Amount;
                 _deStartTime.EditValue = produceRecord.Date;
             }
@@ -148,10 +148,10 @@ namespace ProduceManager.Forms
                 //var procedures = _chkProcedures.
                 var produceRecord = new ProduceRecord
                 {
-                    WorkerId = worker.Id,
-                    BatchId = 0,//batch.Id,
-                    ProductId = product.Id,// batch.ProductId,
-                    ProcedureId = procedure.Id,
+                    Worker = worker,
+                    Batch = null,//batch.Id,
+                    Product = product,// batch.ProductId,
+                    Procedure = procedure,
                     Amount = amount,
                     Date = date,
                 };
@@ -163,10 +163,10 @@ namespace ProduceManager.Forms
                 var oldProduceRecord = _service.GetProduceRecord(_produceRecordId);
 
                 oldProduceRecord.Amount = amount;
-                oldProduceRecord.BatchId = batch.Id;
-                oldProduceRecord.ProductId = batch.ProductId;
-                oldProduceRecord.WorkerId = worker.Id;
-                oldProduceRecord.ProcedureId = procedure.Id;
+                oldProduceRecord.Batch = null;
+                oldProduceRecord.Product = product;
+                oldProduceRecord.Worker = worker;
+                oldProduceRecord.Procedure = procedure;
                 _deStartTime.DateTime = date;
 
                 _service.SaveChanges();

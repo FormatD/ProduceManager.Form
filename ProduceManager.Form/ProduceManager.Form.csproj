@@ -197,6 +197,10 @@
     <Compile Include="Migrations\201804171615254_Init.Designer.cs">
       <DependentUpon>201804171615254_Init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804181619444_new-record-entity.cs" />
+    <Compile Include="Migrations\201804181619444_new-record-entity.Designer.cs">
+      <DependentUpon>201804181619444_new-record-entity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Persistence\ApplicationService.cs" />
     <Compile Include="PrintRibbonControllerResources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -308,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804171615254_Init.resx">
       <DependentUpon>201804171615254_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804181619444_new-record-entity.resx">
+      <DependentUpon>201804181619444_new-record-entity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintRibbonControllerResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -173,11 +173,10 @@ namespace ProduceManager.Forms.Persistence
         internal IList<ProduceRecordViewModel> GetAllProduceRecords()
         {
             var xx = from pr in _dbContext.ProduceRecords
-                         //join b in _dbContext.Batchs on pr.BatchId equals b.Id
-                     join p in _dbContext.Products on pr.ProductId equals p.Id
-                     join w in _dbContext.Workers on pr.WorkerId equals w.Id
-                     join proc in _dbContext.Procedures on pr.ProcedureId equals proc.Id
-                     join price in _dbContext.Prices on new { productId = p.Id, procedureId = proc.Id } equals new { productId = price.Product.Id, procedureId = price.Procedure.Id }
+                                    .Include(x => x.Procedure)
+                                    .Include(x => x.Product)
+                                    .Include(x => x.Worker)
+                     join price in _dbContext.Prices on new { productId = pr.Product.Id, procedureId = pr.Procedure.Id } equals new { productId = price.Product.Id, procedureId = price.Procedure.Id }
                      select new ProduceRecordViewModel
                      {
                          Id = pr.Id,
@@ -189,18 +188,18 @@ namespace ProduceManager.Forms.Persistence
                          //BatchNo = b.No,
                          //IsBatchDeleted = b.IsDeleted,
                          // Product
-                         ProductId = p.Id,
-                         ProductName = p.Name,
-                         IsProductDeleted = p.IsDeleted,
+                         ProductId = pr.Product.Id,
+                         ProductName = pr.Product.Name,
+                         IsProductDeleted = pr.Product.IsDeleted,
                          // Worker
-                         WorkerId = w.Id,
-                         WorkerName = w.Name,
-                         IsWorkerDeleted = w.IsDeleted,
+                         WorkerId = pr.Worker.Id,
+                         WorkerName = pr.Worker.Name,
+                         IsWorkerDeleted = pr.Worker.IsDeleted,
 
                          // Procedure
-                         ProcedureId = proc.Id,
-                         ProcedureName = proc.Name,
-                         IsProcedureDeleted = proc.IsDeleted,
+                         ProcedureId = pr.Procedure.Id,
+                         ProcedureName = pr.Procedure.Name,
+                         IsProcedureDeleted = pr.Procedure.IsDeleted,
 
                          Price = price.price,
                      };
@@ -215,7 +214,11 @@ namespace ProduceManager.Forms.Persistence
 
         public ProduceRecord GetProduceRecord(int id)
         {
-            return _dbContext.ProduceRecords.FirstOrDefault(x => x.Id == id);
+            return _dbContext.ProduceRecords
+                    .Include(x => x.Procedure)
+                    .Include(x => x.Product)
+                    .Include(x => x.Worker)
+                    .FirstOrDefault(x => x.Id == id);
         }
 
         internal void AddProduceRecord(ProduceRecord produceRecord)
