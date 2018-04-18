@@ -7,18 +7,16 @@ using System.Threading.Tasks;
 namespace ProduceManager.Forms.Domains
 {
 
-    public class Worker : Entity, IDisplayable
+    public class Procedure : Entity, IDisplayable
     {
-
         public string Name { get; set; }
 
-        public string Code { get; set; }
-
+        public int Order { get; set; }
         public string DisplayText => GetDisplayText();
 
         public string GetDisplayText()
         {
-            return string.Format("{0}({1})", Name, Code);
+            return string.Format("{0}({1})", Name, Order);
         }
 
         public override string ToString()

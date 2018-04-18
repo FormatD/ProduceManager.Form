@@ -7,18 +7,19 @@ using System.Threading.Tasks;
 namespace ProduceManager.Forms.Domains
 {
 
-    public class Worker : Entity, IDisplayable
+    public class Batch : Entity, IDisplayable
     {
+        public string No { get; set; }
 
-        public string Name { get; set; }
+        public int ProductId { get; set; }
 
-        public string Code { get; set; }
+        public int ExpectedAmount { get; set; }
 
-        public string DisplayText => GetDisplayText();
+        public DateTime StartDate { get; set; }
 
         public string GetDisplayText()
         {
-            return string.Format("{0}({1})", Name, Code);
+            return No;
         }
 
         public override string ToString()

@@ -7,14 +7,12 @@ using System.Threading.Tasks;
 namespace ProduceManager.Forms.Domains
 {
 
-    public class Worker : Entity, IDisplayable
+    public class Product : Entity, IDisplayable
     {
-
-        public string Name { get; set; }
 
         public string Code { get; set; }
 
-        public string DisplayText => GetDisplayText();
+        public string Name { get; set; }
 
         public string GetDisplayText()
         {
@@ -25,6 +23,7 @@ namespace ProduceManager.Forms.Domains
         {
             return GetDisplayText();
         }
+
     }
 
 }

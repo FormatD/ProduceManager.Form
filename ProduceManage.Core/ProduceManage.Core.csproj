@@ -39,6 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domains\Batch.cs" />
+    <Compile Include="Domains\Entity.cs" />
+    <Compile Include="Domains\IDisplayable.cs" />
+    <Compile Include="Domains\Price.cs" />
+    <Compile Include="Domains\Procedure.cs" />
+    <Compile Include="Domains\ProduceRecord.cs" />
+    <Compile Include="Domains\Product.cs" />
+    <Compile Include="Domains\ReportItem.cs" />
     <Compile Include="Domains\SaleBill.cs" />
     <Compile Include="Domains\SequenseNoGenerator.cs" />
     <Compile Include="Domains\Worker.cs" />
