@@ -34,18 +34,18 @@
             this._txtReportName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this._txtDataSource = new DevExpress.XtraEditors.MemoEdit();
+            this._chkIsSystem = new DevExpress.XtraEditors.CheckEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this._btnDesign = new DevExpress.XtraEditors.SimpleButton();
             this._btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this._btnAdd = new DevExpress.XtraEditors.SimpleButton();
-            this._chkIsSystem = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._txtReportName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._txtDataSource.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._chkIsSystem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._chkIsSystem.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl2
@@ -93,7 +93,17 @@
             this._txtDataSource.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered;
             this._txtDataSource.Size = new System.Drawing.Size(251, 94);
             this._txtDataSource.TabIndex = 2;
-            this._txtDataSource.UseOptimizedRendering = true;
+            // 
+            // _chkIsSystem
+            // 
+            this._chkIsSystem.EditValue = null;
+            this._chkIsSystem.Location = new System.Drawing.Point(133, 66);
+            this._chkIsSystem.Name = "_chkIsSystem";
+            this._chkIsSystem.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Default;
+            this._chkIsSystem.Properties.Caption = "是系统报表";
+            this._chkIsSystem.Properties.ReadOnly = true;
+            this._chkIsSystem.Size = new System.Drawing.Size(251, 19);
+            this._chkIsSystem.TabIndex = 1;
             // 
             // panelControl1
             // 
@@ -138,17 +148,6 @@
             this._btnAdd.Text = "添加(&A)";
             this._btnAdd.Click += new System.EventHandler(this._btnAdd_Click);
             // 
-            // _chkIsSystem
-            // 
-            this._chkIsSystem.EditValue = null;
-            this._chkIsSystem.Location = new System.Drawing.Point(133, 66);
-            this._chkIsSystem.Name = "_chkIsSystem";
-            this._chkIsSystem.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Default;
-            this._chkIsSystem.Properties.Caption = "是系统报表";
-            this._chkIsSystem.Properties.ReadOnly = true;
-            this._chkIsSystem.Size = new System.Drawing.Size(251, 19);
-            this._chkIsSystem.TabIndex = 1;
-            // 
             // AddReportForm
             // 
             this.AcceptButton = this._btnAdd;
@@ -168,9 +167,9 @@
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this._txtReportName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._txtDataSource.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._chkIsSystem.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this._chkIsSystem.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

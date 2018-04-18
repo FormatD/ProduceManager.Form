@@ -132,8 +132,12 @@ namespace ProduceManager.Forms
             {
                 if (batchViewModel.IsDeleted)
                     e.DisplayText = "已删除";
-                //else if (batchViewModel)
-                //    e.DisplayText = "产品已删除";
+                else if (batchViewModel.IsProductDeleted)
+                    e.DisplayText = "产品已删除";
+                else if (batchViewModel.IsProcedureDeleted)
+                    e.DisplayText = "工序已删除";
+                else if (batchViewModel.IsWorkerDeleted)
+                    e.DisplayText = "工人已删除";
                 else
                     e.DisplayText = "正常";
             }

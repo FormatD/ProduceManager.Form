@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace ProduceManager.Forms.Domains
 {
-
     public class SaleBill : Entity
     {
         public string BillNo { get; set; }
-
 
         public string CustomeName { get; set; }
 

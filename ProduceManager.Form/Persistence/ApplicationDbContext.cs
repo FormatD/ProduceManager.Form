@@ -20,9 +20,10 @@ namespace ProduceManager.Forms.Persistence
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<SaleBillItem>().Ignore(t => t.ProductName);
+            modelBuilder.Entity<SaleBillItem>()
+                .Ignore(t => t.ProductName)
+                .Ignore(x => x.TotalPrice);
         }
-
 
         public IDbSet<Worker> Workers { get; set; }
 

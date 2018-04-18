@@ -28,20 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject17 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject19 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject20 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions6 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject21 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject22 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject23 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject24 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProduceDetailView));
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this._gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this._colNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this._colDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this._colProductName = new DevExpress.XtraGrid.Columns.GridColumn();
             this._colProcedure = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -51,27 +50,28 @@
             this._colOperation = new DevExpress.XtraGrid.Columns.GridColumn();
             this._riOperate = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this._btnAdd = new DevExpress.XtraEditors.SimpleButton();
-            this._btnQuery = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this._cbProcedures = new DevExpress.XtraEditors.CheckedComboBoxEdit();
             this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this._cbProcedures = new DevExpress.XtraEditors.CheckedComboBoxEdit();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this._btnAdd = new DevExpress.XtraEditors.SimpleButton();
+            this._btnQuery = new DevExpress.XtraEditors.SimpleButton();
+            this._colTotalPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._riOperate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._cbProcedures.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._cbProcedures.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl
@@ -91,29 +91,17 @@
             // 
             this._gridView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this._gridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this._colNo,
             this._colDate,
             this._colProductName,
             this._colProcedure,
             this._colWorker,
             this._colAmount,
             this._colState,
+            this._colTotalPrice,
             this._colOperation});
             this._gridView.GridControl = this.gridControl;
             this._gridView.Name = "_gridView";
-            // 
-            // _colNo
-            // 
-            this._colNo.AppearanceCell.Options.UseTextOptions = true;
-            this._colNo.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this._colNo.AppearanceHeader.Options.UseTextOptions = true;
-            this._colNo.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this._colNo.Caption = "批次号";
-            this._colNo.FieldName = "BatchNo";
-            this._colNo.Name = "_colNo";
-            this._colNo.Visible = true;
-            this._colNo.VisibleIndex = 0;
-            this._colNo.Width = 124;
+            this._gridView.CustomColumnDisplayText += new DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventHandler(this._gridView_CustomColumnDisplayText);
             // 
             // _colDate
             // 
@@ -121,8 +109,8 @@
             this._colDate.FieldName = "Date";
             this._colDate.Name = "_colDate";
             this._colDate.Visible = true;
-            this._colDate.VisibleIndex = 1;
-            this._colDate.Width = 135;
+            this._colDate.VisibleIndex = 0;
+            this._colDate.Width = 141;
             // 
             // _colProductName
             // 
@@ -130,8 +118,8 @@
             this._colProductName.FieldName = "ProductName";
             this._colProductName.Name = "_colProductName";
             this._colProductName.Visible = true;
-            this._colProductName.VisibleIndex = 4;
-            this._colProductName.Width = 135;
+            this._colProductName.VisibleIndex = 3;
+            this._colProductName.Width = 150;
             // 
             // _colProcedure
             // 
@@ -139,8 +127,8 @@
             this._colProcedure.FieldName = "ProcedureName";
             this._colProcedure.Name = "_colProcedure";
             this._colProcedure.Visible = true;
-            this._colProcedure.VisibleIndex = 3;
-            this._colProcedure.Width = 135;
+            this._colProcedure.VisibleIndex = 2;
+            this._colProcedure.Width = 103;
             // 
             // _colWorker
             // 
@@ -148,8 +136,8 @@
             this._colWorker.FieldName = "WorkerName";
             this._colWorker.Name = "_colWorker";
             this._colWorker.Visible = true;
-            this._colWorker.VisibleIndex = 2;
-            this._colWorker.Width = 135;
+            this._colWorker.VisibleIndex = 1;
+            this._colWorker.Width = 141;
             // 
             // _colAmount
             // 
@@ -161,8 +149,8 @@
             this._colAmount.FieldName = "Amount";
             this._colAmount.Name = "_colAmount";
             this._colAmount.Visible = true;
-            this._colAmount.VisibleIndex = 5;
-            this._colAmount.Width = 135;
+            this._colAmount.VisibleIndex = 4;
+            this._colAmount.Width = 124;
             // 
             // _colState
             // 
@@ -170,7 +158,7 @@
             this._colState.Name = "_colState";
             this._colState.Visible = true;
             this._colState.VisibleIndex = 6;
-            this._colState.Width = 109;
+            this._colState.Width = 97;
             // 
             // _colOperation
             // 
@@ -183,16 +171,16 @@
             this._colOperation.Name = "_colOperation";
             this._colOperation.Visible = true;
             this._colOperation.VisibleIndex = 7;
-            this._colOperation.Width = 106;
+            this._colOperation.Width = 157;
             // 
             // _riOperate
             // 
             this._riOperate.AutoHeight = false;
-            editorButtonImageOptions3.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            editorButtonImageOptions4.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            editorButtonImageOptions5.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            editorButtonImageOptions6.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this._riOperate.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "编辑", 40, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "删除", 40, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "编辑", 40, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "删除", 40, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject21, serializableAppearanceObject22, serializableAppearanceObject23, serializableAppearanceObject24, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this._riOperate.Name = "_riOperate";
             this._riOperate.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this._riOperate.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this._riOperation_ButtonClick);
@@ -216,6 +204,36 @@
             this.panelControl1.Size = new System.Drawing.Size(1032, 41);
             this.panelControl1.TabIndex = 9;
             // 
+            // _cbProcedures
+            // 
+            this._cbProcedures.EditValue = "";
+            this._cbProcedures.Location = new System.Drawing.Point(502, 11);
+            this._cbProcedures.Name = "_cbProcedures";
+            this._cbProcedures.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this._cbProcedures.Size = new System.Drawing.Size(100, 20);
+            this._cbProcedures.TabIndex = 4;
+            // 
+            // dateEdit2
+            // 
+            this.dateEdit2.EditValue = null;
+            this.dateEdit2.Location = new System.Drawing.Point(355, 11);
+            this.dateEdit2.Name = "dateEdit2";
+            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit2.Size = new System.Drawing.Size(98, 20);
+            this.dateEdit2.TabIndex = 3;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(337, 14);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(12, 14);
+            this.labelControl3.TabIndex = 2;
+            this.labelControl3.Text = "到";
+            // 
             // dateEdit1
             // 
             this.dateEdit1.EditValue = null;
@@ -228,6 +246,14 @@
             this.dateEdit1.Size = new System.Drawing.Size(98, 20);
             this.dateEdit1.TabIndex = 3;
             // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(472, 14);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(24, 14);
+            this.labelControl4.TabIndex = 2;
+            this.labelControl4.Text = "工序";
+            // 
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(172, 14);
@@ -235,6 +261,21 @@
             this.labelControl2.Size = new System.Drawing.Size(60, 14);
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "生产时间从";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(13, 14);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(36, 14);
+            this.labelControl1.TabIndex = 2;
+            this.labelControl1.Text = "关键字";
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(55, 11);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(100, 20);
+            this.textEdit1.TabIndex = 1;
             // 
             // _btnAdd
             // 
@@ -262,58 +303,14 @@
             this._btnQuery.Text = "查询";
             this._btnQuery.Click += new System.EventHandler(this._btnQuery_Click);
             // 
-            // labelControl3
+            // _colTotalPrice
             // 
-            this.labelControl3.Location = new System.Drawing.Point(337, 14);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(12, 14);
-            this.labelControl3.TabIndex = 2;
-            this.labelControl3.Text = "到";
-            // 
-            // dateEdit2
-            // 
-            this.dateEdit2.EditValue = null;
-            this.dateEdit2.Location = new System.Drawing.Point(355, 11);
-            this.dateEdit2.Name = "dateEdit2";
-            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Size = new System.Drawing.Size(98, 20);
-            this.dateEdit2.TabIndex = 3;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(13, 14);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(36, 14);
-            this.labelControl1.TabIndex = 2;
-            this.labelControl1.Text = "关键字";
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(55, 11);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(100, 20);
-            this.textEdit1.TabIndex = 1;
-            // 
-            // _cbProcedures
-            // 
-            this._cbProcedures.EditValue = "";
-            this._cbProcedures.Location = new System.Drawing.Point(502, 11);
-            this._cbProcedures.Name = "_cbProcedures";
-            this._cbProcedures.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this._cbProcedures.Size = new System.Drawing.Size(100, 20);
-            this._cbProcedures.TabIndex = 4;
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Location = new System.Drawing.Point(472, 14);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(24, 14);
-            this.labelControl4.TabIndex = 2;
-            this.labelControl4.Text = "工序";
+            this._colTotalPrice.Caption = "总价";
+            this._colTotalPrice.FieldName = "TotalPrice";
+            this._colTotalPrice.Name = "_colTotalPrice";
+            this._colTotalPrice.Visible = true;
+            this._colTotalPrice.VisibleIndex = 5;
+            this._colTotalPrice.Width = 101;
             // 
             // ProduceDetailView
             // 
@@ -329,12 +326,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._cbProcedures.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._cbProcedures.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -343,7 +340,6 @@
 
         private DevExpress.XtraGrid.GridControl gridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView _gridView;
-        private DevExpress.XtraGrid.Columns.GridColumn _colNo;
         private DevExpress.XtraGrid.Columns.GridColumn _colProductName;
         private DevExpress.XtraGrid.Columns.GridColumn _colProcedure;
         private DevExpress.XtraGrid.Columns.GridColumn _colWorker;
@@ -363,5 +359,6 @@
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.CheckedComboBoxEdit _cbProcedures;
         private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraGrid.Columns.GridColumn _colTotalPrice;
     }
 }

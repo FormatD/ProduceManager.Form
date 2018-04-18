@@ -177,6 +177,7 @@ namespace ProduceManager.Forms.Persistence
                      join p in _dbContext.Products on pr.ProductId equals p.Id
                      join w in _dbContext.Workers on pr.WorkerId equals w.Id
                      join proc in _dbContext.Procedures on pr.ProcedureId equals proc.Id
+                     join price in _dbContext.Prices on new { productId = p.Id, procedureId = proc.Id } equals new { productId = price.Product.Id, procedureId = price.Procedure.Id }
                      select new ProduceRecordViewModel
                      {
                          Id = pr.Id,
@@ -200,6 +201,8 @@ namespace ProduceManager.Forms.Persistence
                          ProcedureId = proc.Id,
                          ProcedureName = proc.Name,
                          IsProcedureDeleted = proc.IsDeleted,
+
+                         Price = price.price,
                      };
 
             return xx.ToList();
@@ -355,7 +358,9 @@ namespace ProduceManager.Forms.Persistence
 
         public bool IsProcedureDeleted { get; set; }
 
+        public double Price { get; set; }
 
+        public double TotalPrice => Price * Amount;
     }
 
     public class BatchViewModel

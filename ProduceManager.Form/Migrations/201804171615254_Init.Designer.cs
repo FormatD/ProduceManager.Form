@@ -7,13 +7,13 @@ namespace ProduceManager.Forms.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.0.0-20911")]
-    public sealed partial class addReportSystemFlag : IMigrationMetadata
+    public sealed partial class Init : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addReportSystemFlag));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Init));
         
         string IMigrationMetadata.Id
         {
-            get { return "201804050456318_addReportSystemFlag"; }
+            get { return "201804171615254_Init"; }
         }
         
         string IMigrationMetadata.Source

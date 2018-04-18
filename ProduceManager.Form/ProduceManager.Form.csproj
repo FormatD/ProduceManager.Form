@@ -193,25 +193,9 @@
     <Compile Include="Forms\WaitForm.Designer.cs">
       <DependentUpon>WaitForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201804011542413_add_delete_and_code.cs" />
-    <Compile Include="Migrations\201804011542413_add_delete_and_code.Designer.cs">
-      <DependentUpon>201804011542413_add_delete_and_code.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804041641561_reports.cs" />
-    <Compile Include="Migrations\201804041641561_reports.Designer.cs">
-      <DependentUpon>201804041641561_reports.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804050456318_addReportSystemFlag.cs" />
-    <Compile Include="Migrations\201804050456318_addReportSystemFlag.Designer.cs">
-      <DependentUpon>201804050456318_addReportSystemFlag.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804151330287_add-sale-bill.cs" />
-    <Compile Include="Migrations\201804151330287_add-sale-bill.Designer.cs">
-      <DependentUpon>201804151330287_add-sale-bill.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804161813508_remove-sale-item-totalprice.cs" />
-    <Compile Include="Migrations\201804161813508_remove-sale-item-totalprice.Designer.cs">
-      <DependentUpon>201804161813508_remove-sale-item-totalprice.cs</DependentUpon>
+    <Compile Include="Migrations\201804171615254_Init.cs" />
+    <Compile Include="Migrations\201804171615254_Init.Designer.cs">
+      <DependentUpon>201804171615254_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Persistence\ApplicationService.cs" />
     <Compile Include="PrintRibbonControllerResources.Designer.cs">
@@ -269,10 +253,6 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201803310458187_init.cs" />
-    <Compile Include="Migrations\201803310458187_init.Designer.cs">
-      <DependentUpon>201803310458187_init.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Persistence\ApplicationDbContext.cs" />
     <Compile Include="UserControls\ProduceDetailView.cs">
@@ -326,20 +306,8 @@
     <EmbeddedResource Include="Forms\AddBatchForm.resx">
       <DependentUpon>AddBatchForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804011542413_add_delete_and_code.resx">
-      <DependentUpon>201804011542413_add_delete_and_code.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804041641561_reports.resx">
-      <DependentUpon>201804041641561_reports.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804050456318_addReportSystemFlag.resx">
-      <DependentUpon>201804050456318_addReportSystemFlag.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804151330287_add-sale-bill.resx">
-      <DependentUpon>201804151330287_add-sale-bill.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804161813508_remove-sale-item-totalprice.resx">
-      <DependentUpon>201804161813508_remove-sale-item-totalprice.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201804171615254_Init.resx">
+      <DependentUpon>201804171615254_Init.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintRibbonControllerResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -372,9 +340,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803310458187_init.resx">
-      <DependentUpon>201803310458187_init.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ProduceDetailView.resx">
       <DependentUpon>ProduceDetailView.cs</DependentUpon>

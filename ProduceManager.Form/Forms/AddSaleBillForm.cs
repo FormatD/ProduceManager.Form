@@ -82,6 +82,7 @@ namespace ProduceManager.Forms
             {
                 saleBill.CustomeName = name;
                 saleBill.BillNo = SequenseNoGenerator.GetNextCode("XS");
+                saleBill.Date = DateTime.Now;
                 _service.AddSaleBill(saleBill);
             }
             else
@@ -104,7 +105,10 @@ namespace ProduceManager.Forms
         Product product;
         private void _leProducts_EditValueChanging(object sender, ChangingEventArgs e)
         {
-            product = _productList.FirstOrDefault(x => x.Name == e.NewValue.ToString());
+            if (e.NewValue == null)
+                product = null;
+            else
+                product = _productList.FirstOrDefault(x => x.Name == e.NewValue.ToString());
         }
 
         private void _leProducts_PopupFilter(object sender, PopupFilterEventArgs e)

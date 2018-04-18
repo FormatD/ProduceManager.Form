@@ -7,6 +7,6 @@ namespace ProduceManager.Forms
 {
     public class SystemConfig
     {
-        public static string ConnectionName { get; set; } = "Mssql"; //"sqliteDb";// "Mssql";
+        public static string ConnectionName { get; set; } = "sqliteDb"; //"sqliteDb";// "Mssql";
     }
 }
