@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject17 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject19 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject20 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions6 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject21 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject22 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject23 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject24 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProduceDetailView));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this._gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this._colDate = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -47,6 +47,7 @@
             this._colWorker = new DevExpress.XtraGrid.Columns.GridColumn();
             this._colAmount = new DevExpress.XtraGrid.Columns.GridColumn();
             this._colState = new DevExpress.XtraGrid.Columns.GridColumn();
+            this._colTotalPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this._colOperation = new DevExpress.XtraGrid.Columns.GridColumn();
             this._riOperate = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -60,7 +61,6 @@
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this._btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this._btnQuery = new DevExpress.XtraEditors.SimpleButton();
-            this._colTotalPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._riOperate)).BeginInit();
@@ -158,7 +158,16 @@
             this._colState.Name = "_colState";
             this._colState.Visible = true;
             this._colState.VisibleIndex = 6;
-            this._colState.Width = 97;
+            this._colState.Width = 146;
+            // 
+            // _colTotalPrice
+            // 
+            this._colTotalPrice.Caption = "总价";
+            this._colTotalPrice.FieldName = "TotalPrice";
+            this._colTotalPrice.Name = "_colTotalPrice";
+            this._colTotalPrice.Visible = true;
+            this._colTotalPrice.VisibleIndex = 5;
+            this._colTotalPrice.Width = 101;
             // 
             // _colOperation
             // 
@@ -168,19 +177,23 @@
             this._colOperation.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this._colOperation.Caption = "操作";
             this._colOperation.ColumnEdit = this._riOperate;
+            this._colOperation.MaxWidth = 120;
+            this._colOperation.MinWidth = 120;
             this._colOperation.Name = "_colOperation";
             this._colOperation.Visible = true;
             this._colOperation.VisibleIndex = 7;
-            this._colOperation.Width = 157;
+            this._colOperation.Width = 120;
             // 
             // _riOperate
             // 
             this._riOperate.AutoHeight = false;
-            editorButtonImageOptions5.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            editorButtonImageOptions6.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            editorButtonImageOptions1.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions2.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this._riOperate.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "编辑", 40, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "删除", 40, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject21, serializableAppearanceObject22, serializableAppearanceObject23, serializableAppearanceObject24, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "编辑", 40, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "删除", 50, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this._riOperate.Name = "_riOperate";
             this._riOperate.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this._riOperate.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this._riOperation_ButtonClick);
@@ -302,15 +315,6 @@
             this._btnQuery.TabIndex = 0;
             this._btnQuery.Text = "查询";
             this._btnQuery.Click += new System.EventHandler(this._btnQuery_Click);
-            // 
-            // _colTotalPrice
-            // 
-            this._colTotalPrice.Caption = "总价";
-            this._colTotalPrice.FieldName = "TotalPrice";
-            this._colTotalPrice.Name = "_colTotalPrice";
-            this._colTotalPrice.Visible = true;
-            this._colTotalPrice.VisibleIndex = 5;
-            this._colTotalPrice.Width = 101;
             // 
             // ProduceDetailView
             // 

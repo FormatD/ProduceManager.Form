@@ -45,8 +45,7 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this._cbWorkers = new DevExpress.XtraEditors.GridLookUpEdit();
-            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this._cbWorkers = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._chkIsBatchAddModel.Properties)).BeginInit();
@@ -59,7 +58,6 @@
             ((System.ComponentModel.ISupportInitialize)(this._deStartTime.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._seExpectedAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._cbWorkers.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -69,9 +67,9 @@
             this.panelControl1.Controls.Add(this._btnCancel);
             this.panelControl1.Controls.Add(this._btnAdd);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(0, 251);
+            this.panelControl1.Location = new System.Drawing.Point(0, 217);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(467, 46);
+            this.panelControl1.Size = new System.Drawing.Size(440, 46);
             this.panelControl1.TabIndex = 1;
             // 
             // _chkIsBatchAddModel
@@ -87,7 +85,7 @@
             // 
             this._btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this._btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this._btnCancel.Location = new System.Drawing.Point(307, 11);
+            this._btnCancel.Location = new System.Drawing.Point(280, 11);
             this._btnCancel.Name = "_btnCancel";
             this._btnCancel.Size = new System.Drawing.Size(64, 23);
             this._btnCancel.TabIndex = 1;
@@ -97,7 +95,7 @@
             // _btnAdd
             // 
             this._btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this._btnAdd.Location = new System.Drawing.Point(383, 11);
+            this._btnAdd.Location = new System.Drawing.Point(356, 11);
             this._btnAdd.Name = "_btnAdd";
             this._btnAdd.Size = new System.Drawing.Size(64, 23);
             this._btnAdd.TabIndex = 0;
@@ -122,12 +120,12 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(467, 251);
+            this.panelControl2.Size = new System.Drawing.Size(440, 217);
             this.panelControl2.TabIndex = 2;
             // 
             // _cbBatch
             // 
-            this._cbBatch.Location = new System.Drawing.Point(135, 21);
+            this._cbBatch.Location = new System.Drawing.Point(162, -3);
             this._cbBatch.Name = "_cbBatch";
             this._cbBatch.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this._cbBatch.Properties.Appearance.Options.UseBackColor = true;
@@ -139,11 +137,12 @@
             this._cbBatch.Properties.NullText = "请选择产品";
             this._cbBatch.Size = new System.Drawing.Size(267, 20);
             this._cbBatch.TabIndex = 0;
+            this._cbBatch.Visible = false;
             this._cbBatch.EditValueChanged += new System.EventHandler(this._cbBatch_EditValueChanged);
             // 
             // _cbProcedure
             // 
-            this._cbProcedure.Location = new System.Drawing.Point(135, 59);
+            this._cbProcedure.Location = new System.Drawing.Point(123, 24);
             this._cbProcedure.Name = "_cbProcedure";
             this._cbProcedure.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this._cbProcedure.Properties.Appearance.Options.UseBackColor = true;
@@ -161,7 +160,7 @@
             // 
             // _cbProducts
             // 
-            this._cbProducts.Location = new System.Drawing.Point(135, 170);
+            this._cbProducts.Location = new System.Drawing.Point(123, 135);
             this._cbProducts.Name = "_cbProducts";
             this._cbProducts.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -174,7 +173,7 @@
             // _deStartTime
             // 
             this._deStartTime.EditValue = null;
-            this._deStartTime.Location = new System.Drawing.Point(135, 96);
+            this._deStartTime.Location = new System.Drawing.Point(123, 61);
             this._deStartTime.Name = "_deStartTime";
             this._deStartTime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -190,7 +189,7 @@
             0,
             0,
             0});
-            this._seExpectedAmount.Location = new System.Drawing.Point(135, 206);
+            this._seExpectedAmount.Location = new System.Drawing.Point(123, 171);
             this._seExpectedAmount.Name = "_seExpectedAmount";
             this._seExpectedAmount.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -199,7 +198,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(58, 207);
+            this.labelControl4.Location = new System.Drawing.Point(46, 172);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(48, 14);
             this.labelControl4.TabIndex = 0;
@@ -207,7 +206,7 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(82, 136);
+            this.labelControl6.Location = new System.Drawing.Point(70, 101);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(24, 14);
             this.labelControl6.TabIndex = 0;
@@ -215,7 +214,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(82, 172);
+            this.labelControl5.Location = new System.Drawing.Point(70, 137);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(24, 14);
             this.labelControl5.TabIndex = 0;
@@ -223,7 +222,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(82, 62);
+            this.labelControl3.Location = new System.Drawing.Point(70, 27);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(24, 14);
             this.labelControl3.TabIndex = 0;
@@ -231,7 +230,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(58, 97);
+            this.labelControl2.Location = new System.Drawing.Point(46, 62);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(48, 14);
             this.labelControl2.TabIndex = 0;
@@ -239,29 +238,22 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(70, 24);
+            this.labelControl1.Location = new System.Drawing.Point(97, 0);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(36, 14);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "批次号";
+            this.labelControl1.Visible = false;
             // 
             // _cbWorkers
             // 
-            this._cbWorkers.Location = new System.Drawing.Point(135, 135);
+            this._cbWorkers.Location = new System.Drawing.Point(123, 100);
             this._cbWorkers.Name = "_cbWorkers";
             this._cbWorkers.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this._cbWorkers.Properties.NullText = "请选择工人";
-            this._cbWorkers.Properties.PopupView = this.gridLookUpEdit1View;
             this._cbWorkers.Size = new System.Drawing.Size(267, 20);
             this._cbWorkers.TabIndex = 3;
-            // 
-            // gridLookUpEdit1View
-            // 
-            this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
-            this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
             // AddProduceRecordForm
             // 
@@ -269,7 +261,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this._btnCancel;
-            this.ClientSize = new System.Drawing.Size(467, 297);
+            this.ClientSize = new System.Drawing.Size(440, 263);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -291,7 +283,6 @@
             ((System.ComponentModel.ISupportInitialize)(this._deStartTime.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._seExpectedAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._cbWorkers.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -314,7 +305,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LookUpEdit _cbBatch;
         private DevExpress.XtraEditors.CheckEdit _chkIsBatchAddModel;
-        private DevExpress.XtraEditors.GridLookUpEdit _cbWorkers;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
+        private DevExpress.XtraEditors.LookUpEdit _cbWorkers;
     }
 }

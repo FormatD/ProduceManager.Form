@@ -71,7 +71,6 @@ namespace ProduceManager.Forms
             _cbProducts.Properties.ImmediatePopup = true;
             _cbProducts.Properties.DisplayMember = "Name";
             _cbProducts.Properties.ValueMember = "Id";
-
             _cbProducts.Properties.PopupFilter += Properties_PopupFilter;
 
             _cbBatch.Properties.DataSource = _batchList = _service.GetAllBatches();
@@ -79,18 +78,21 @@ namespace ProduceManager.Forms
             _cbBatch.Properties.ImmediatePopup = true;
             _cbBatch.Properties.DisplayMember = "BatchNo";
             _cbBatch.Properties.ValueMember = "Id";
+            _cbBatch.Properties.PopupFilter += Properties_PopupFilter;
 
             _cbProcedure.Properties.DataSource = _procedureList = _service.GetAllProcedures();
             _cbProcedure.Properties.TextEditStyle = TextEditStyles.Standard;
             _cbProcedure.Properties.ImmediatePopup = true;
             _cbProcedure.Properties.DisplayMember = "DisplayText";
             _cbProcedure.Properties.ValueMember = "Id";
+            _cbProcedure.Properties.PopupFilter += Properties_PopupFilter;
 
             _cbWorkers.Properties.DataSource = _workerList = _service.GetAllWorkers();
             _cbWorkers.Properties.TextEditStyle = TextEditStyles.Standard;
             _cbWorkers.Properties.ImmediatePopup = true;
             _cbWorkers.Properties.DisplayMember = "DisplayText";
             _cbWorkers.Properties.ValueMember = "Id";
+            _cbWorkers.Properties.PopupFilter += Properties_PopupFilter;
 
             if (_isAddingNew)
             {
@@ -113,10 +115,12 @@ namespace ProduceManager.Forms
 
                 //_cbBatch.ItemIndex = _batchList.IndexOf(x => x.Id == produceRecord.BatchId);
                 _cbProducts.ItemIndex = _productList.IndexOf(x => x.Id == produceRecord.Product.Id);
-                _cbWorkers.EditValue = _workerList.FirstOrDefault(x => x.Id == produceRecord.Worker.Id);
+                _cbWorkers.ItemIndex = _workerList.IndexOf(x => x.Id == produceRecord.Worker.Id);
                 _cbProcedure.ItemIndex = _productList.IndexOf(x => x.Id == produceRecord.Procedure.Id);
                 _seExpectedAmount.EditValue = produceRecord.Amount;
                 _deStartTime.EditValue = produceRecord.Date;
+
+                _chkIsBatchAddModel.Visible = false;
             }
         }
 
