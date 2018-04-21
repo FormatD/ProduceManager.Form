@@ -1,7 +1,9 @@
 ﻿using ProduceManager.Forms.Domains;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Data.Entity;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,9 +12,13 @@ namespace ProduceManager.Forms.Persistence
 {
     public class ApplicationDbContext : DbContext
     {
-
         public ApplicationDbContext()
             : base(SystemConfig.ConnectionName)
+        {
+        }
+
+        public ApplicationDbContext(DbConnection sQLiteConnection)
+            : base(sQLiteConnection, false)
         {
         }
 

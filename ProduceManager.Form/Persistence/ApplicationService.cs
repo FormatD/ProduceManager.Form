@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 
@@ -13,7 +14,9 @@ namespace ProduceManager.Forms.Persistence
 
         public static ApplicationService Instanse { get { return _service.Value; } }
 
-        ApplicationDbContext _dbContext = new ApplicationDbContext();
+        ApplicationDbContext _dbContext = SystemConfig.ConnectionName.Length > 10
+            ? new ApplicationDbContext(new SQLiteConnection(SystemConfig.ConnectionName))
+            : new ApplicationDbContext();
 
         #region Batches
 
@@ -292,6 +295,8 @@ namespace ProduceManager.Forms.Persistence
         {
             var bill = GetSaleBill(id);
             _dbContext.SaleBills.Remove(bill);
+
+            _dbContext.SaveChanges();
         }
 
         internal IList<SaleBill> GetAllSaleBills()

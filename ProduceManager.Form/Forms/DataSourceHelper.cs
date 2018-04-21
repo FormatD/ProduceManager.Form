@@ -16,7 +16,9 @@ namespace ProduceManager.Forms
 
             try
             {
-                var connectionSetting = ConfigurationManager.ConnectionStrings[SystemConfig.ConnectionName];
+                var connectionSetting = SystemConfig.ConnectionName.Length < 10
+                    ? ConfigurationManager.ConnectionStrings[SystemConfig.ConnectionName]
+                    : new ConnectionStringSettings("sqlitedb", SystemConfig.ConnectionName, "System.Data.SQLite.EF6");
                 var provider = connectionSetting.ProviderName;
                 var connectionString = connectionSetting.ConnectionString;
 

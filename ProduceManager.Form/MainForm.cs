@@ -185,6 +185,12 @@ namespace ProduceManager.Forms
         {
             new AddSaleBillForm().ShowDialog();
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            if (new LoginForm().ShowDialog() != DialogResult.OK)
+                Close();
+        }
     }
 
 
@@ -192,7 +198,6 @@ namespace ProduceManager.Forms
     public interface IMdiService
     {
         IView JumpTo<T>(object parameter = null) where T : UserControl, IView, new();
-
     }
 
     public interface IView

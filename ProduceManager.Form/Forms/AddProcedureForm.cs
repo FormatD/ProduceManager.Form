@@ -60,6 +60,7 @@ namespace ProduceManager.Forms
                 {
                     Name = name,
                     //Code = code,
+                    CanSetPrice = _chkCanSetPrice.Checked,
                 };
                 _service.AddProcedure(procedure);
             }
@@ -68,7 +69,7 @@ namespace ProduceManager.Forms
                 var oldBatch = _service.GetProcedure(_procedureId);
 
                 oldBatch.Name = name;
-                //oldBatch.Code = code;
+                oldBatch.CanSetPrice = _chkCanSetPrice.Checked;
 
                 _service.SaveChanges();
             }

@@ -37,12 +37,14 @@
             this._txtName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this._txtCode = new DevExpress.XtraEditors.TextEdit();
+            this._chkCanSetPrice = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._txtName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._txtCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._chkCanSetPrice.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -51,16 +53,16 @@
             this.panelControl1.Controls.Add(this._btnCancel);
             this.panelControl1.Controls.Add(this._btnAdd);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(0, 124);
+            this.panelControl1.Location = new System.Drawing.Point(0, 150);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(432, 46);
+            this.panelControl1.Size = new System.Drawing.Size(431, 46);
             this.panelControl1.TabIndex = 1;
             // 
             // _btnCancel
             // 
             this._btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this._btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this._btnCancel.Location = new System.Drawing.Point(272, 11);
+            this._btnCancel.Location = new System.Drawing.Point(271, 11);
             this._btnCancel.Name = "_btnCancel";
             this._btnCancel.Size = new System.Drawing.Size(64, 23);
             this._btnCancel.TabIndex = 1;
@@ -70,7 +72,7 @@
             // _btnAdd
             // 
             this._btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this._btnAdd.Location = new System.Drawing.Point(348, 11);
+            this._btnAdd.Location = new System.Drawing.Point(347, 11);
             this._btnAdd.Name = "_btnAdd";
             this._btnAdd.Size = new System.Drawing.Size(64, 23);
             this._btnAdd.TabIndex = 0;
@@ -80,6 +82,7 @@
             // panelControl2
             // 
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl2.Controls.Add(this._chkCanSetPrice);
             this.panelControl2.Controls.Add(this.labelControl2);
             this.panelControl2.Controls.Add(this._txtName);
             this.panelControl2.Controls.Add(this.labelControl4);
@@ -87,7 +90,7 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(432, 124);
+            this.panelControl2.Size = new System.Drawing.Size(431, 150);
             this.panelControl2.TabIndex = 2;
             // 
             // labelControl2
@@ -120,13 +123,21 @@
             this._txtCode.Size = new System.Drawing.Size(251, 20);
             this._txtCode.TabIndex = 1;
             // 
+            // _chkCanSetPrice
+            // 
+            this._chkCanSetPrice.Location = new System.Drawing.Point(135, 114);
+            this._chkCanSetPrice.Name = "_chkCanSetPrice";
+            this._chkCanSetPrice.Properties.Caption = "可以设置价格";
+            this._chkCanSetPrice.Size = new System.Drawing.Size(165, 19);
+            this._chkCanSetPrice.TabIndex = 2;
+            // 
             // AddProcedureForm
             // 
             this.AcceptButton = this._btnAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this._btnCancel;
-            this.ClientSize = new System.Drawing.Size(432, 170);
+            this.ClientSize = new System.Drawing.Size(431, 196);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -142,6 +153,7 @@
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this._txtName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._txtCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._chkCanSetPrice.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -156,5 +168,6 @@
         private DevExpress.XtraEditors.TextEdit _txtCode;
         private DevExpress.XtraEditors.TextEdit _txtName;
         private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.CheckEdit _chkCanSetPrice;
     }
 }

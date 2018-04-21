@@ -72,7 +72,7 @@ namespace ProduceManager.Forms
 
                 var minDate = new DateTime(2000, 1, 1);
                 var startTime = dateEdit1.DateTime < minDate ? minDate : dateEdit1.DateTime;
-                var endTime = dateEdit2.DateTime < minDate ? DateTime.MaxValue : dateEdit2.DateTime;
+                var endTime = dateEdit2.DateTime < minDate ? DateTime.MaxValue : dateEdit2.DateTime.AddDays(1).AddSeconds(-1);
 
                 gridControl.DataSource = produceRecordList = _service.GetAllProduceRecords()
                     .Where(x => (!procedures.Any() || procedures.Contains(x.ProcedureId))

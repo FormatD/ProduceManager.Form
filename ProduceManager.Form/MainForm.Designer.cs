@@ -1616,6 +1616,7 @@
             this._btnReportDesigner.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("_btnReportDesigner.ImageOptions.Image")));
             this._btnReportDesigner.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("_btnReportDesigner.ImageOptions.LargeImage")));
             this._btnReportDesigner.Name = "_btnReportDesigner";
+            this._btnReportDesigner.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this._btnReportDesigner.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnReportDesigner_ItemClick);
             // 
             // _btnAddReport
@@ -1905,6 +1906,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "生产管理系统";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this._ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.appMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).EndInit();

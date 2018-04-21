@@ -88,6 +88,7 @@ namespace ProduceManager.Forms.UserControls
             {
                 DataSource = DataSourceHelper.GetDataSource(reportItem.DataSource)
             };
+
             report.LoadLayout(new MemoryStream(reportItem.Content));
             report.CreateDocument();
             documentViewer1.DocumentSource = report;

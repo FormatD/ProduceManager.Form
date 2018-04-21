@@ -19,10 +19,12 @@ namespace ProduceManager.Forms
     public partial class AddSaleBillForm : XtraForm
     {
         private bool _isAddingNew;
-        private SaleBill saleBill;
         private int _saleBillId;
-        ApplicationService _service;
+        private SaleBill saleBill;
+        private Product product;
+        private ApplicationService _service;
         private IList<Product> _productList;
+        private IList<Price> _allPrices;
 
         public AddSaleBillForm()
         {
@@ -42,6 +44,15 @@ namespace ProduceManager.Forms
 
         private void AddBatchForm_Load(object sender, EventArgs e)
         {
+            if (saleBill == null)
+            {
+                MessageBoxHelper.Warn("销售单不存在。");
+                DialogResult = DialogResult.Abort;
+                return;
+            }
+
+            _allPrices = _service.GetAllPriceConfig().Where(x => x.Procedure.Id == 5).ToList();
+
             gridView1.CustomDrawFooterCell += GridView1_CustomDrawFooterCell;
 
             gridControl1.DataSource = saleBill.Items;
@@ -102,7 +113,6 @@ namespace ProduceManager.Forms
 
         }
 
-        Product product;
         private void _leProducts_EditValueChanging(object sender, ChangingEventArgs e)
         {
             if (e.NewValue == null)
@@ -124,7 +134,12 @@ namespace ProduceManager.Forms
 
         private void _leProducts_EditValueChanged(object sender, EventArgs e)
         {
-            if (gridView1.FocusedRowHandle == DevExpress.XtraGrid.GridControl.NewItemRowHandle && product != null)
+            if (product == null)
+                return;
+
+            var price = _allPrices.FirstOrDefault(x => x.Product == product)?.price ?? 0;
+
+            if (gridView1.FocusedRowHandle == DevExpress.XtraGrid.GridControl.NewItemRowHandle)
             {
                 var row = gridView1.GetRow(gridView1.FocusedRowHandle);
 
@@ -132,7 +147,7 @@ namespace ProduceManager.Forms
                 dataSource.Add(new SaleBillItem
                 {
                     Product = product,
-                    Price = 0,
+                    Price = price,
                     Amount = 0,
                     ProductName = product.Name,
                 });
@@ -140,10 +155,11 @@ namespace ProduceManager.Forms
                 gridControl1.RefreshDataSource();
                 gridView1.FocusedRowHandle = dataSource.Count;
             }
-            else if (product != null)
+            else
             {
                 var focusedSaleBillItem = gridView1.GetFocusedRow() as SaleBillItem;
                 focusedSaleBillItem.Product = product;
+                focusedSaleBillItem.Price = price;
             }
         }
     }

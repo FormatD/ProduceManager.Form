@@ -60,7 +60,7 @@ namespace ProduceManager.Forms.UserControls
 
             var minDate = new DateTime(2000, 1, 1);
             var startTime = _deStart.DateTime < minDate ? minDate : _deStart.DateTime;
-            var endTime = _deEnd.DateTime < minDate ? DateTime.MaxValue : _deEnd.DateTime;
+            var endTime = _deEnd.DateTime < minDate ? DateTime.MaxValue : _deEnd.DateTime.AddDays(1).AddSeconds(-1);
 
             gridControl.DataSource = _saleBillList = _service.GetAllSaleBills()
                 .Where(x => (string.IsNullOrWhiteSpace(keyword) || x.CustomeName.Contains(keyword))
@@ -112,6 +112,7 @@ namespace ProduceManager.Forms.UserControls
                 if (MessageBoxHelper.Question(string.Format("您确定要删除销售单“{0}”吗?", saleBill.GetDisplayText())))
                 {
                     _service.DeleteSaleBill(saleBill.Id);
+                    Query();
                 }
             }
         }
