@@ -24,7 +24,7 @@ namespace ProduceManager.Forms
 {
     public partial class MainForm : RibbonForm
     {
-        IMdiService _mdiService;
+        readonly IMdiService _mdiService;
 
         public MainForm()
         {
@@ -53,7 +53,7 @@ namespace ProduceManager.Forms
 
         public class MdiService : IMdiService
         {
-            private MainForm _form;
+            private readonly MainForm _form;
 
             public MdiService(MainForm mainForm)
             {

@@ -18,15 +18,15 @@ namespace ProduceManager.Forms
 {
     public partial class AddProduceRecordForm : XtraForm
     {
-        private bool _isAddingNew;
-        private int _produceRecordId;
-        ApplicationService _service = ApplicationService.Instanse;
+        private readonly bool _isAddingNew;
+        private readonly int _produceRecordId;
+        readonly ApplicationService _service = ApplicationService.Instanse;
         private IList<Product> _productList;
         private IList<BatchViewModel> _batchList;
         private IList<Procedure> _procedureList;
         private IList<Worker> _workerList;
-        private int _batchId;
-        private bool _addFromBatch;
+        private readonly int _batchId;
+        private readonly bool _addFromBatch;
         private bool _isBatchMode;
 
         public event EventHandler<AddProduceRecordEventArgs> DataSaved;

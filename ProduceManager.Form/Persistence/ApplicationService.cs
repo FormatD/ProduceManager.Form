@@ -10,11 +10,11 @@ namespace ProduceManager.Forms.Persistence
 {
     public class ApplicationService
     {
-        private static Lazy<ApplicationService> _service = new Lazy<ApplicationService>();
+        private static readonly Lazy<ApplicationService> _service = new Lazy<ApplicationService>();
 
         public static ApplicationService Instanse { get { return _service.Value; } }
 
-        ApplicationDbContext _dbContext = SystemConfig.ConnectionName.Length > 10
+        readonly ApplicationDbContext _dbContext = SystemConfig.ConnectionName.Length > 10
             ? new ApplicationDbContext(new SQLiteConnection(SystemConfig.ConnectionName))
             : new ApplicationDbContext();
 

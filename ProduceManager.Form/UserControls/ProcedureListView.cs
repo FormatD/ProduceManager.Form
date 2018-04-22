@@ -15,7 +15,7 @@ namespace ProduceManager.Forms
 {
     public partial class ProcedureListView : UserControl, IView
     {
-        ApplicationService _service;
+        readonly ApplicationService _service;
         private IList<Procedure> _procedureList;
 
         public IMdiService MdiService { get; set; }

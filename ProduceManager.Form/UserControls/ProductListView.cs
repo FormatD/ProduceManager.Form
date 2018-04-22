@@ -15,7 +15,7 @@ namespace ProduceManager.Forms
 {
     public partial class ProductListView : UserControl, IView
     {
-        ApplicationService _service;
+        readonly ApplicationService _service;
         private IList<Product> _productList;
 
         public IMdiService MdiService { get; set; }

@@ -14,7 +14,7 @@ namespace ProduceManager.Forms.UserControls
 {
     public partial class SaleBillView : UserControl, IView
     {
-        ApplicationService _service;
+        readonly ApplicationService _service;
         private IList<SaleBill> _saleBillList;
 
         public IMdiService MdiService { get; set; }

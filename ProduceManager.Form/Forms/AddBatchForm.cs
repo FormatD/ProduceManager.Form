@@ -15,8 +15,8 @@ namespace ProduceManager.Forms
 {
     public partial class AddBatchForm : XtraForm
     {
-        private bool _isAddingNew;
-        private int _batchId;
+        private readonly bool _isAddingNew;
+        private readonly int _batchId;
         ApplicationService _service;
         private IList<Product> _productList;
         public AddBatchForm()

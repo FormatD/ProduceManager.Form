@@ -18,11 +18,11 @@ namespace ProduceManager.Forms
 {
     public partial class AddSaleBillForm : XtraForm
     {
-        private bool _isAddingNew;
-        private int _saleBillId;
-        private SaleBill saleBill;
+        private readonly bool _isAddingNew;
+        private readonly int _saleBillId;
+        private readonly SaleBill saleBill;
         private Product product;
-        private ApplicationService _service;
+        private readonly ApplicationService _service;
         private IList<Product> _productList;
         private IList<Price> _allPrices;
 

@@ -103,7 +103,7 @@ namespace ProduceManager.Forms
 
         public class SaveCommandHandler : ICommandHandler
         {
-            XRDesignPanel panel;
+            readonly XRDesignPanel panel;
 
             public SaveCommandHandler(XRDesignPanel panel)
             {

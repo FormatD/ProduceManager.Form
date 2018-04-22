@@ -15,9 +15,9 @@ namespace ProduceManager.Forms
 {
     public partial class AddProductForm : XtraForm
     {
-        private int _productId;
-        private bool _isAddingNew;
-        ApplicationService _service;
+        private readonly int _productId;
+        private readonly bool _isAddingNew;
+        readonly ApplicationService _service;
         public AddProductForm()
         {
             _service = ApplicationService.Instanse;

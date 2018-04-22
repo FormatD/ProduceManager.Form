@@ -16,7 +16,7 @@ namespace ProduceManager.Forms
     public partial class ProduceDetailView : UserControl, IView
     {
         private IList<ProduceRecordViewModel> produceRecordList;
-        private ApplicationService _service = ApplicationService.Instanse;
+        private readonly ApplicationService _service = ApplicationService.Instanse;
 
         public IMdiService MdiService { get; set; }
 

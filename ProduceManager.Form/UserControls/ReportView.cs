@@ -10,12 +10,15 @@ using DevExpress.XtraEditors;
 using ProduceManager.Forms.Persistence;
 using System.IO;
 using ProduceManager.Forms.Utils;
+using DevExpress.XtraReports.UI;
+using ProduceManager.Forms.Domains;
 
 namespace ProduceManager.Forms.UserControls
 {
     public partial class ReportView : XtraUserControl, IView
     {
-        ApplicationService _service = ApplicationService.Instanse;
+        readonly ApplicationService _service = ApplicationService.Instanse;
+        private ReportItem _reportItem;
 
         public ReportView()
         {
@@ -75,23 +78,51 @@ namespace ProduceManager.Forms.UserControls
             if (_tlReports.FocusedNode == null)
                 return;
 
-            var reportItem = _tlReports.FocusedNode.Tag as Domains.ReportItem;
-            if (reportItem == null)
+            _reportItem = _tlReports.FocusedNode.Tag as ReportItem;
+            if (_reportItem == null)
                 return;
-            if (reportItem.Content == null || reportItem.Content.Length == 0)
+            if (_reportItem.Content == null || _reportItem.Content.Length == 0)
             {
                 MessageBoxHelper.Warn("未设计的报表。");
                 return;
             }
 
-            var report = new DevExpress.XtraReports.UI.XtraReport
-            {
-                DataSource = DataSourceHelper.GetDataSource(reportItem.DataSource)
-            };
+            var report = new XtraReport { };
 
-            report.LoadLayout(new MemoryStream(reportItem.Content));
+            report.ParametersRequestBeforeShow += Report_ParametersRequestBeforeShow;
+            report.ParametersRequestSubmit += Report_ParametersRequestSubmit;
+            report.LoadLayout(new MemoryStream(_reportItem.Content));
             report.CreateDocument();
             documentViewer1.DocumentSource = report;
+
+            documentViewer1.Refresh();
+        }
+
+        private void Report_ParametersRequestSubmit(object sender, DevExpress.XtraReports.Parameters.ParametersRequestEventArgs e)
+        {
+            var report = sender as XtraReport;
+
+            if (report == null)
+                return;
+
+            if (_reportItem == null)
+                return;
+
+            var parameterDictionary = e.ParametersInformation.ToDictionary(x => x.Parameter.Name, x => x.Parameter.Value);
+
+            report.DataSource = DataSourceHelper.GetDataSource(_reportItem.DataSource, parameterDictionary);
+        }
+
+        private void Report_ParametersRequestBeforeShow(object sender, DevExpress.XtraReports.Parameters.ParametersRequestEventArgs e)
+        {
+            var report = sender as XtraReport;
+
+            if (report == null)
+                return;
+
+            var parameterDictionary = e.ParametersInformation.ToDictionary(x => x.Parameter.Name, x => x.Parameter.Value);
+
+            report.DataSource = DataSourceHelper.GetDataSource(_reportItem.DataSource, parameterDictionary);
         }
     }
 }

@@ -15,9 +15,9 @@ namespace ProduceManager.Forms
 {
     public partial class AddProcedureForm : XtraForm
     {
-        private int _procedureId;
-        private bool _isAddingNew;
-        ApplicationService _service;
+        private readonly int _procedureId;
+        private readonly bool _isAddingNew;
+        readonly ApplicationService _service;
         public AddProcedureForm()
         {
             _service = ApplicationService.Instanse;

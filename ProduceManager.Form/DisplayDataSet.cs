@@ -12,8 +12,8 @@ namespace ProduceManager.Forms
     /// </summary>
     public class DisplayDataSet : DataSet, IDisplayNameProvider
     {
-        string _dsName = "数据源";
-        Func<string[], string> _fieldNameFunc = p =>
+        readonly string _dsName = "数据源";
+        readonly Func<string[], string> _fieldNameFunc = p =>
         {
             string fieldName = p[p.Length - 1];
             return fieldName;

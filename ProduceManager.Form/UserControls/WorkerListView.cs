@@ -15,7 +15,7 @@ namespace ProduceManager.Forms
 {
     public partial class WorkerListView : UserControl, IView
     {
-        ApplicationService _service;
+        readonly ApplicationService _service;
         private IList<Worker> _workerList;
 
         public IMdiService MdiService { get; set; }

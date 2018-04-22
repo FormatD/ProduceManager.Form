@@ -19,9 +19,9 @@ namespace ProduceManager.Forms
     public partial class AddReportForm : XtraForm
     {
         private readonly ApplicationService _service = ApplicationService.Instanse;
-        private int _id;
+        private readonly int _id;
         private MemoryStream _memoryStream;
-        private bool _isAddingNew = true;
+        private readonly bool _isAddingNew = true;
         private ReportItem _report;
 
         public AddReportForm(int id)
