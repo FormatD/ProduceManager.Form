@@ -215,6 +215,8 @@
       <DependentUpon>201804191548470_add-can-set-price.cs</DependentUpon>
     </Compile>
     <Compile Include="Persistence\ApplicationService.cs" />
+    <Compile Include="Persistence\BatchViewModel.cs" />
+    <Compile Include="Persistence\ProduceRecordViewModel.cs" />
     <Compile Include="PrintRibbonControllerResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

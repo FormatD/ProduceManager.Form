@@ -24,7 +24,7 @@ namespace ProduceManager.Forms
             DevExpress.UserSkins.BonusSkins.Register();
             UserLookAndFeel.Default.SetSkinStyle("Office 2013");
 
-            Application.Run(AppHelper.MainForm = new MainForm());
+            Application.Run(new LoginForm());
         }
     }
 }

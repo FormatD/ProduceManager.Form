@@ -65,7 +65,9 @@ namespace ProduceManager.Forms.Persistence
 
         internal IList<Product> GetAllProducts()
         {
-            return _dbContext.Products.ToList();
+            return _dbContext.Products
+                .Where(p => !p.IsDeleted)
+                .ToList();
         }
 
         public Product GetProduct(int id)
@@ -99,7 +101,9 @@ namespace ProduceManager.Forms.Persistence
 
         internal IList<Procedure> GetAllProcedures()
         {
-            return _dbContext.Procedures.ToList();
+            return _dbContext.Procedures
+                .Where(p => !p.IsDeleted)
+                .ToList();
         }
 
         internal Procedure GetProcedure(int id)
@@ -127,7 +131,9 @@ namespace ProduceManager.Forms.Persistence
 
         internal IList<Worker> GetAllWorkers()
         {
-            return _dbContext.Workers.ToList();
+            return _dbContext.Workers
+                .Where(w => !w.IsDeleted)
+                .ToList();
         }
 
         public Worker GetWorker(int id)
@@ -268,6 +274,7 @@ namespace ProduceManager.Forms.Persistence
             return _dbContext.Prices
                    .Include(x => x.Product)
                    .Include(x => x.Procedure)
+                   .Where(x => !x.Product.IsDeleted && !x.Procedure.IsDeleted)
                    .ToList();
         }
 
@@ -277,7 +284,9 @@ namespace ProduceManager.Forms.Persistence
 
         public SaleBill GetSaleBill(int id)
         {
-            return _dbContext.SaleBills.Include(x => x.Items).FirstOrDefault(x => x.Id == id);
+            return _dbContext.SaleBills
+                .Where(b => !b.IsDeleted)
+                .Include(x => x.Items).FirstOrDefault(x => x.Id == id);
         }
 
         internal void AddSaleBill(SaleBill saleBill)
@@ -330,67 +339,5 @@ namespace ProduceManager.Forms.Persistence
             _dbContext.SaveChanges();
         }
         #endregion
-    }
-
-    public class ProduceRecordViewModel
-    {
-        public int Id { get; set; }
-
-        public int BatchId { get; set; }
-
-        public string BatchNo { get; set; }
-
-        public int ProductId { get; set; }
-
-        public string ProductName { get; set; }
-
-        public int ProcedureId { get; set; }
-
-        public string ProcedureName { get; set; }
-
-        public int WorkerId { get; set; }
-
-        public string WorkerName { get; set; }
-
-        public DateTime Date { get; set; }
-
-        public int Amount { get; set; }
-
-        public bool IsDeleted { get; set; }
-
-        public bool IsProductDeleted { get; set; }
-
-        public bool IsBatchDeleted { get; set; }
-
-        public bool IsWorkerDeleted { get; set; }
-
-        public bool IsProcedureDeleted { get; set; }
-
-        public double Price { get; set; }
-
-        public double TotalPrice => Price * Amount;
-    }
-
-    public class BatchViewModel
-    {
-        public int Id { get; set; }
-
-        public string BatchNo { get; set; }
-
-        public int ProductId { get; set; }
-
-        public string ProductName { get; set; }
-
-        public string CurrentWorker { get; set; }
-
-        public int ExpectedAmount { get; set; }
-
-        public int State { get; set; }
-
-        public DateTime StartDate { get; set; }
-
-        public bool IsDeleted { get; set; }
-
-        public bool IsProductDeleted { get; set; }
     }
 }

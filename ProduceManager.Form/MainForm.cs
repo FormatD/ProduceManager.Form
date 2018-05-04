@@ -188,8 +188,6 @@ namespace ProduceManager.Forms
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            if (new LoginForm().ShowDialog() != DialogResult.OK)
-                Close();
         }
     }
 
