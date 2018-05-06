@@ -18,7 +18,7 @@ using DevExpress.XtraPrinting.Preview;
 using ProduceManager.Forms.Utils;
 using System.IO;
 using DevExpress.XtraReports.UI;
-
+using ProduceManager.Forms.Messages;
 
 namespace ProduceManager.Forms
 {
@@ -189,13 +189,25 @@ namespace ProduceManager.Forms
         private void MainForm_Load(object sender, EventArgs e)
         {
         }
-    }
 
+        private void _btnExportReports_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            JumpToReportView();
+            EventBus.Instanse.SendMessage(ExportReportMessage.Empty);
+        }
+
+        private void btnImportReport_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            JumpToReportView();
+            EventBus.Instanse.SendMessage(ImportReportMessage.Empty);
+        }
+    }
 
 
     public interface IMdiService
     {
         IView JumpTo<T>(object parameter = null) where T : UserControl, IView, new();
+
     }
 
     public interface IView

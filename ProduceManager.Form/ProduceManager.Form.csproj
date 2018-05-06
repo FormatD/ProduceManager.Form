@@ -110,6 +110,9 @@
     <Reference Include="FastColoredTextBox, Version=2.16.21.0, Culture=neutral, PublicKeyToken=fb8aa12b994ef61b, processorArchitecture=MSIL">
       <HintPath>..\packages\FCTB.2.16.21.0\lib\FastColoredTextBox.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.0.0\lib\net40\NLog.dll</HintPath>
       <Private>True</Private>
@@ -144,6 +147,7 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EventBus.cs" />
     <Compile Include="Forms\AddSaleBillForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +206,8 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Messages\ImportReportMessage.cs" />
+    <Compile Include="Messages\ExportReportMessage.cs" />
     <Compile Include="Migrations\201804171615254_Init.cs" />
     <Compile Include="Migrations\201804171615254_Init.Designer.cs">
       <DependentUpon>201804171615254_Init.cs</DependentUpon>
@@ -295,7 +301,8 @@
     <Compile Include="Utils\MessageBoxHelper.cs" />
     <Compile Include="Utils\ObjectExtension.cs" />
     <Compile Include="Utils\PinYinHelper.cs" />
-    <Compile Include="Utils\UsertControlExtension.cs" />
+    <Compile Include="Utils\StringExtension.cs" />
+    <Compile Include="Utils\UserControlExtension.cs" />
     <Compile Include="Utils\WaitHelper.cs" />
     <Compile Include="Utils\Win32Helper.cs" />
     <Compile Include="Utils\XtraGridHelper.cs" />

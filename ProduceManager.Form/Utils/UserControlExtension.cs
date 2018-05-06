@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace ProduceManager.Forms.Utils
 {
-    public static class UsertControlExtension
+    public static class UserControlExtension
     {
         public static T FindChildren<T>(this Control control) where T : Control
         {

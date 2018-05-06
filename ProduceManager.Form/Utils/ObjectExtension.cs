@@ -1,11 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Newtonsoft.Json;
 
 namespace ProduceManager.Forms.Utils
 {
-    public class ObjectExtension
+    public static class ObjectExtension
     {
+        public static string ToJson<T>(this T source)
+        {
+            return JsonConvert.SerializeObject(source);
+        }
+
+        public static T FromJson<T>(this string source)
+        {
+            return JsonConvert.DeserializeObject<T>(source);
+        }
     }
 }

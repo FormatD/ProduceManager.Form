@@ -185,7 +185,7 @@ namespace ProduceManager.Forms.Persistence
                                     .Include(x => x.Procedure)
                                     .Include(x => x.Product)
                                     .Include(x => x.Worker)
-                     join price in _dbContext.Prices on new { productId = pr.Product.Id, procedureId = pr.Procedure.Id } equals new { productId = price.Product.Id, procedureId = price.Procedure.Id }
+                         //join price in _dbContext.Prices on new { productId = pr.Product.Id, procedureId = pr.Procedure.Id } equals new { productId = price.Product.Id, procedureId = price.Procedure.Id }
                      select new ProduceRecordViewModel
                      {
                          Id = pr.Id,
@@ -210,10 +210,21 @@ namespace ProduceManager.Forms.Persistence
                          ProcedureName = pr.Procedure.Name,
                          IsProcedureDeleted = pr.Procedure.IsDeleted,
 
-                         Price = price.price,
+                         //Price = price.price,
                      };
+            var prices = _dbContext.Prices
+                .Include(x => x.Product)
+                .Include(x => x.Procedure)
+                .Where(x => x.Product != null && x.Procedure != null).ToDictionary(x => $"{x.Product.Id}|{x.Procedure.Id}");
 
-            return xx.ToList();
+            var viewModels = xx.ToList();
+            foreach (var item in viewModels)
+            {
+                if (prices.TryGetValue($"{item.ProductId}|{item.ProcedureId}", out Price price))
+                    item.Price = price.price;
+            }
+
+            return viewModels;
         }
 
         internal object SearchProduceRecord(Func<ProduceRecord, bool> func)
@@ -263,6 +274,22 @@ namespace ProduceManager.Forms.Persistence
         internal IEnumerable<ReportItem> GetAllReports()
         {
             return _dbContext.Reports.ToList();
+        }
+
+        internal void DeleteReport(ReportItem reportItem)
+        {
+            var report = _dbContext.Reports.FirstOrDefault(x => x.Id == reportItem.Id);
+            _dbContext.Reports.Remove(report);
+            _dbContext.SaveChanges();
+        }
+
+        public void DeleteAllReport()
+        {
+            foreach (var report in GetAllReports())
+                _dbContext.Reports.Remove(report);
+
+            _dbContext.SaveChanges();
+
         }
 
         #endregion

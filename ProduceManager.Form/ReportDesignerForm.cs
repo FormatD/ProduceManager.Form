@@ -44,7 +44,7 @@ namespace ProduceManager.Forms
 
         #region [OpenReport]
 
-        public static Action<MemoryStream> _saveAction = null;
+        public static Action<byte[]> _saveAction = null;
         private static XtraReport _srcReport = null;
         public static bool _cancelCloseForm = false;
 
@@ -53,7 +53,7 @@ namespace ProduceManager.Forms
         /// </summary>
         /// <param name="srcReport">源报表</param>
         /// <param name="saveAction">保存方法</param>
-        public void OpenReport(XtraReport srcReport, Action<MemoryStream> saveAction)
+        public void OpenReport(XtraReport srcReport, Action<byte[]> saveAction)
         {
             _saveAction = saveAction;
             _srcReport = srcReport;
@@ -160,14 +160,13 @@ namespace ProduceManager.Forms
                 panel.ReportState = ReportState.Saved;
             }
 
-
             private void StoreReport(XtraReport report)
             {
                 MemoryStream stream = new MemoryStream();
                 report.SaveLayout(stream);
                 if (panel.ReportState == ReportState.Changed)
                 {
-                    _saveAction(stream);
+                    _saveAction(stream.ToArray());
                 }
             }
 

@@ -20,7 +20,7 @@ namespace ProduceManager.Forms
     {
         private readonly ApplicationService _service = ApplicationService.Instanse;
         private readonly int _id;
-        private MemoryStream _memoryStream;
+        private byte[] _reportContent;
         private readonly bool _isAddingNew = true;
         private ReportItem _report;
 
@@ -34,6 +34,10 @@ namespace ProduceManager.Forms
         public AddReportForm()
         {
             InitializeComponent();
+
+            _txtDataSource.Language = FastColoredTextBoxNS.Language.SQL;
+            _txtDataSource.WordWrap = true;
+
         }
 
         private void _btnDesign_Click(object sender, EventArgs e)
@@ -41,18 +45,21 @@ namespace ProduceManager.Forms
             try
             {
                 var ds = DataSourceHelper.GetDataSource(_txtDataSource.Text);
-                if (_memoryStream == null)
+                if (_reportContent == null)
                 {
-                    _memoryStream = new MemoryStream();
-                    var rep = new XtraReport();
-                    rep.DataSource = ds;
-                    rep.SaveLayout(_memoryStream);
+                    var memoryStream = new MemoryStream();
+                    var rep = new XtraReport
+                    {
+                        DataSource = ds
+                    };
+                    rep.SaveLayout(memoryStream);
+                    _reportContent = memoryStream.ToArray();
                 }
 
                 ReportDesignerHelper.ShowDesigner(
-                    _memoryStream,
-                    ds,
-                    ms => _memoryStream = ms);
+                    _reportContent,
+                    _txtDataSource.Text,
+                    ms => _reportContent = ms);
             }
             catch (Exception ex)
             {
@@ -76,13 +83,13 @@ namespace ProduceManager.Forms
                 return;
             }
 
-            if (_memoryStream == null || _memoryStream.Length == 0)
+            if (_reportContent == null || _reportContent.Length == 0)
             {
                 MessageBoxHelper.Warn("请先设计报表。");
                 return;
             }
 
-            _report.Content = _memoryStream.ToArray();
+            _report.Content = _reportContent.ToArray();
             _report.DataSource = dataSource;
             _report.Name = reportName;
 
@@ -100,7 +107,7 @@ namespace ProduceManager.Forms
             _txtDataSource.Text = _report.DataSource;
             _chkIsSystem.Checked = _report.IsSystem;
 
-            _memoryStream = _report.Content == null ? null : new MemoryStream(_report.Content);
+            _reportContent = _report.Content;
 
             if (!_isAddingNew)
             {

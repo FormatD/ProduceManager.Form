@@ -12,6 +12,8 @@ using System.IO;
 using ProduceManager.Forms.Utils;
 using DevExpress.XtraReports.UI;
 using ProduceManager.Forms.Domains;
+using ProduceManager.Forms.Messages;
+using DevExpress.XtraReports.Parameters;
 
 namespace ProduceManager.Forms.UserControls
 {
@@ -19,6 +21,7 @@ namespace ProduceManager.Forms.UserControls
     {
         readonly ApplicationService _service = ApplicationService.Instanse;
         private ReportItem _reportItem;
+        private IEnumerable<ReportItem> _allReports;
 
         public ReportView()
         {
@@ -30,6 +33,47 @@ namespace ProduceManager.Forms.UserControls
         private void ReportView_Load(object sender, EventArgs e)
         {
             _tlReports.FocusedNodeChanged += _tlReports_FocusedNodeChanged;
+            EventBus.Instanse.Subscrible((ExportReportMessage message) =>
+            {
+                using (var dlg = new SaveFileDialog())
+                {
+                    dlg.Title = "导出报表";
+                    dlg.Filter = "报表文件|*.rpts";
+                    dlg.DefaultExt = ".rpts";
+                    dlg.AddExtension = true;
+                    if (dlg.ShowDialog() == DialogResult.OK)
+                    {
+                        File.WriteAllText(dlg.FileName, _allReports.ToJson());
+                    }
+                }
+            });
+            EventBus.Instanse.Subscrible((ImportReportMessage message) =>
+            {
+                using (var dlg = new OpenFileDialog())
+                {
+                    dlg.Title = "导入报表";
+                    dlg.Filter = "报表文件|*.rpts";
+                    if (dlg.ShowDialog() == DialogResult.OK)
+                    {
+                        try
+                        {
+                            var importReports = File.ReadAllText(dlg.FileName).FromJson<List<ReportItem>>();
+
+                            _service.DeleteAllReport();
+                            foreach (var report in importReports)
+                            {
+                                _service.AddReport(report);
+                            }
+
+                            Reload();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBoxHelper.Warn("导入失败。" + ex.Message);
+                        }
+                    }
+                }
+            });
             Reload();
         }
 
@@ -51,10 +95,21 @@ namespace ProduceManager.Forms.UserControls
             if (reportItem == null)
                 return;
 
-            using (var dlg = new AddReportForm(reportItem.Id))
+            if (e.Button.Index == 0)
             {
-                if (dlg.ShowDialog() == DialogResult.OK)
+                using (var dlg = new AddReportForm(reportItem.Id))
                 {
+                    if (dlg.ShowDialog() == DialogResult.OK)
+                    {
+                        Reload();
+                    }
+                }
+            }
+            else if (e.Button.Index == 1)
+            {
+                if (MessageBoxHelper.Question($"确定要删除报表“{reportItem.Name}”吗？"))
+                {
+                    _service.DeleteReport(reportItem);
                     Reload();
                 }
             }
@@ -65,7 +120,7 @@ namespace ProduceManager.Forms.UserControls
             _tlReports.Nodes.Clear();
 
             var root = _tlReports.AppendNode(new object[] { "所有报表" }, null, null);
-            foreach (var report in _service.GetAllReports())
+            foreach (var report in (_allReports = _service.GetAllReports()))
             {
                 _tlReports.AppendNode(new object[] { report.Name }, root, report);
             }
@@ -87,15 +142,58 @@ namespace ProduceManager.Forms.UserControls
                 return;
             }
 
+            using (WaitHelper.ShowWaitForm("报表加载中", AppHelper.MainForm))
+            {
+                var wraper = new ReportWraper(_reportItem.DataSource, _reportItem.Content);
+                documentViewer1.DocumentSource = wraper.CreateReport();
+
+                documentViewer1.Refresh();
+            }
+        }
+    }
+
+    public class ReportWraper
+    {
+        private string _dataSource;
+        private byte[] _content;
+
+        public ReportWraper(string dataSource, byte[] content)
+        {
+            _dataSource = dataSource;
+            _content = content;
+        }
+
+        public XtraReport CreateReport()
+        {
             var report = new XtraReport { };
 
             report.ParametersRequestBeforeShow += Report_ParametersRequestBeforeShow;
             report.ParametersRequestSubmit += Report_ParametersRequestSubmit;
-            report.LoadLayout(new MemoryStream(_reportItem.Content));
+            report.LoadLayout(new MemoryStream(_content));
             report.CreateDocument();
-            documentViewer1.DocumentSource = report;
 
-            documentViewer1.Refresh();
+            report.DataSource = DataSourceHelper.GetDataSource(_dataSource, RetrieveDefaultParameterDictionary(report));
+
+            return report;
+        }
+
+        private static Dictionary<string, object> RetrieveDefaultParameterDictionary(XtraReport report)
+        {
+            var parameterDictionary = report.Parameters.OfType<Parameter>().ToDictionary(x => x.Name, x => x.Value);
+
+            foreach (var key in parameterDictionary.Keys.ToList())
+            {
+                if (key.EqualsIgnoreCase("Year"))
+                {
+                    parameterDictionary[key] = DateTime.Now.Year;
+                }
+                else if (key.EqualsIgnoreCase("Month"))
+                {
+                    parameterDictionary[key] = DateTime.Now.Month;
+                }
+            }
+
+            return parameterDictionary;
         }
 
         private void Report_ParametersRequestSubmit(object sender, DevExpress.XtraReports.Parameters.ParametersRequestEventArgs e)
@@ -105,12 +203,9 @@ namespace ProduceManager.Forms.UserControls
             if (report == null)
                 return;
 
-            if (_reportItem == null)
-                return;
-
             var parameterDictionary = e.ParametersInformation.ToDictionary(x => x.Parameter.Name, x => x.Parameter.Value);
 
-            report.DataSource = DataSourceHelper.GetDataSource(_reportItem.DataSource, parameterDictionary);
+            report.DataSource = DataSourceHelper.GetDataSource(_dataSource, parameterDictionary);
         }
 
         private void Report_ParametersRequestBeforeShow(object sender, DevExpress.XtraReports.Parameters.ParametersRequestEventArgs e)
@@ -121,8 +216,8 @@ namespace ProduceManager.Forms.UserControls
                 return;
 
             var parameterDictionary = e.ParametersInformation.ToDictionary(x => x.Parameter.Name, x => x.Parameter.Value);
-
-            report.DataSource = DataSourceHelper.GetDataSource(_reportItem.DataSource, parameterDictionary);
+            report.DataSource = DataSourceHelper.GetDataSource(_dataSource, parameterDictionary);
         }
+
     }
 }
