@@ -177,10 +177,10 @@ namespace ProduceManager.Forms
                 OnDataSaved(oldProduceRecord);
             }
 
-            SetAsFocused();
 
             if (_chkIsBatchAddModel.Checked)
             {
+                SetAsFocused();
                 ResetForm();
             }
             else
@@ -194,6 +194,7 @@ namespace ProduceManager.Forms
             ThreadPool.QueueUserWorkItem(x =>
             {
                 Thread.Sleep(500);
+
                 BeginInvoke(new MethodInvoker(() =>
                 {
                     var xx = Win32Helper.SetForegroundWindow(this.Handle);
@@ -217,8 +218,7 @@ namespace ProduceManager.Forms
 
         private void _cbBatch_EditValueChanged(object sender, EventArgs e)
         {
-            var batch = _cbBatch.GetSelectedDataRow() as BatchViewModel;
-            if (batch == null)
+            if (!(_cbBatch.GetSelectedDataRow() is BatchViewModel batch))
                 _cbProducts.ItemIndex = -1;
             else
             {

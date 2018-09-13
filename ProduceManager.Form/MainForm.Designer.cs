@@ -1905,7 +1905,7 @@
             this._btnExportReports.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
             this._btnExportReports.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
             this._btnExportReports.Name = "_btnExportReports";
-            this._btnExportReports.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnExportReports_ItemClick);
+            this._btnExportReports.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ExportReports_ItemClick);
             // 
             // btnImportReport
             // 
@@ -1915,7 +1915,7 @@
             this.btnImportReport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.Image")));
             this.btnImportReport.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.LargeImage")));
             this.btnImportReport.Name = "btnImportReport";
-            this.btnImportReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnImportReport_ItemClick);
+            this.btnImportReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ImportReport_ItemClick);
             // 
             // MainForm
             // 

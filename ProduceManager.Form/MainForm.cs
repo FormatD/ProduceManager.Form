@@ -62,8 +62,7 @@ namespace ProduceManager.Forms
 
             public IView JumpTo<T>(object parameter) where T : UserControl, IView, new()
             {
-                IView view;
-                _form._tabMainContainer.SelectedTabPage = LoadTabPage<T>(out view, parameter);
+                _form._tabMainContainer.SelectedTabPage = LoadTabPage<T>(out IView view, parameter);
                 return view;
             }
 
@@ -181,7 +180,7 @@ namespace ProduceManager.Forms
             var view = _mdiService.JumpTo<SaleBillView>();
         }
 
-        private void e_ItemClick(object sender, ItemClickEventArgs e)
+        private void ItemClick(object sender, ItemClickEventArgs e)
         {
             new AddSaleBillForm().ShowDialog();
         }
@@ -190,13 +189,13 @@ namespace ProduceManager.Forms
         {
         }
 
-        private void _btnExportReports_ItemClick(object sender, ItemClickEventArgs e)
+        private void ExportReports_ItemClick(object sender, ItemClickEventArgs e)
         {
             JumpToReportView();
             EventBus.Instanse.SendMessage(ExportReportMessage.Empty);
         }
 
-        private void btnImportReport_ItemClick(object sender, ItemClickEventArgs e)
+        private void ImportReport_ItemClick(object sender, ItemClickEventArgs e)
         {
             JumpToReportView();
             EventBus.Instanse.SendMessage(ImportReportMessage.Empty);

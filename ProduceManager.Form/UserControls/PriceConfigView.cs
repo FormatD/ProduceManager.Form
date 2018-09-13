@@ -85,7 +85,7 @@ namespace ProduceManager.Forms.UserControls
             gridControl.DataSource = dt;
         }
 
-        void bbiPrintPreview_ItemClick(object sender, ItemClickEventArgs e)
+        void PrintPreview_ItemClick(object sender, ItemClickEventArgs e)
         {
             gridControl.ShowRibbonPrintPreview();
         }

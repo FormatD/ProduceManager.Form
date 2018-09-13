@@ -40,8 +40,10 @@ namespace ProduceManager.Forms
                 return;
             }
 
-            XtraReport report = new XtraReport();
-            report.DisplayName = "Report";
+            XtraReport report = new XtraReport
+            {
+                DisplayName = "Report"
+            };
 
             try
             {
@@ -67,8 +69,10 @@ namespace ProduceManager.Forms
                 return;
             }
 
-            XtraReport report = new XtraReport();
-            report.DisplayName = "Report";
+            XtraReport report = new XtraReport
+            {
+                DisplayName = "Report"
+            };
 
             try
             {

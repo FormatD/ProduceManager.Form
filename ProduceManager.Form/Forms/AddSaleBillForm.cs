@@ -107,7 +107,7 @@ namespace ProduceManager.Forms
             DialogResult = DialogResult.OK;
         }
 
-        private void gridView1_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
+        private void GridView1_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
         {
             var row = gridView1.GetRow(gridView1.FocusedRowHandle);
 

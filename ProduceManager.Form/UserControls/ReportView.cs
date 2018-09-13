@@ -91,8 +91,7 @@ namespace ProduceManager.Forms.UserControls
 
         private void _riOperate_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            var reportItem = _tlReports.FocusedNode.Tag as Domains.ReportItem;
-            if (reportItem == null)
+            if (!(_tlReports.FocusedNode.Tag is ReportItem reportItem))
                 return;
 
             if (e.Button.Index == 0)
@@ -154,8 +153,8 @@ namespace ProduceManager.Forms.UserControls
 
     public class ReportWraper
     {
-        private string _dataSource;
-        private byte[] _content;
+        private readonly string _dataSource;
+        private readonly byte[] _content;
 
         public ReportWraper(string dataSource, byte[] content)
         {
@@ -198,9 +197,8 @@ namespace ProduceManager.Forms.UserControls
 
         private void Report_ParametersRequestSubmit(object sender, DevExpress.XtraReports.Parameters.ParametersRequestEventArgs e)
         {
-            var report = sender as XtraReport;
 
-            if (report == null)
+            if (!(sender is XtraReport report))
                 return;
 
             var parameterDictionary = e.ParametersInformation.ToDictionary(x => x.Parameter.Name, x => x.Parameter.Value);
@@ -210,9 +208,8 @@ namespace ProduceManager.Forms.UserControls
 
         private void Report_ParametersRequestBeforeShow(object sender, DevExpress.XtraReports.Parameters.ParametersRequestEventArgs e)
         {
-            var report = sender as XtraReport;
 
-            if (report == null)
+            if (!(sender is XtraReport report))
                 return;
 
             var parameterDictionary = e.ParametersInformation.ToDictionary(x => x.Parameter.Name, x => x.Parameter.Value);

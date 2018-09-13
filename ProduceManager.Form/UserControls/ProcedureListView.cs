@@ -126,9 +126,8 @@ namespace ProduceManager.Forms
 
         public void Jump(object parameter)
         {
-            if (parameter is int)
+            if (parameter is int batchId)
             {
-                var batchId = (int)parameter;
                 JumpTo(batchId);
             }
         }
