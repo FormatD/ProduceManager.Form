@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProduceManager.Form", "Prod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProduceManagement.Core", "ProduceManagement.Core\ProduceManagement.Core.csproj", "{CF49B155-970F-4918-8F2F-80D4428D629D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProduceManagement.Web", "ProduceManagement.Web\ProduceManagement.Web.csproj", "{13447B2A-E8F2-448D-9467-61FFCCE07636}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CF49B155-970F-4918-8F2F-80D4428D629D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF49B155-970F-4918-8F2F-80D4428D629D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF49B155-970F-4918-8F2F-80D4428D629D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13447B2A-E8F2-448D-9467-61FFCCE07636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13447B2A-E8F2-448D-9467-61FFCCE07636}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13447B2A-E8F2-448D-9467-61FFCCE07636}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13447B2A-E8F2-448D-9467-61FFCCE07636}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
