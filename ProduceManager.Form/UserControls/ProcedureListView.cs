@@ -1,14 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProduceManager.Forms.Persistence;
-using ProduceManager.Forms.Domains;
+using ProduceManager.Core.Domains;
+using ProduceManager.Core.Persistence;
 using ProduceManager.Forms.Utils;
 
 namespace ProduceManager.Forms

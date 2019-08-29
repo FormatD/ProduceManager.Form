@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using ProduceManager.Forms.Persistence;
+using ProduceManager.Core.Domains;
+using ProduceManager.Core.Persistence;
 using ProduceManager.Forms.Utils;
-using ProduceManager.Forms.Domains;
 
 namespace ProduceManager.Forms.UserControls
 {

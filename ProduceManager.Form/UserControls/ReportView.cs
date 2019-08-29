@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using ProduceManager.Forms.Persistence;
 using System.IO;
 using ProduceManager.Forms.Utils;
 using DevExpress.XtraReports.UI;
-using ProduceManager.Forms.Domains;
 using ProduceManager.Forms.Messages;
 using DevExpress.XtraReports.Parameters;
+using ProduceManager.Core.Persistence;
+using ProduceManager.Core.Domains;
+using ProduceManager.Core;
+using ProduceManager.Core.Utils;
 
 namespace ProduceManager.Forms.UserControls
 {

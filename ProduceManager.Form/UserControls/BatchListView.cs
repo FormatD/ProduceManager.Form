@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProduceManager.Forms.Persistence;
+using ProduceManager.Core.Persistence;
 using ProduceManager.Forms.Utils;
 using DevExpress.XtraEditors;
 

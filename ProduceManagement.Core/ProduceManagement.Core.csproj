@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.2.0" />
+    <PackageReference Include="Microsoft.International.Converters.PinYinConverter" Version="1.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="NLog" Version="4.6.7" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.111.0" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.111.0" />
+    <PackageReference Include="System.Data.SQLite.EF6" Version="1.0.111.0" />
+    <PackageReference Include="System.Data.SQLite.Linq" Version="1.0.111.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Migrations\201804171615254_Init.Designer.cs">
+      <DependentUpon>201804171615254_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Migrations\201804181619444_new-record-entity.Designer.cs">
+      <DependentUpon>201804181619444_new-record-entity.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Migrations\201804191548470_add-can-set-price.Designer.cs">
+      <DependentUpon>201804191548470_add-can-set-price.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Migrations\201804171615254_Init.resx">
+      <DependentUpon>201804171615254_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Migrations\201804181619444_new-record-entity.resx">
+      <DependentUpon>201804181619444_new-record-entity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Migrations\201804191548470_add-can-set-price.resx">
+      <DependentUpon>201804191548470_add-can-set-price.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

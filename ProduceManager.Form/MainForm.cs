@@ -19,6 +19,7 @@ using ProduceManager.Forms.Utils;
 using System.IO;
 using DevExpress.XtraReports.UI;
 using ProduceManager.Forms.Messages;
+using ProduceManager.Core;
 
 namespace ProduceManager.Forms
 {

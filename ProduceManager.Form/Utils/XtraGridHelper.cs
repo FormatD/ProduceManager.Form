@@ -3,9 +3,7 @@
  * 2013年7月19日   邓千军     添加禁用GridView列排序，向Grid注册提示信息，在主从视图展开/折叠所有主视图的行，在列头添加一个复选框等方法
  * */
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using System.Windows.Forms;
 using System.Drawing;
@@ -15,8 +13,7 @@ using DevExpress.Utils;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using DevExpress.XtraGrid.Views.Base;
-using DevExpress.XtraEditors.Repository;
-using ProduceManager.Forms.Domains;
+using ProduceManager.Core.Domains;
 
 namespace ProduceManager.Forms.Utils
 {

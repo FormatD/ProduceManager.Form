@@ -1,14 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using ProduceManager.Forms.Persistence;
-using ProduceManager.Forms.Domains;
+using ProduceManager.Core.Persistence;
+using ProduceManager.Core.Domains;
 using ProduceManager.Forms.Utils;
 
 namespace ProduceManager.Forms

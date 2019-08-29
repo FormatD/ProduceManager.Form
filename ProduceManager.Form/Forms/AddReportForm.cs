@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Linq;
-using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.IO;
 using DevExpress.XtraReports.UI;
-using System.Data.SqlClient;
 using ProduceManager.Forms.Utils;
-using ProduceManager.Forms.Domains;
-using ProduceManager.Forms.Persistence;
+using ProduceManager.Core.Domains;
+using ProduceManager.Core.Persistence;
 
 namespace ProduceManager.Forms
 {

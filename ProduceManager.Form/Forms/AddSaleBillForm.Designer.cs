@@ -145,7 +145,7 @@
             // 
             // saleBillItemBindingSource
             // 
-            this.saleBillItemBindingSource.DataSource = typeof(ProduceManager.Forms.Domains.SaleBillItem);
+            this.saleBillItemBindingSource.DataSource = typeof(ProduceManager.Core.Domains.SaleBillItem);
             // 
             // gridView1
             // 

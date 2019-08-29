@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraEditors.Repository;
 using System.Linq.Expressions;
+using ProduceManager.Core.Utils;
 
 namespace ProduceManager.Forms.Utils
 {
