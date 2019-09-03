@@ -14,17 +14,17 @@
         <el-submenu index="1">
           <template slot="title"
             ><i class="el-icon-message"></i>
-            <router-link to="/">Home</router-link>
+            <router-link to="/">Main</router-link>
           </template>
           <el-menu-item-group>
             <template slot="title"
               >分组一</template
             >
             <el-menu-item index="1-1">
-              <router-link to="/about">About1</router-link>
+              <router-link to="/home">Home</router-link>
             </el-menu-item>
             <el-menu-item index="1-2">
-              <router-link to="/about">About2</router-link>
+              <router-link to="/about">About</router-link>
             </el-menu-item>
           </el-menu-item-group>
           <el-submenu index="1-4">
